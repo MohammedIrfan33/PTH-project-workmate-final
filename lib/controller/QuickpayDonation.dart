@@ -8,8 +8,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:http/http.dart';
 
-import 'package:msfmylthrithala/modles/loginModels.dart';
-import 'package:msfmylthrithala/screens/PaymentsuccessScreen.dart';
+import 'package:PTHPalathingal/modles/loginModels.dart';
+import 'package:PTHPalathingal/screens/PaymentsuccessScreen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../ApiLists/Apis.dart';

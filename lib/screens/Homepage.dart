@@ -1,7 +1,7 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:msfmylthrithala/ApiLists/Appdata.dart';
+import 'package:PTHPalathingal/ApiLists/Appdata.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -10,10 +10,10 @@ import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_state_manager/get_state_manager.dart';
-import 'package:msfmylthrithala/controller/HomeScreenController.dart';
-import 'package:msfmylthrithala/screens/Quickpaydonation.dart';
+import 'package:PTHPalathingal/controller/HomeScreenController.dart';
+import 'package:PTHPalathingal/screens/Quickpaydonation.dart';
 
-import 'package:msfmylthrithala/screens/TopReports.dart';
+import 'package:PTHPalathingal/screens/TopReports.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:url_launcher/url_launcher.dart';
 

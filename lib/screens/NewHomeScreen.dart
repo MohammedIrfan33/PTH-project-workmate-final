@@ -1,14 +1,14 @@
 import 'dart:developer';
 
 import 'package:animated_notch_bottom_bar/animated_notch_bottom_bar/animated_notch_bottom_bar.dart';
-import 'package:msfmylthrithala/ApiLists/Appdata.dart';
-import 'package:msfmylthrithala/Utils/colors.dart';
-import 'package:msfmylthrithala/screens/TopSponsors.dart';
+import 'package:PTHPalathingal/ApiLists/Appdata.dart';
+import 'package:PTHPalathingal/Utils/colors.dart';
+import 'package:PTHPalathingal/screens/TopSponsors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
-import 'package:msfmylthrithala/screens/homepage3.dart';
+import 'package:PTHPalathingal/screens/homepage3.dart';
 
 import '../main.dart';
 import 'HistoryScreen.dart';

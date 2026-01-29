@@ -1,5 +1,5 @@
 import 'dart:convert';
-import 'package:msfmylthrithala/ApiLists/Appdata.dart';
+import 'package:PTHPalathingal/ApiLists/Appdata.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 

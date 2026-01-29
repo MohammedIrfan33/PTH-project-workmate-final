@@ -3,8 +3,8 @@ import 'dart:typed_data';
 import 'dart:ui';
 
 import 'package:auto_size_text/auto_size_text.dart';
-import 'package:msfmylthrithala/ApiLists/Appdata.dart';
-import 'package:msfmylthrithala/Utils/colors.dart';
+import 'package:PTHPalathingal/ApiLists/Appdata.dart';
+import 'package:PTHPalathingal/Utils/colors.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';

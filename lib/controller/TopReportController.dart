@@ -2,9 +2,9 @@ import 'dart:convert';
 
 import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
-import 'package:msfmylthrithala/modles/TopreportAssemblyModel.dart';
-import 'package:msfmylthrithala/modles/TopreportPanchatModel.dart';
-import 'package:msfmylthrithala/modles/TopreportWardModel.dart';
+import 'package:PTHPalathingal/modles/TopreportAssemblyModel.dart';
+import 'package:PTHPalathingal/modles/TopreportPanchatModel.dart';
+import 'package:PTHPalathingal/modles/TopreportWardModel.dart';
 
 import '../ApiLists/Apis.dart';
 import '../modles/TopClubModel.dart';

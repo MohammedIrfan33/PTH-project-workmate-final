@@ -1,17 +1,17 @@
 import 'dart:convert';
 
 import 'package:auto_size_text/auto_size_text.dart';
-import 'package:msfmylthrithala/ApiLists/Appdata.dart';
+import 'package:PTHPalathingal/ApiLists/Appdata.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
-import 'package:msfmylthrithala/Appcore/helper.dart';
-import 'package:msfmylthrithala/controller/ReportController.dart';
-import 'package:msfmylthrithala/modles/ClubModel.dart';
-import 'package:msfmylthrithala/modles/PanchayatModel.dart';
-import 'package:msfmylthrithala/modles/WardModel.dart';
+import 'package:PTHPalathingal/Appcore/helper.dart';
+import 'package:PTHPalathingal/controller/ReportController.dart';
+import 'package:PTHPalathingal/modles/ClubModel.dart';
+import 'package:PTHPalathingal/modles/PanchayatModel.dart';
+import 'package:PTHPalathingal/modles/WardModel.dart';
 import 'package:http/http.dart' as http;
 import '../ApiLists/Apis.dart';
 import '../Utils/colors.dart';

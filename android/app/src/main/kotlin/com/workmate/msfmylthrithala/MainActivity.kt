@@ -1,4 +1,4 @@
-package com.workmate.msfmylthrithala
+package com.workmate.pthpalathingal
 
 import io.flutter.embedding.android.FlutterActivity
 

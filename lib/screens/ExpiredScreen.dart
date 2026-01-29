@@ -1,5 +1,5 @@
 import 'dart:io';
-import 'package:msfmylthrithala/Utils/colors.dart';
+import 'package:PTHPalathingal/Utils/colors.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';

@@ -1,14 +1,14 @@
 import 'package:auto_size_text/auto_size_text.dart';
-import 'package:msfmylthrithala/rewardStatus/Hundered_Club.dart';
+import 'package:PTHPalathingal/rewardStatus/Hundered_Club.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
-import 'package:msfmylthrithala/rewardStatus/reward_poster.dart';
-import 'package:msfmylthrithala/widgets/animated_container.dart';
-import 'package:msfmylthrithala/widgets/people_list.dart';
+import 'package:PTHPalathingal/rewardStatus/reward_poster.dart';
+import 'package:PTHPalathingal/widgets/animated_container.dart';
+import 'package:PTHPalathingal/widgets/people_list.dart';
 
 import '../Utils/colors.dart';
 import '../controller/TopReportController.dart';

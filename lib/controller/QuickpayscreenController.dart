@@ -3,15 +3,15 @@ import 'dart:io';
 
 import 'package:flutter/services.dart';
 import 'package:path_provider/path_provider.dart';
-import 'package:msfmylthrithala/ApiLists/Appdata.dart';
+import 'package:PTHPalathingal/ApiLists/Appdata.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
 import 'package:path/path.dart';
 
-import 'package:msfmylthrithala/screens/PaymentfailedScreen.dart';
-import 'package:msfmylthrithala/screens/PaymentsuccessScreen.dart';
+import 'package:PTHPalathingal/screens/PaymentfailedScreen.dart';
+import 'package:PTHPalathingal/screens/PaymentsuccessScreen.dart';
 
 import '../ApiLists/Apis.dart';
 import '../modles/AssembelyModel.dart';
@@ -239,7 +239,7 @@ class QuickpayScreencontroller extends GetxController {
       'description': 'Payment channel',
       'prefill': {
         'contact': txtControllerMobile.text,
-        'email': '${txtControllerMobile.text}@msfmylthrithala.in',
+        'email': '${txtControllerMobile.text}@PTHPalathingal.in',
       },
       'external': {
         'wallets': ['paytm'],

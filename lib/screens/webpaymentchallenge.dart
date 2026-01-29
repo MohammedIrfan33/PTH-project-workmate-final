@@ -1,6 +1,6 @@
-import 'package:msfmylthrithala/ApiLists/Appdata.dart';
-import 'package:msfmylthrithala/Utils/colors.dart';
-import 'package:msfmylthrithala/screens/PaymentsuccessScreen.dart';
+import 'package:PTHPalathingal/ApiLists/Appdata.dart';
+import 'package:PTHPalathingal/Utils/colors.dart';
+import 'package:PTHPalathingal/screens/PaymentsuccessScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';

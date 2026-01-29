@@ -1,6 +1,6 @@
 import 'package:flutter/services.dart';
 
-import 'package:msfmylthrithala/screens/SplashScreen.dart';
+import 'package:PTHPalathingal/screens/SplashScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:get_storage/get_storage.dart';

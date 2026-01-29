@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:get/get.dart';
-import 'package:msfmylthrithala/modles/ChallengeListItemModel.dart';
+import 'package:PTHPalathingal/modles/ChallengeListItemModel.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../ApiLists/Apis.dart';

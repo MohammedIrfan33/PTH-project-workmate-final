@@ -6,8 +6,8 @@ import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_state_manager/src/rx_flutter/rx_obx_widget.dart';
 import 'package:get/get_state_manager/src/simple/get_state.dart';
-import 'package:msfmylthrithala/Utils/colors.dart';
-import 'package:msfmylthrithala/controller/TopvolunteersController.dart';
+import 'package:PTHPalathingal/Utils/colors.dart';
+import 'package:PTHPalathingal/controller/TopvolunteersController.dart';
 
 class TopVolunteer extends StatelessWidget {
   final controller = Get.put(TopvolunteerController());

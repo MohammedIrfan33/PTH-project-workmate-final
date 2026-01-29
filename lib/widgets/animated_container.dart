@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:msfmylthrithala/Utils/colors.dart';
-import 'package:msfmylthrithala/widgets/people_list.dart';
+import 'package:PTHPalathingal/Utils/colors.dart';
+import 'package:PTHPalathingal/widgets/people_list.dart';
 
 class ClickableCardWrapper extends StatefulWidget {
   final int index;

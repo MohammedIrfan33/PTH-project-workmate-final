@@ -1,11 +1,11 @@
 import 'dart:convert';
 
-import 'package:msfmylthrithala/ApiLists/Appdata.dart';
+import 'package:PTHPalathingal/ApiLists/Appdata.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
-import 'package:msfmylthrithala/modles/ChallenegeListModel.dart';
+import 'package:PTHPalathingal/modles/ChallenegeListModel.dart';
 import 'package:http/http.dart' as http;
-import 'package:msfmylthrithala/modles/ChallengeListItemModel.dart';
+import 'package:PTHPalathingal/modles/ChallengeListItemModel.dart';
 
 import '../ApiLists/Apis.dart';
 

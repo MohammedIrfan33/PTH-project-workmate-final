@@ -1,11 +1,11 @@
 import 'dart:convert';
 
-import 'package:msfmylthrithala/ApiLists/Appdata.dart';
+import 'package:PTHPalathingal/ApiLists/Appdata.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:msfmylthrithala/modles/ClubModel.dart';
-import 'package:msfmylthrithala/modles/WardModel.dart';
+import 'package:PTHPalathingal/modles/ClubModel.dart';
+import 'package:PTHPalathingal/modles/WardModel.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../ApiLists/Apis.dart';

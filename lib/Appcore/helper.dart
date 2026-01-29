@@ -2,7 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:msfmylthrithala/Utils/colors.dart';
+import 'package:PTHPalathingal/Utils/colors.dart';
 
 void showPayConfirmDialog({
   required VoidCallback onConfirm,

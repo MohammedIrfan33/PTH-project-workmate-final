@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:msfmylthrithala/screens/Homepage.dart';
+import 'package:PTHPalathingal/screens/Homepage.dart';
 
 import 'NewHomeScreen.dart';
 

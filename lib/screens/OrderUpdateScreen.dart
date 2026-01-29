@@ -4,8 +4,8 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
-import 'package:msfmylthrithala/controller/ChallengeListController.dart';
-import 'package:msfmylthrithala/screens/QuickPaychallenge.dart';
+import 'package:PTHPalathingal/controller/ChallengeListController.dart';
+import 'package:PTHPalathingal/screens/QuickPaychallenge.dart';
 
 import '../Utils/colors.dart';
 import '../controller/OrderUpdateController.dart';

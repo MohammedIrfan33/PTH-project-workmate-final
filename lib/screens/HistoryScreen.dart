@@ -3,14 +3,14 @@ import 'dart:ui';
 
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:get/get_connect/http/src/utils/utils.dart';
-import 'package:msfmylthrithala/modles/NewAssemblyModel.dart';
+import 'package:PTHPalathingal/modles/NewAssemblyModel.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
-import 'package:msfmylthrithala/screens/OrderUpdateScreen.dart';
-import 'package:msfmylthrithala/widgets/my_textfield.dart';
+import 'package:PTHPalathingal/screens/OrderUpdateScreen.dart';
+import 'package:PTHPalathingal/widgets/my_textfield.dart';
 import '../ApiLists/Apis.dart';
 import '../ApiLists/Appdata.dart';
 import '../controller/ChallengehistoryController.dart';

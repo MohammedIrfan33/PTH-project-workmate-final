@@ -5,7 +5,7 @@ import 'package:get/get.dart';
 import 'package:get/get_rx/get_rx.dart';
 import 'package:get/get_rx/src/rx_types/rx_types.dart';
 import 'package:get/state_manager.dart';
-import 'package:msfmylthrithala/modles/Sponsorshipmodel.dart';
+import 'package:PTHPalathingal/modles/Sponsorshipmodel.dart';
 import 'package:http/http.dart' as http;
 
 import '../ApiLists/Apis.dart';

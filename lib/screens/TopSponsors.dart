@@ -5,7 +5,7 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
-import 'package:msfmylthrithala/controller/TopClubcontroller.dart';
+import 'package:PTHPalathingal/controller/TopClubcontroller.dart';
 
 import '../controller/TopSponsorController.dart';
 import '../main.dart';
@@ -256,7 +256,7 @@ class _TopsponsorsState extends State<Topsponsors> with RouteAware {
                             ),
                           ),
                           Positioned(
-                            right: 27,
+                            right: 24,
                             bottom: 0,
                             child: Container(
                               width: 90,
@@ -266,7 +266,7 @@ class _TopsponsorsState extends State<Topsponsors> with RouteAware {
                                 child: AutoSizeText(
                                     '${controller.challengeSponsorlist[index].count}',
                                   style: TextStyle(
-                                    fontSize: 20,
+                                    fontSize: 18,
                                     fontWeight: FontWeight.bold,
                                     color: Color.fromRGBO(4, 52, 106, 1),
                                   ),

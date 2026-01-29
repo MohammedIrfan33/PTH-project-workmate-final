@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:msfmylthrithala/Utils/colors.dart';
+import 'package:PTHPalathingal/Utils/colors.dart';
 
 class PeopleListItem extends StatelessWidget {
   final int index;

@@ -4,21 +4,21 @@ import 'dart:ffi';
 import 'dart:io';
 import '../Utils/colors.dart';
 
-import 'package:msfmylthrithala/ApiLists/Appdata.dart';
+import 'package:PTHPalathingal/ApiLists/Appdata.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:http/http.dart';
-import 'package:msfmylthrithala/modles/AssembelyModel.dart';
-import 'package:msfmylthrithala/modles/ChallenegeListModel.dart';
-import 'package:msfmylthrithala/modles/ClubModel.dart';
-import 'package:msfmylthrithala/modles/DistrictModel.dart';
-import 'package:msfmylthrithala/modles/PanchayatModel.dart';
-import 'package:msfmylthrithala/modles/WardModel.dart';
+import 'package:PTHPalathingal/modles/AssembelyModel.dart';
+import 'package:PTHPalathingal/modles/ChallenegeListModel.dart';
+import 'package:PTHPalathingal/modles/ClubModel.dart';
+import 'package:PTHPalathingal/modles/DistrictModel.dart';
+import 'package:PTHPalathingal/modles/PanchayatModel.dart';
+import 'package:PTHPalathingal/modles/WardModel.dart';
 
-import 'package:msfmylthrithala/modles/loginModels.dart';
-import 'package:msfmylthrithala/screens/PaymentfailedScreen.dart';
-import 'package:msfmylthrithala/screens/PaymentsuccessScreen.dart';
+import 'package:PTHPalathingal/modles/loginModels.dart';
+import 'package:PTHPalathingal/screens/PaymentfailedScreen.dart';
+import 'package:PTHPalathingal/screens/PaymentsuccessScreen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../ApiLists/Apis.dart';

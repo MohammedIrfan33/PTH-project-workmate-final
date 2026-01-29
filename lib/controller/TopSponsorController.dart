@@ -2,8 +2,8 @@ import 'dart:async';
 import 'dart:convert';
 
 import 'package:get/get.dart';
-import 'package:msfmylthrithala/modles/TopClubModel.dart';
-import 'package:msfmylthrithala/modles/TopvolunteerModel.dart';
+import 'package:PTHPalathingal/modles/TopClubModel.dart';
+import 'package:PTHPalathingal/modles/TopvolunteerModel.dart';
 import 'package:http/http.dart' as http;
 
 import '../ApiLists/Apis.dart';

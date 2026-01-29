@@ -3,11 +3,11 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:msfmylthrithala/modles/AssembelyModel.dart';
-import 'package:msfmylthrithala/modles/ClubModel.dart';
-import 'package:msfmylthrithala/modles/DistrictModel.dart';
-import 'package:msfmylthrithala/modles/PanchayatModel.dart';
-import 'package:msfmylthrithala/modles/WardModel.dart';
+import 'package:PTHPalathingal/modles/AssembelyModel.dart';
+import 'package:PTHPalathingal/modles/ClubModel.dart';
+import 'package:PTHPalathingal/modles/DistrictModel.dart';
+import 'package:PTHPalathingal/modles/PanchayatModel.dart';
+import 'package:PTHPalathingal/modles/WardModel.dart';
 
 import '../ApiLists/Apis.dart';
 import '../ApiLists/Appdata.dart';

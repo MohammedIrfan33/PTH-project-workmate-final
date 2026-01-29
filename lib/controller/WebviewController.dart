@@ -43,7 +43,7 @@ class Webviewcontroller extends GetxController {
       'description': 'Payment channel',
       'prefill': {
         'contact': '${number}',
-        'email': '${number}@msfmylthrithala.in',
+        'email': '${number}@PTHPalathingal.in',
       },
       'external': {
         'wallets': ['paytm'],

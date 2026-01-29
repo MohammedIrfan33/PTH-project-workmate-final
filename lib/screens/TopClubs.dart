@@ -4,7 +4,7 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
-import 'package:msfmylthrithala/controller/TopClubcontroller.dart';
+import 'package:PTHPalathingal/controller/TopClubcontroller.dart';
 
 import '../widgets/PorgressIndicator.dart';
 
