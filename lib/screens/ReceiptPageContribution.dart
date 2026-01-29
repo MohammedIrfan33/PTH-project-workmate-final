@@ -168,7 +168,7 @@ class _ReceiptDownloadState extends State<Receiptpagecontribution> {
                   ClipRRect(
                     borderRadius: BorderRadius.circular(12.0),
                     child: Image.asset(
-                      'assets/thennala/receipt.jpg',
+                      'assets/pth-reward-club/receipt.jpeg',
                       width: 340, // Adjust as per your template
                       height: 400, // Adjust as per your template
                       fit: BoxFit.fill,

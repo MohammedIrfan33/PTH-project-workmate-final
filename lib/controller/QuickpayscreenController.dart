@@ -45,6 +45,8 @@ class QuickpayScreencontroller extends GetxController {
   var Errorcheck = <int>[0, 0, 0, 0, 0, 0, 0, 0].obs;
 
   fullONOneSave() async {
+
+    print(basename(imagefile!.path));
     File file =  imagefile!;
 
 
@@ -91,7 +93,7 @@ class QuickpayScreencontroller extends GetxController {
         await http.MultipartFile.fromPath(
           'image',
           file!.path,
-          filename: basename(file!.path),
+          //filename: basename(file!.path),
         ),
       );
 

@@ -102,7 +102,6 @@ flutter:
     - assets/images/
     - assets/StaticImg/
     - assets/home_curosel_images/
-    - assets/banner/
     - assets/images/bellicon.svg
     - assets/backarrow_s.svg
     - assets/topclub_s.svg
@@ -111,7 +110,7 @@ flutter:
     - assets/whatsapp_s.svg
     - assets/phone_s.svg
     - assets/email_s.svg
-    - assets/status/
+    
     - assets/topvolunteers_s.svg
     - assets/report_s.svg
     - assets/history_s.svg
@@ -127,13 +126,11 @@ flutter:
     - assets/topvolunteer2.svg
     - assets/googlepay/payment_profile.json
     - assets/splash/
-    - assets/home/
-    - assets/dashbord/
-    - assets/dashbord/topvolunteer.svg
-    - assets/donateiocns/
+    - assets/pth-reward-club/
+    
     - assets/cart/
     - assets/home3/
-    - assets/thennala/
+   
     - assets/icons/
 
 

@@ -53,7 +53,7 @@ class _TopsponsorsState extends State<Topsponsors> with RouteAware {
               ),
               const Center(
                 child: Text(
-                  'Top Donors',
+                  'Top Sponsors',
                   style: TextStyle(
                     color: Color(0xFF3A3A3A),
                     fontSize: 14,
@@ -124,6 +124,10 @@ class _TopsponsorsState extends State<Topsponsors> with RouteAware {
         } else if (controller.challengeSponsorlist.isEmpty) {
           return const Center(child: Text('No entries to show'));
         } else {
+
+      
+
+    
           return Padding(
             padding: EdgeInsets.symmetric(horizontal: 16),
             child: GetBuilder(
@@ -135,24 +139,7 @@ class _TopsponsorsState extends State<Topsponsors> with RouteAware {
                       margin: EdgeInsets.only(bottom: 12),
                       child: Stack(
                         children: [
-                          Positioned(
-                            left: 8,
-                            top: 16,
-                            child: CircleAvatar(
-                              radius: 52, // Adjust as per your template
-                              backgroundImage:
-                                  controller
-                                          .challengeSponsorlist[index]
-                                          .image ==
-                                      ""
-                                  ? AssetImage("assets/images/person1.jpg")
-                                  : NetworkImage(
-                                      controller
-                                          .challengeSponsorlist[index]
-                                          .image,
-                                    ),
-                            ),
-                          ),
+                         
 
                           Container(
                             child: ClipRRect(
@@ -164,30 +151,53 @@ class _TopsponsorsState extends State<Topsponsors> with RouteAware {
                                 ), // Curve bottom-right corner
                               ),
                               child: Image.asset(
-                                "assets/images/sponsors.png",
-                                height: 136,
+                                "assets/pth-reward-club/sponsers.jpeg",
+                                height: 200,
                                 width: double.infinity,
                                 fit: BoxFit.fill,
                               ),
                             ),
                           ),
 
-                          Positioned(
-                            right: 76,
-                            bottom: 55,
+                           Positioned(
+                            left: 30,
+                            top: 25,
+                            
+                            bottom: 0,
                             child: Container(
-                              width: 100,
+                              child: CircleAvatar(
+                                radius: 60, // Adjust as per your template
+                                backgroundImage:
+                                    controller
+                                            .challengeSponsorlist[index]
+                                            .image ==
+                                        ""
+                                    ? AssetImage("assets/images/person1.jpg")
+                                    : NetworkImage(
+                                             controller
+                                            .challengeSponsorlist[index]
+                                            .image,
+                                      ),
+                              ),
+                            ),
+                          ),
 
-                              height: 20,
+                          Positioned(
+                            right: 50,
+                            bottom: 75,
+                            child: Container(
+                              width: 150,
+
+                            
 
                               child: Align(
                                 alignment: Alignment.centerLeft,
                                 child: AutoSizeText(
                                   controller.challengeSponsorlist[index].name,
                                   style: TextStyle(
-                                    fontSize: 11,
+                                    fontSize: 16,
                                     fontWeight: FontWeight.w700,
-                                    color: Colors.white70,
+                                    color: Color.fromRGBO(4, 52, 106, 1),
                                   ),
                                   maxLines: 1,
                                   minFontSize: 5,
@@ -197,8 +207,8 @@ class _TopsponsorsState extends State<Topsponsors> with RouteAware {
                             ),
                           ),
                           Positioned(
-                            right: 74,
-                            bottom: 42,
+                            right: 100,
+                            bottom: 55,
                             child: Container(
                               width: 100,
                               height: 20,
@@ -210,7 +220,9 @@ class _TopsponsorsState extends State<Topsponsors> with RouteAware {
                                   style: TextStyle(
                                     fontSize: 10,
                                     fontWeight: FontWeight.w400,
-                                    color: Colors.white70,
+                                     color: Color.fromRGBO(4, 52, 106, 1),
+                                    
+                                    
                                   ),
                                   maxLines: 1,
                                   minFontSize: 5,
@@ -220,24 +232,47 @@ class _TopsponsorsState extends State<Topsponsors> with RouteAware {
                             ),
                           ),
                           Positioned(
-                            right: 88,
-                            bottom: 10,
+                            right: 110,
+                            bottom: 0,
                             child: Container(
-                              width: 68,
-                              height: 18,
+                              width: 90,
+                              height: 60,
 
                               child: Center(
                                 child: AutoSizeText(
-                                  controller.challengeSponsorlist[index].payable
+                                    '₹ '+controller.challengeSponsorlist[index].payable
                                       .replaceAll(".00", ""),
                                   style: TextStyle(
-                                    fontSize: 16,
+                                    fontSize: 26,
                                     fontWeight: FontWeight.bold,
-                                    color: Colors.black,
+                                    color: Colors.white,
                                   ),
                                   maxLines: 1,
                                   minFontSize: 6,
-                                  maxFontSize: 16,
+                                  maxFontSize: 40,
+                                  overflow: TextOverflow.ellipsis,
+                                ),
+                              ),
+                            ),
+                          ),
+                          Positioned(
+                            right: 27,
+                            bottom: 0,
+                            child: Container(
+                              width: 90,
+                              height: 60,
+
+                              child: Center(
+                                child: AutoSizeText(
+                                    '${controller.challengeSponsorlist[index].count}',
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.bold,
+                                    color: Color.fromRGBO(4, 52, 106, 1),
+                                  ),
+                                  maxLines: 1,
+                                  minFontSize: 6,
+                                  maxFontSize: 40,
                                   overflow: TextOverflow.ellipsis,
                                 ),
                               ),

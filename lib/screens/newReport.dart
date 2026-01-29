@@ -631,30 +631,30 @@ class HistoryState extends State<Newreport> {
                                                       ],
                                                     ),
                                                     const SizedBox(height: 4),
-                                                    Row(
-                                                      children: [
-                                                        Text(
-                                                          controller
-                                                              .newRportList[index]
-                                                              .assembly,
-                                                          style:
-                                                              const TextStyle(
-                                                                color: Color(
-                                                                  0xFF3A3A3A,
-                                                                ),
-                                                                fontSize: 12,
-                                                                fontFamily:
-                                                                    'Poppins',
-                                                                fontWeight:
-                                                                    FontWeight
-                                                                        .w500,
-                                                                height: 0,
-                                                              ),
-                                                          textScaleFactor: 1.0,
-                                                        ),
-                                                      ],
-                                                    ),
-                                                    const SizedBox(height: 4),
+                                                    // Row(
+                                                    //   children: [
+                                                    //     Text(
+                                                    //       controller
+                                                    //           .newRportList[index]
+                                                    //           .assembly,
+                                                    //       style:
+                                                    //           const TextStyle(
+                                                    //             color: Color(
+                                                    //               0xFF3A3A3A,
+                                                    //             ),
+                                                    //             fontSize: 12,
+                                                    //             fontFamily:
+                                                    //                 'Poppins',
+                                                    //             fontWeight:
+                                                    //                 FontWeight
+                                                    //                     .w500,
+                                                    //             height: 0,
+                                                    //           ),
+                                                    //       textScaleFactor: 1.0,
+                                                    //     ),
+                                                    //   ],
+                                                    // ),
+                                                    // \const SizedBox(height: 4),
                                                   ],
                                                 ),
                                               ],
@@ -682,8 +682,8 @@ class HistoryState extends State<Newreport> {
                                   child: AutoSizeText(
                                     controller.newRportList[index].quantity ==
                                             "1"
-                                        ? "${controller.newRportList[index].quantity} Pkt"
-                                        : "${controller.newRportList[index].quantity} Pkts",
+                                        ? "${controller.newRportList[index].quantity} Kg"
+                                        : "${controller.newRportList[index].quantity} Kg",
                                     softWrap: true,
                                     textAlign: TextAlign.right,
                                     style: const TextStyle(

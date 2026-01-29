@@ -618,6 +618,7 @@ class _HistoryState extends State<Myhistory> with RouteAware {
                                                     }
                                                   },
                                                   child: Container(
+                                                    height: 45,
                                                     padding:
                                                         const EdgeInsets.symmetric(
                                                           vertical: 8,
@@ -648,7 +649,7 @@ class _HistoryState extends State<Myhistory> with RouteAware {
                                                         'Receipt',
                                                         style: TextStyle(
                                                           color: Colors.white,
-                                                          fontSize: 10,
+                                                          fontSize: 14,
                                                           fontFamily: 'Poppins',
                                                           fontWeight:
                                                               FontWeight.w500,
@@ -677,6 +678,7 @@ class _HistoryState extends State<Myhistory> with RouteAware {
                                                           );
                                                         },
                                                         child: Container(
+                                                          height: 45,
                                                           padding:
                                                               const EdgeInsets.symmetric(
                                                                 vertical: 8,
@@ -711,7 +713,7 @@ class _HistoryState extends State<Myhistory> with RouteAware {
                                                               style: TextStyle(
                                                                 color: Colors
                                                                     .white,
-                                                                fontSize: 10,
+                                                                fontSize: 14,
                                                                 fontFamily:
                                                                     'Poppins',
                                                                 fontWeight:

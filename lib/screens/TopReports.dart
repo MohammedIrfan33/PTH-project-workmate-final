@@ -6,6 +6,9 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
+import 'package:msfmylthrithala/rewardStatus/reward_poster.dart';
+import 'package:msfmylthrithala/widgets/animated_container.dart';
+import 'package:msfmylthrithala/widgets/people_list.dart';
 
 import '../Utils/colors.dart';
 import '../controller/TopReportController.dart';
@@ -64,7 +67,8 @@ class _TopClubsState extends State<TopReport>
                   // ),
                 ),
                 const Center(
-                  child: Text(
+                  child: Text
+                  (
                     'Top Report',
                     style: TextStyle(
                       color: Color(0xFF3A3A3A),
@@ -305,101 +309,10 @@ class _TopClubsState extends State<TopReport>
                         return ListView.builder(
                           itemCount: controller.contributorsList.length,
                           itemBuilder: (context, index) {
-                            return Padding(
-                              padding: const EdgeInsets.symmetric(vertical: 6),
-                              child: Container(
-                                height: 84,
-                                decoration: ShapeDecoration(
-                                  color: AppColors.listBagroundcolor,
-                                  shape: RoundedRectangleBorder(
-                                    side: BorderSide(
-                                      width: 1,
-                                      color: AppColors.primaryColor,
-                                    ),
-                                    borderRadius: BorderRadius.circular(10),
-                                  ),
-                                ),
-                                child: Padding(
-                                  padding: const EdgeInsets.symmetric(
-                                    horizontal: 24,
-                                  ),
-                                  child: Container(
-                                    child: Row(
-                                      children: [
-                                        Container(
-                                          width: 41,
-                                          height: 40,
-                                          clipBehavior: Clip.antiAlias,
-                                          decoration: const BoxDecoration(),
-                                          child: Stack(
-                                            children: [
-                                              SvgPicture.asset(
-                                                "assets/images/topvolunteer.svg",
-                                              ),
-                                              Positioned(
-                                                left: 17,
-                                                right: 0,
-                                                bottom: 0,
-                                                top: 12,
-                                                child: Text(
-                                                  index < 3
-                                                      ? (index + 1).toString()
-                                                      : "",
-                                                  style: TextStyle(
-                                                    fontSize: 6,
-                                                    fontWeight: FontWeight.bold,
-                                                  ),
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                        ),
-                                        Expanded(
-                                          flex: 4,
-                                          child: Padding(
-                                            padding: const EdgeInsets.only(
-                                              left: 6.0,
-                                            ),
-                                            child: Text(
-                                              controller
-                                                  .contributorsList[index]
-                                                  .name,
-                                              style: const TextStyle(
-                                                color: Color(0xFF3A3A3A),
-                                                fontSize: 13,
-                                                fontFamily: 'Poppins',
-                                                fontWeight: FontWeight.w700,
-                                                height: 0,
-                                              ),
-                                              textScaleFactor: 1.0,
-                                            ),
-                                          ),
-                                        ),
-                                        Expanded(
-                                          flex: 2,
-                                          child: Padding(
-                                            padding: const EdgeInsets.only(
-                                              left: 4,
-                                            ),
-                                            child: Text(
-                                              textAlign: TextAlign.right,
-                                              '₹ ${controller.contributorsList[index].amount.replaceAll(".00", "")}',
-                                              style: const TextStyle(
-                                                color: Color(0xFF3A3A3A),
-                                                fontSize: 13,
-                                                fontFamily: 'Poppins',
-                                                fontWeight: FontWeight.w700,
-                                                height: 0,
-                                              ),
-                                              textScaleFactor: 1.0,
-                                            ),
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                ),
-                              ),
+                            return PeopleListItem(
+                              index: index,
+                              name: controller.contributorsList[index].name,
+                              quantityKg: controller.contributorsList[index].packet,
                             );
                           },
                         );
@@ -427,150 +340,55 @@ class _TopClubsState extends State<TopReport>
                           itemBuilder: (context, index) {
                             return InkWell(
                               onTap: () {
-                                // String value=controller.assemblylist[index].amount;
-                                // int? amount = int.tryParse(value);
-                                //
-                                // if (amount == null) return; // Handle invalid numbers safely
-                                //
-                                // StatefulWidget? page =
-                                // // (amount >= 50 && amount < 100) ? FiftyClub(name: controller.assemblylist[index].name,) :
-                                // // (amount >= 100 && amount < 150) ? HundredClub(name: controller.assemblylist[index].name,) :
-                                // // (amount >= 150 && amount < 200) ? OnefiftyClub(name: controller.assemblylist[index].name,) :
-                                // (amount >= 100 && amount < 200) ? HunderedClub(name: controller.assemblylist[index].name,name_panchayath: controller.assemblylist[index].panchayat,) :
-                                // (amount >= 200 && amount < 300) ? TwohundredClub(name: controller.assemblylist[index].name,name_panchayath: controller.assemblylist[index].panchayat,) :
-                                //
-                                // (amount >= 300) ? ThreehundredClub(name: controller.assemblylist[index].name,name_panchayath: controller.assemblylist[index].panchayat,) :
-                                // null;
-                                //
-                                // if (page != null) {
-                                //   Get.to(page);
-                                // }
+
+                                print('========');
+                                
+
+String value=controller.assemblylist[index].packet;
+                                int? packet = int.tryParse(value);
+
+                                print('========$packet');
+                                
+                                if (packet == null) return; // Handle invalid numbers safely
+                                StatefulWidget? page =
+                          
+                                (packet >= 100 && packet < 200) ? PosterShareWidget(name: controller.assemblylist[index].name, imagePath: 'assets/pth-reward-club/100.jpeg',) :
+                                (packet >= 200 && packet < 300) ? PosterShareWidget(
+                                  name: controller.assemblylist[index].name,
+                                   imagePath: 'assets/pth-reward-club/200.jpeg',
+                                   nameColor: Colors.black,
+                                   ) :
+
+                                (packet >= 300 && packet < 400) ? PosterShareWidget(
+                                  name: controller.assemblylist[index].name,
+                                   imagePath: 'assets/pth-reward-club/300.jpeg',
+                                   nameColor: Colors.white,
+                                   ) :
+
+
+                                 (packet >= 400) ? PosterShareWidget(
+                                  name: controller.assemblylist[index].name,
+                                   imagePath: 'assets/pth-reward-club/400.jpeg',
+                                   nameColor: Colors.white,
+                                   ) :
+                                  
+
+                            
+                                null;
+                                
+                                if (page != null) {
+                                  Get.to(page);
+                                }
                               },
-                              child: Padding(
-                                padding: const EdgeInsets.symmetric(
-                                  vertical: 6,
-                                ),
-                                child: Container(
-                                  height: 84,
-                                  decoration: ShapeDecoration(
-                                    color: AppColors.listBagroundcolor,
-                                    shape: RoundedRectangleBorder(
-                                      side: BorderSide(
-                                        width: 1,
-                                        color: AppColors.primaryColor,
-                                      ),
-                                      borderRadius: BorderRadius.circular(10),
-                                    ),
-                                  ),
-                                  child: Padding(
-                                    padding: const EdgeInsets.symmetric(
-                                      horizontal: 24,
-                                    ),
-                                    child: Container(
-                                      child: Row(
-                                        children: [
-                                          Container(
-                                            width: 41,
-                                            height: 40,
-                                            clipBehavior: Clip.antiAlias,
-                                            decoration: const BoxDecoration(),
-                                            child: Stack(
-                                              children: [
-                                                SvgPicture.asset(
-                                                  "assets/images/topvolunteer.svg",
-                                                ),
-                                                Positioned(
-                                                  left: 17,
-                                                  right: 0,
-                                                  bottom: 0,
-                                                  top: 12,
-                                                  child: Text(
-                                                    index < 3
-                                                        ? (index + 1).toString()
-                                                        : "",
-                                                    style: TextStyle(
-                                                      fontSize: 6,
-                                                      fontWeight:
-                                                          FontWeight.bold,
-                                                    ),
-                                                  ),
-                                                ),
-                                              ],
-                                            ),
-                                          ),
-                                          Expanded(
-                                            flex: 4,
-                                            child: Padding(
-                                              padding: const EdgeInsets.only(
-                                                left: 6.0,
-                                              ),
-                                              child: Column(
-                                                mainAxisAlignment: MainAxisAlignment.center,
-                                                children: [
-                                                  Text(
-                                                    controller
-                                                        .assemblylist[index]
-                                                        .name,
-                                                    style: const TextStyle(
-                                                      color: Color(0xFF3A3A3A),
-                                                      fontSize: 13,
-                                                      fontFamily: 'Poppins',
-                                                      fontWeight: FontWeight.w700,
-                                                      height: 0,
-                                                    ),
-                                                    textScaleFactor: 1.0,
-                                                  ),
-                                                  
-                                                ],
-                                              ),
-                                            ),
-                                          ),
-                                          Expanded(
-                                            flex: 2,
-                                            child: Padding(
-                                              padding: const EdgeInsets.only(
-                                                left: 4,
-                                              ),
-                                              child: Column(
-                                                mainAxisAlignment: MainAxisAlignment.center,
-                                                children: [
-                                                  Text(
-                                                    textAlign: TextAlign.right,
-                                                    "₹ ${controller.assemblylist[index].amount.replaceAll(".00", "")}",
-                                                    style: const TextStyle(
-                                                      color: Color(0xFF3A3A3A),
-                                                      fontSize: 13,
-                                                      fontFamily: 'Poppins',
-                                                      fontWeight: FontWeight.w700,
-                                                      height: 0,
-                                                    ),
-                                                    textScaleFactor: 1.0,
-                                                  ),
-                                                  SizedBox(height: 4,),
-                                                  Text(
-                                                    controller
-                                                        .assemblylist[index]
-                                                        .packet+'Kg' ,
-                                                    style: const TextStyle(
-                                                      color: Color(0xFF3A3A3A),
-                                                      fontSize: 13,
-                                                      fontFamily: 'Poppins',
-                                                      fontWeight: FontWeight.w700,
-                                                      height: 0,
-                                                    ),
-                                                    textScaleFactor: 1.0,
-                                                  ),
-                                                ],
-                                              ),
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ),
-                                ),
+                              child: PeopleListItem(
+                                index: index,
+                                name: controller.assemblylist[index].name,
+                                quantityKg: controller.assemblylist[index].packet,
+                               
                               ),
                             );
+
+                         
                           },
                         );
                       },
@@ -594,102 +412,13 @@ class _TopClubsState extends State<TopReport>
                         return ListView.builder(
                           itemCount: controller.panchayatlist.length,
                           itemBuilder: (context, index) {
-                            return Padding(
-                              padding: const EdgeInsets.symmetric(vertical: 6),
-                              child: Container(
-                                height: 84,
-                                decoration: ShapeDecoration(
-                                  color: AppColors.listBagroundcolor,
-                                  shape: RoundedRectangleBorder(
-                                    side: BorderSide(
-                                      width: 1,
-                                      color: AppColors.primaryColor,
-                                    ),
-                                    borderRadius: BorderRadius.circular(10),
-                                  ),
-                                ),
-                                child: Padding(
-                                  padding: const EdgeInsets.symmetric(
-                                    horizontal: 24,
-                                  ),
-                                  child: Container(
-                                    child: Row(
-                                      children: [
-                                        Container(
-                                          width: 41,
-                                          height: 40,
-                                          clipBehavior: Clip.antiAlias,
-                                          decoration: const BoxDecoration(),
-                                          child: Stack(
-                                            children: [
-                                              SvgPicture.asset(
-                                                "assets/images/topvolunteer.svg",
-                                              ),
-                                              Positioned(
-                                                left: 17,
-                                                right: 0,
-                                                bottom: 0,
-                                                top: 12,
-                                                child: Text(
-                                                  index < 3
-                                                      ? (index + 1).toString()
-                                                      : "",
-                                                  style: TextStyle(
-                                                    fontSize: 6,
-                                                    fontWeight: FontWeight.bold,
-                                                  ),
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                        ),
-                                        Expanded(
-                                          flex: 4,
-                                          child: Padding(
-                                            padding: const EdgeInsets.only(
-                                              left: 6.0,
-                                            ),
-                                            child: Text(
-                                              controller
-                                                  .panchayatlist[index]
-                                                  .name,
-                                              style: const TextStyle(
-                                                color: Color(0xFF3A3A3A),
-                                                fontSize: 13,
-                                                fontFamily: 'Poppins',
-                                                fontWeight: FontWeight.w700,
-                                                height: 0,
-                                              ),
-                                              textScaleFactor: 1.0,
-                                            ),
-                                          ),
-                                        ),
-                                        Expanded(
-                                          flex: 2,
-                                          child: Padding(
-                                            padding: const EdgeInsets.only(
-                                              left: 4,
-                                            ),
-                                            child: Text(
-                                              textAlign: TextAlign.right,
-                                              '₹ ${controller.panchayatlist[index].amount.replaceAll(".00", "")}',
-                                              style: const TextStyle(
-                                                color: Color(0xFF3A3A3A),
-                                                fontSize: 13,
-                                                fontFamily: 'Poppins',
-                                                fontWeight: FontWeight.w700,
-                                                height: 0,
-                                              ),
-                                              textScaleFactor: 1.0,
-                                            ),
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                ),
-                              ),
+                            return PeopleListItem(
+                              index: index,
+                              name: controller.panchayatlist[index].name,
+                              quantityKg: controller.panchayatlist[index].packet,
                             );
+                          
+                          
                           },
                         );
                       },
@@ -713,100 +442,12 @@ class _TopClubsState extends State<TopReport>
                         return ListView.builder(
                           itemCount: controller.clublist.length,
                           itemBuilder: (context, index) {
-                            return Padding(
-                              padding: const EdgeInsets.symmetric(vertical: 6),
-                              child: Container(
-                                height: 84,
-                                decoration: ShapeDecoration(
-                                  color: AppColors.listBagroundcolor,
-                                  shape: RoundedRectangleBorder(
-                                    side: BorderSide(
-                                      width: 1,
-                                      color: AppColors.primaryColor,
-                                    ),
-                                    borderRadius: BorderRadius.circular(10),
-                                  ),
-                                ),
-                                child: Padding(
-                                  padding: const EdgeInsets.symmetric(
-                                    horizontal: 24,
-                                  ),
-                                  child: Container(
-                                    child: Row(
-                                      children: [
-                                        Container(
-                                          width: 41,
-                                          height: 40,
-                                          clipBehavior: Clip.antiAlias,
-                                          decoration: const BoxDecoration(),
-                                          child: Stack(
-                                            children: [
-                                              SvgPicture.asset(
-                                                "assets/images/topvolunteer.svg",
-                                              ),
-                                              Positioned(
-                                                left: 17,
-                                                right: 0,
-                                                bottom: 0,
-                                                top: 12,
-                                                child: Text(
-                                                  index < 3
-                                                      ? (index + 1).toString()
-                                                      : "",
-                                                  style: TextStyle(
-                                                    fontSize: 6,
-                                                    fontWeight: FontWeight.bold,
-                                                  ),
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                        ),
-                                        Expanded(
-                                          flex: 4,
-                                          child: Padding(
-                                            padding: const EdgeInsets.only(
-                                              left: 6.0,
-                                            ),
-                                            child: Text(
-                                              controller.clublist[index].name,
-                                              style: const TextStyle(
-                                                color: Color(0xFF3A3A3A),
-                                                fontSize: 13,
-                                                fontFamily: 'Poppins',
-                                                fontWeight: FontWeight.w700,
-                                                height: 0,
-                                              ),
-                                              textScaleFactor: 1.0,
-                                            ),
-                                          ),
-                                        ),
-                                        Expanded(
-                                          flex: 2,
-                                          child: Padding(
-                                            padding: const EdgeInsets.only(
-                                              left: 4,
-                                            ),
-                                            child: Text(
-                                              textAlign: TextAlign.right,
-                                              '₹ ${controller.clublist[index].amount.replaceAll(".00", "")}',
-                                              style: const TextStyle(
-                                                color: Color(0xFF3A3A3A),
-                                                fontSize: 13,
-                                                fontFamily: 'Poppins',
-                                                fontWeight: FontWeight.w700,
-                                                height: 0,
-                                              ),
-                                              textScaleFactor: 1.0,
-                                            ),
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                ),
-                              ),
+                            return PeopleListItem(
+                              index: index,
+                              name: controller.clublist[index].name,
+                              quantityKg: controller.clublist[index].packet,
                             );
+                          
                           },
                         );
                       },
