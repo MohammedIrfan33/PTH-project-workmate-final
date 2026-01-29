@@ -11,7 +11,7 @@ class AppData {
   static bool   ischallenge = false;
   static String challangeid="0";
 
-  static String hide = "1";
+  static String hide = "0";
   static List<String> versions=['3','2'];
   static String productlist="";
   static String Sponsorproductlist="";

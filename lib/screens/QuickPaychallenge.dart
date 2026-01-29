@@ -246,53 +246,53 @@ class _QuickpayState extends State<Quickpaychallenge>
                         ? Column(
                             children: [
                               const SizedBox(height: 38),
-                              // Padding(
-                              //   padding: const EdgeInsets.symmetric(
-                              //     horizontal: 26.0,
-                              //     vertical: 8,
-                              //   ),
-                              //   child: Column(
-                              //     mainAxisAlignment:
-                              //         MainAxisAlignment.spaceBetween,
-                              //     children: [
-                              //       GestureDetector(
-                              //         onTap: () {
-                              //           setState(() {
-                              //             isChecked3 = !isChecked3;
-                              //             controller.clubModel.value = null;
-                              //           });
-                              //         },
-                              //         child: Row(
-                              //           mainAxisAlignment:
-                              //               MainAxisAlignment.start,
-                              //           children: [
-                              //             CustomPaint(
-                              //               size: Size(14.0, 14.0),
-                              //               painter: RadioCheckboxPainter(
-                              //                 isChecked: isChecked3,
-                              //               ),
-                              //             ),
-                              //             SizedBox(width: 8.0),
-                              //             const Text(
-                              //               'Order through Organisation',
-                              //               style: TextStyle(
-                              //                 color: Color(0xFF3A591F),
-                              //                 fontSize: 10,
-                              //                 fontFamily: 'Fregular',
-                              //                 fontWeight: FontWeight.w400,
-                              //                 height: 0,
-                              //               ),
-                              //               textScaleFactor: 1.0,
-                              //             ),
-                              //           ],
-                              //         ),
-                              //       ),
-                              //     ],
-                              //   ),
-                              // ),
-                            
-                            
-                            
+                              Padding(
+                                padding: const EdgeInsets.symmetric(
+                                  horizontal: 26.0,
+                                  vertical: 8,
+                                ),
+                                child: Column(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    // GestureDetector(
+                                    //   onTap: () {
+                                    //     setState(() {
+                                    //       isChecked3 = !isChecked3;
+                                    //       controller.clubModel.value = null;
+                                    //     });
+                                    //   },
+                                    //   child: Row(
+                                    //     mainAxisAlignment:
+                                    //         MainAxisAlignment.start,
+                                    //     children: [
+                                    //       CustomPaint(
+                                    //         size: Size(14.0, 14.0),
+                                    //         painter: RadioCheckboxPainter(
+                                    //           isChecked: isChecked3,
+                                    //         ),
+                                    //       ),
+                                    //       SizedBox(width: 8.0),
+                                    //       const Text(
+                                    //         'Order through Organisation',
+                                    //         style: TextStyle(
+                                    //           color: Color(0xFF3A591F),
+                                    //           fontSize: 10,
+                                    //           fontFamily: 'Fregular',
+                                    //           fontWeight: FontWeight.w400,
+                                    //           height: 0,
+                                    //         ),
+                                    //         textScaleFactor: 1.0,
+                                    //       ),
+                                    //     ],
+                                    //   ),
+                                    // ),
+                                 
+                                 
+                                 
+                                  ],
+                                ),
+                              ),
                             ],
                           )
                         : AppData.clubId.isNull

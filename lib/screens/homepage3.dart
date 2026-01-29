@@ -283,77 +283,78 @@ class _Homepage3State extends State<Homepage3> with RouteAware {
                             ),
 
                             //
-                            Column(
-                              spacing: 14,
-                              children: [
-                                Row(
-                                  spacing: 4,
-                                  children: [
-                                    Container(
-                                      height: 24,
-                                      width: 24,
-                                      child: Image.asset(
-                                        'assets/home3/Mask group.png',
-                                      ),
-                                    ),
-                                    Text(
-                                      'Quick Order',
-                                      style: TextStyle(
-                                        color: Colors.black,
-                                        fontSize: 14,
-                                        fontWeight: .w500,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                                SizedBox(
-                                  height: 38,
-                                  child: Row(
-                                    spacing: 12,
+                            if (AppData.hide != "1")
+                              Column(
+                                spacing: 14,
+                                children: [
+                                  Row(
+                                    spacing: 4,
                                     children: [
-                                      ...List.generate(paketsCounts.length, (
-                                        index,
-                                      ) {
-                                        return Expanded(
-                                          child: GestureDetector(
-                                            onTap: () {
-                                              Get.to(
-                                                CartScreen(
-                                                  packetCount: int.parse(
-                                                    paketsCounts[index],
+                                      Container(
+                                        height: 24,
+                                        width: 24,
+                                        child: Image.asset(
+                                          'assets/home3/Mask group.png',
+                                        ),
+                                      ),
+                                      Text(
+                                        'Quick Order',
+                                        style: TextStyle(
+                                          color: Colors.black,
+                                          fontSize: 14,
+                                          fontWeight: .w500,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  SizedBox(
+                                    height: 38,
+                                    child: Row(
+                                      spacing: 12,
+                                      children: [
+                                        ...List.generate(paketsCounts.length, (
+                                          index,
+                                        ) {
+                                          return Expanded(
+                                            child: GestureDetector(
+                                              onTap: () {
+                                                Get.to(
+                                                  CartScreen(
+                                                    packetCount: int.parse(
+                                                      paketsCounts[index],
+                                                    ),
+                                                    Gobal_challengeid:
+                                                        AppData.challangeid,
                                                   ),
-                                                  Gobal_challengeid:
-                                                      AppData.challangeid,
+                                                );
+                                              },
+                                              child: Container(
+                                                padding: EdgeInsets.symmetric(
+                                                  horizontal: 8,
                                                 ),
-                                              );
-                                            },
-                                            child: Container(
-                                              padding: EdgeInsets.symmetric(
-                                                horizontal: 8,
-                                              ),
-                                              decoration: BoxDecoration(
-                                                border: Border.all(
-                                                  color: Colors.black,
-                                                  width: 1,
+                                                decoration: BoxDecoration(
+                                                  border: Border.all(
+                                                    color: Colors.black,
+                                                    width: 1,
+                                                  ),
+                                                  borderRadius: BorderRadius.all(
+                                                    Radius.circular(4),
+                                                  ),
                                                 ),
-                                                borderRadius: BorderRadius.all(
-                                                  Radius.circular(4),
-                                                ),
-                                              ),
-                                              child: Center(
-                                                child: Text(
-                                                  paketsCounts[index] + "Pkts",
+                                                child: Center(
+                                                  child: Text(
+                                                    paketsCounts[index] + "Pkts",
+                                                  ),
                                                 ),
                                               ),
                                             ),
-                                          ),
-                                        );
-                                      }),
-                                    ],
+                                          );
+                                        }),
+                                      ],
+                                    ),
                                   ),
-                                ),
-                              ],
-                            ),
+                                ],
+                              ),
                             SizedBox(
                               height: 240,
                               child: Container(
@@ -699,112 +700,115 @@ class _Homepage3State extends State<Homepage3> with RouteAware {
                               ),
                             ),
 
-                            Visibility(
-                              visible: true,
-                              child: Row(
-                                mainAxisAlignment: .spaceEvenly,
-                                children: [
-                                  Column(
-                                    spacing: 4,
+                            if (AppData.hide != "1")
+                              Visibility(
+                                visible: true,
+                                child: Row(
+                                  mainAxisAlignment: .spaceEvenly,
+                                  children: [
+                                    Column(
+                                      spacing: 4,
 
-                                    mainAxisSize: .max,
-                                    children: [
-                                      GestureDetector(
-                                        onTap: () {
-                                          Get.to(
-                                            itempage(
-                                              uniqueid: AppData.uniqueid,
-                                              volunteerID: AppData.volunteerId,
-                                              challengeid: AppData.challangeid,
-                                            ),
-                                          );
-                                        },
-                                        child: Container(
-                                          height: 70,
-                                          width: 70,
-                                          decoration: BoxDecoration(
-                                            image: DecorationImage(
-                                              image: AssetImage(
-                                                'assets/home3/sponsor_icon.png',
+                                      mainAxisSize: .max,
+                                      children: [
+                                        GestureDetector(
+                                          onTap: () {
+                                            Get.to(
+                                              itempage(
+                                                uniqueid: AppData.uniqueid,
+                                                volunteerID: AppData.volunteerId,
+                                                challengeid: AppData.challangeid,
                                               ),
-                                            ),
-                                            borderRadius: BorderRadius.all(
-                                              Radius.circular(12),
-                                            ),
-                                            gradient: LinearGradient(
-                                              colors: [
-                                                Color.fromARGB(255, 197, 161, 255),
-                                                Color(0xff0069B2),
-                                              ],
-                                              begin: Alignment.topRight,
-                                              end: Alignment.bottomLeft,
+                                            );
+                                          },
+                                          child: Container(
+                                            height: 70,
+                                            width: 70,
+                                            decoration: BoxDecoration(
+                                              image: DecorationImage(
+                                                image: AssetImage(
+                                                  'assets/home3/sponsor_icon.png',
+                                                ),
+                                              ),
+                                              borderRadius: BorderRadius.all(
+                                                Radius.circular(12),
+                                              ),
+                                              gradient: LinearGradient(
+                                                colors: [
+                                                  Color.fromARGB(255, 197, 161, 255),
+                                                  Color(0xff0069B2),
+                                                ],
+                                                begin: Alignment.topRight,
+                                                end: Alignment.bottomLeft,
+                                              ),
                                             ),
                                           ),
                                         ),
-                                      ),
-                                      Text(
-                                        'Sponsorship',
-                                        style: TextStyle(
-                                          color: Color(0xff333333),
-                                          fontSize: 14,
+                                        Text(
+                                          'Sponsorship',
+                                          style: TextStyle(
+                                            color: Color(0xff333333),
+                                            fontSize: 14,
+                                          ),
                                         ),
-                                      ),
-                                    ],
-                                  ),
-                                  Column(
-                                    spacing: 4,
+                                      ],
+                                    ),
+                                    Column(
+                                      spacing: 4,
 
-                                    mainAxisSize: .max,
-                                    children: [
-                                      GestureDetector(
-                                        onTap: () {
-                                          Get.to(
-                                            Quickpaycontribution(
-                                              volunteerID: volunteerID,
-                                            ),
-                                          );
-                                        },
-                                        child: Container(
-                                          height: 70,
-                                          width: 70,
-                                          decoration: BoxDecoration(
-                                            image: DecorationImage(
-                                              image: AssetImage(
-                                                'assets/home3/donation_icon.png',
+                                      mainAxisSize: .max,
+                                      children: [
+                                        GestureDetector(
+                                          onTap: () {
+                                            Get.to(
+                                              Quickpaycontribution(
+                                                volunteerID: volunteerID,
                                               ),
-                                            ),
-                                            borderRadius: BorderRadius.all(
-                                              Radius.circular(12),
-                                            ),
-                                            gradient: LinearGradient(
-                                              colors: [
-                                                Color.fromARGB(255, 197, 161, 255),
-                                                Color(0xff0069B2),
-                                              ],
-                                              begin: Alignment.topRight,
-                                              end: Alignment.bottomLeft,
+                                            );
+                                          },
+                                          child: Container(
+                                            height: 70,
+                                            width: 70,
+                                            decoration: BoxDecoration(
+                                              image: DecorationImage(
+                                                image: AssetImage(
+                                                  'assets/home3/donation_icon.png',
+                                                ),
+                                              ),
+                                              borderRadius: BorderRadius.all(
+                                                Radius.circular(12),
+                                              ),
+                                              gradient: LinearGradient(
+                                                colors: [
+                                                  Color.fromARGB(255, 197, 161, 255),
+                                                  Color(0xff0069B2),
+                                                ],
+                                                begin: Alignment.topRight,
+                                                end: Alignment.bottomLeft,
+                                              ),
                                             ),
                                           ),
                                         ),
-                                      ),
-                                      Text(
-                                        'Donation',
-                                        style: TextStyle(
-                                          color: Color(0xff333333),
-                                          fontSize: 14,
+                                        Text(
+                                          'Donation',
+                                          style: TextStyle(
+                                            color: Color(0xff333333),
+                                            fontSize: 14,
+                                          ),
                                         ),
-                                      ),
-                                    ],
-                                  ),
-                                ],
+                                      ],
+                                    ),
+                                  ],
+                                ),
                               ),
-                            ),
                             Container(
                               padding: EdgeInsets.symmetric(
                                 horizontal: 32,
                                 vertical: 12,
                               ),
-                              height: 104,
+                              constraints: BoxConstraints(
+                                minHeight: 104,
+                              ),
                               decoration: BoxDecoration(
                                 image: DecorationImage(
                                   fit: .fill,
@@ -819,6 +823,7 @@ class _Homepage3State extends State<Homepage3> with RouteAware {
                                   Expanded(
                                     flex: 2,
                                     child: Column(
+                                      mainAxisSize: MainAxisSize.min,
                                       crossAxisAlignment:
                                           CrossAxisAlignment.start,
                                       children: [
@@ -838,7 +843,6 @@ class _Homepage3State extends State<Homepage3> with RouteAware {
                                         ),
                                         SizedBox(height: 5),
                                         Row(
-                                          spacing: 06,
                                           children: [
                                             Expanded(
                                               child: GestureDetector(
@@ -854,6 +858,7 @@ class _Homepage3State extends State<Homepage3> with RouteAware {
                                                 ),
                                               ),
                                             ),
+                                            SizedBox(width: 6),
                                             Expanded(
                                               child: GestureDetector(
                                                 onTap: () {
@@ -882,210 +887,214 @@ class _Homepage3State extends State<Homepage3> with RouteAware {
                             ),
                             SizedBox(height: 06),
 
-                            SizedBox(
-                              height: 50,
-                              child: Row(
-                                mainAxisAlignment: .spaceEvenly,
-                                children: [
-                                  // GestureDetector(
-                                  //   onTap: () {
-                                  //     Get.to(TopVolunteer());
-                                  //   },
-                                  //   child: Image.asset(
-                                  //     fit: .fill,
-                                  //     color: Color(0xff8F6CCB),
-                                  //     'assets/home3/top_leader_icon.png',
-                                  //   ),
-                                  // ),
-                                  GestureDetector(
-                                    onTap: () {
-                                      if (!volunteerID.isNull) {
-                                        Get.to(
-                                          Closethepayment(
-                                            Volunter_id: volunteerID!,
-                                            name: userName!,
-                                            mobile: mobile!,
-                                          ),
-                                        );
-                                      } else {
-                                        Get.snackbar(
-                                          'Access denied ',
-
-                                          " You don't have access to this page ",
-                                          // Message of the Snackbar
-                                          snackPosition: SnackPosition.BOTTOM,
-                                          // Position of the Snackbar
-                                          backgroundColor:
-                                              AppColors.primaryColor2,
-                                          // Background color of the Snackbar
-                                          colorText: Colors.white,
-                                          // Text color of the Snackbar
-                                          borderRadius: 10,
-                                          titleText: const Text(
+                            if (AppData.hide != "1")
+                              SizedBox(
+                                height: 50,
+                                child: Row(
+                                  mainAxisAlignment: .spaceEvenly,
+                                  children: [
+                                    // GestureDetector(
+                                    //   onTap: () {
+                                    //     Get.to(TopVolunteer());
+                                    //   },
+                                    //   child: Image.asset(
+                                    //     fit: .fill,
+                                    //     color: Color(0xff8F6CCB),
+                                    //     'assets/home3/top_leader_icon.png',
+                                    //   ),
+                                    // ),
+                                   
+                                   
+                                   
+                                    GestureDetector(
+                                      onTap: () {
+                                        if (!volunteerID.isNull) {
+                                          Get.to(
+                                            Closethepayment(
+                                              Volunter_id: volunteerID!,
+                                              name: userName!,
+                                              mobile: mobile!,
+                                            ),
+                                          );
+                                        } else {
+                                          Get.snackbar(
                                             'Access denied ',
-                                            style: TextStyle(
-                                              color: Colors.white,
-                                              fontFamily: 'Fmedium',
-                                              // Set your custom font family here
-                                              fontSize: 16,
-                                              fontWeight: FontWeight.bold,
-                                            ),
-                                            textScaleFactor: 1.0,
-                                          ),
-                                          messageText: const Text(
-                                            "You don't have access to this page",
-                                            style: TextStyle(
-                                              color: Colors.white,
-                                              fontFamily: 'Fontsemibold',
-                                              // Set your custom font family here
-                                              fontSize: 14,
-                                            ),
-                                            textScaleFactor: 1.0,
-                                          ),
-                                          // Border radius of the Snackbar
-                                          margin: const EdgeInsets.all(10),
-                                          // Margin around the Snackbar
-                                          duration: const Duration(
-                                            seconds: 3,
-                                          ), // Duration for which the Snackbar is displayed
-                                        );
-                                      }
-                                    },
-                                    child: Image.asset(
-                                      fit: .fill,
-                                      color: Color(0xff8F6CCB),
-                                      'assets/home3/collection_settle_icon.png',
-                                    ),
-                                  ),
-                                  GestureDetector(
-                                    onTap: () {
-                                      if (!volunteerID.isNull) {
-                                        Get.to(
-                                          Reportscreen(
-                                            volunteer_ID: volunteerID!,
-                                          ),
-                                        );
-                                      } else {
-                                        Get.snackbar(
-                                          'Access denied ',
-                                          // Title of the Snackbar
-                                          " You don't have access to this page ",
-                                          // Message of the Snackbar
-                                          snackPosition: SnackPosition.BOTTOM,
-                                          // Position of the Snackbar
-                                          backgroundColor:
-                                              AppColors.primaryColor2,
-                                          // Background color of the Snackbar
-                                          colorText: Colors.white,
-                                          // Text color of the Snackbar
-                                          borderRadius: 10,
-                                          titleText: const Text(
-                                            'Access denied ',
-                                            style: TextStyle(
-                                              color: Colors.white,
-                                              fontFamily: 'Fmedium',
-                                              // Set your custom font family here
-                                              fontSize: 16,
-                                              fontWeight: FontWeight.bold,
-                                            ),
-                                            textScaleFactor: 1.0,
-                                          ),
-                                          messageText: const Text(
-                                            "You don't have access to this page",
-                                            style: TextStyle(
-                                              color: Colors.white,
-                                              fontFamily: 'Fontsemibold',
-                                              // Set your custom font family here
-                                              fontSize: 14,
-                                            ),
-                                            textScaleFactor: 1.0,
-                                          ),
-                                          // Border radius of the Snackbar
-                                          margin: const EdgeInsets.all(10),
-                                          // Margin around the Snackbar
-                                          duration: const Duration(
-                                            seconds: 3,
-                                          ), // Duration for which the Snackbar is displayed
-                                        );
-                                      }
-                                    },
-                                    child: Image.asset(
-                                      fit: .fill,
-                                      color: Color(0xff8F6CCB),
-                                      'assets/home3/leader_report_icon.png',
-                                    ),
-                                  ),
-                                  GestureDetector(
-                                    onTap: () {
-                                      if (volunteerID.isNull) {
-                                        Get.to(VolunteerLogin());
-                                      } else {
-                                        Get.snackbar(
-                                          'Loging',
-                                          // Title of the Snackbar
-                                          "You are already login",
-                                          // Message of the Snackbar
-                                          snackPosition: SnackPosition.BOTTOM,
-                                          // Position of the Snackbar
-                                          backgroundColor:
-                                              AppColors.primaryColor2,
-                                          // Background color of the Snackbar
-                                          colorText: Colors.white,
-                                          // Text color of the Snackbar
-                                          borderRadius: 10,
-                                          // Border radius of the Snackbar
-                                          margin: const EdgeInsets.all(10),
-                                          // Margin around the Snackbar
-                                          duration: const Duration(seconds: 3),
 
-                                          titleText: const Text(
-                                            'Loging',
-                                            style: TextStyle(
-                                              color: Colors.white,
-                                              fontFamily: 'Fmedium',
-                                              // Set your custom font family here
-                                              fontSize: 16,
-                                              fontWeight: FontWeight.bold,
-                                            ),
-                                            textScaleFactor: 1.0,
-                                          ),
-                                          messageText: const Text(
-                                            'You are already login',
-                                            style: TextStyle(
-                                              color: Colors.white,
-                                              fontFamily: 'Fontsemibold',
-                                              // Set your custom font family here
-                                              fontSize: 14,
-                                              fontWeight: FontWeight.normal,
-                                            ),
-                                            textScaleFactor: 1.0,
-                                          ),
-                                          // Duration for which the Snackbar is displayed
-                                          mainButton: TextButton(
-                                            onPressed: () {
-                                              Get.closeCurrentSnackbar();
-                                              logout();
-                                            },
-                                            child: const Text(
-                                              'Logout',
+                                            " You don't have access to this page ",
+                                            // Message of the Snackbar
+                                            snackPosition: SnackPosition.BOTTOM,
+                                            // Position of the Snackbar
+                                            backgroundColor:
+                                                AppColors.primaryColor2,
+                                            // Background color of the Snackbar
+                                            colorText: Colors.white,
+                                            // Text color of the Snackbar
+                                            borderRadius: 10,
+                                            titleText: const Text(
+                                              'Access denied ',
                                               style: TextStyle(
                                                 color: Colors.white,
                                                 fontFamily: 'Fmedium',
+                                                // Set your custom font family here
+                                                fontSize: 16,
+                                                fontWeight: FontWeight.bold,
+                                              ),
+                                              textScaleFactor: 1.0,
+                                            ),
+                                            messageText: const Text(
+                                              "You don't have access to this page",
+                                              style: TextStyle(
+                                                color: Colors.white,
+                                                fontFamily: 'Fontsemibold',
+                                                // Set your custom font family here
+                                                fontSize: 14,
+                                              ),
+                                              textScaleFactor: 1.0,
+                                            ),
+                                            // Border radius of the Snackbar
+                                            margin: const EdgeInsets.all(10),
+                                            // Margin around the Snackbar
+                                            duration: const Duration(
+                                              seconds: 3,
+                                            ), // Duration for which the Snackbar is displayed
+                                          );
+                                        }
+                                      },
+                                      child: Image.asset(
+                                        fit: .fill,
+                                        color: Color(0xff8F6CCB),
+                                        'assets/home3/collection_settle_icon.png',
+                                      ),
+                                    ),
+                                    GestureDetector(
+                                      onTap: () {
+                                        if (!volunteerID.isNull) {
+                                          Get.to(
+                                            Reportscreen(
+                                              volunteer_ID: volunteerID!,
+                                            ),
+                                          );
+                                        } else {
+                                          Get.snackbar(
+                                            'Access denied ',
+                                            // Title of the Snackbar
+                                            " You don't have access to this page ",
+                                            // Message of the Snackbar
+                                            snackPosition: SnackPosition.BOTTOM,
+                                            // Position of the Snackbar
+                                            backgroundColor:
+                                                AppColors.primaryColor2,
+                                            // Background color of the Snackbar
+                                            colorText: Colors.white,
+                                            // Text color of the Snackbar
+                                            borderRadius: 10,
+                                            titleText: const Text(
+                                              'Access denied ',
+                                              style: TextStyle(
+                                                color: Colors.white,
+                                                fontFamily: 'Fmedium',
+                                                // Set your custom font family here
+                                                fontSize: 16,
+                                                fontWeight: FontWeight.bold,
+                                              ),
+                                              textScaleFactor: 1.0,
+                                            ),
+                                            messageText: const Text(
+                                              "You don't have access to this page",
+                                              style: TextStyle(
+                                                color: Colors.white,
+                                                fontFamily: 'Fontsemibold',
+                                                // Set your custom font family here
+                                                fontSize: 14,
+                                              ),
+                                              textScaleFactor: 1.0,
+                                            ),
+                                            // Border radius of the Snackbar
+                                            margin: const EdgeInsets.all(10),
+                                            // Margin around the Snackbar
+                                            duration: const Duration(
+                                              seconds: 3,
+                                            ), // Duration for which the Snackbar is displayed
+                                          );
+                                        }
+                                      },
+                                      child: Image.asset(
+                                        fit: .fill,
+                                        color: Color(0xff8F6CCB),
+                                        'assets/home3/leader_report_icon.png',
+                                      ),
+                                    ),
+                                    GestureDetector(
+                                      onTap: () {
+                                        if (volunteerID.isNull) {
+                                          Get.to(VolunteerLogin());
+                                        } else {
+                                          Get.snackbar(
+                                            'Loging',
+                                            // Title of the Snackbar
+                                            "You are already login",
+                                            // Message of the Snackbar
+                                            snackPosition: SnackPosition.BOTTOM,
+                                            // Position of the Snackbar
+                                            backgroundColor:
+                                                AppColors.primaryColor2,
+                                            // Background color of the Snackbar
+                                            colorText: Colors.white,
+                                            // Text color of the Snackbar
+                                            borderRadius: 10,
+                                            // Border radius of the Snackbar
+                                            margin: const EdgeInsets.all(10),
+                                            // Margin around the Snackbar
+                                            duration: const Duration(seconds: 3),
+
+                                            titleText: const Text(
+                                              'Loging',
+                                              style: TextStyle(
+                                                color: Colors.white,
+                                                fontFamily: 'Fmedium',
+                                                // Set your custom font family here
+                                                fontSize: 16,
+                                                fontWeight: FontWeight.bold,
+                                              ),
+                                              textScaleFactor: 1.0,
+                                            ),
+                                            messageText: const Text(
+                                              'You are already login',
+                                              style: TextStyle(
+                                                color: Colors.white,
+                                                fontFamily: 'Fontsemibold',
+                                                // Set your custom font family here
+                                                fontSize: 14,
+                                                fontWeight: FontWeight.normal,
+                                              ),
+                                              textScaleFactor: 1.0,
+                                            ),
+                                            // Duration for which the Snackbar is displayed
+                                            mainButton: TextButton(
+                                              onPressed: () {
+                                                Get.closeCurrentSnackbar();
+                                                logout();
+                                              },
+                                              child: const Text(
+                                                'Logout',
+                                                style: TextStyle(
+                                                  color: Colors.white,
+                                                  fontFamily: 'Fmedium',
+                                                ),
                                               ),
                                             ),
-                                          ),
-                                        );
-                                      }
-                                    },
-                                    child: Image.asset(
-                                      fit: .fill,
-                                      color: Color(0xff8F6CCB),
-                                      'assets/home3/leader_login_icon.png',
+                                          );
+                                        }
+                                      },
+                                      child: Image.asset(
+                                        fit: .fill,
+                                        color: Color(0xff8F6CCB),
+                                        'assets/home3/leader_login_icon.png',
+                                      ),
                                     ),
-                                  ),
-                                ],
+                                  ],
+                                ),
                               ),
-                            ),
                             SizedBox(
                               height: 40,
                               child: Row(
@@ -1163,32 +1172,34 @@ class _Homepage3State extends State<Homepage3> with RouteAware {
                 ),
               ),
 
-              Column(
-                spacing: 24,
-                children: [
-                  GestureDetector(
-                    onTap: () {
-                      Get.to(
-                        CartScreen(Gobal_challengeid: AppData.challangeid),
-                      );
-                    },
-                    child: Container(
-                      margin: EdgeInsets.symmetric(horizontal: 24),
-                      padding: EdgeInsets.symmetric(horizontal: 24),
-                      height: 62,
+             
+                Column(
+                  spacing: 24,
+                  children: [
+                     if (AppData.hide != "1")
+                    GestureDetector(
+                      onTap: () {
+                        Get.to(
+                          CartScreen(Gobal_challengeid: AppData.challangeid),
+                        );
+                      },
+                      child: Container(
+                        margin: EdgeInsets.symmetric(horizontal: 24),
+                        padding: EdgeInsets.symmetric(horizontal: 24),
+                        height: 62,
 
-                      decoration: BoxDecoration(
-                        image: DecorationImage(
-                          image: AssetImage('assets/home3/Frame 427318974.png'),
-                          fit: .fill,
+                        decoration: BoxDecoration(
+                          image: DecorationImage(
+                            image: AssetImage('assets/home3/Frame 427318974.png'),
+                            fit: .fill,
+                          ),
                         ),
                       ),
                     ),
-                  ),
 
-                  SizedBox(height: 10),
-                ],
-              ),
+                    SizedBox(height: 10),
+                  ],
+                ),
             ],
           ),
         );
