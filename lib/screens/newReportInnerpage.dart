@@ -175,7 +175,7 @@ class HistoryState extends State<Newreportinnerpage> {
                             padding: EdgeInsets.all(8),
 
                             decoration: ShapeDecoration(
-                              color: AppColors.primaryColor3,
+                              color: AppColors.listBagroundcolor,
                               shape: RoundedRectangleBorder(
                                 side: BorderSide(
                                   width: 1,

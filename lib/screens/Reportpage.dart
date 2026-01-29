@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
+import 'package:msfmylthrithala/Appcore/helper.dart';
 import 'package:msfmylthrithala/controller/ReportController.dart';
 import 'package:msfmylthrithala/modles/ClubModel.dart';
 import 'package:msfmylthrithala/modles/PanchayatModel.dart';
@@ -540,11 +541,21 @@ class _ReportState extends State<Reportscreen>
                         Stack(
                           children: [
                             Positioned(
-                              child: SvgPicture.asset(
-                                height: 96,
-
-                                'assets/dashbord/firstbg.svg', // Path to your SVG
-                                fit: BoxFit.fill,
+                              child: Container(
+                                height: 86,
+                                width: double.infinity,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(22),
+                                  gradient: LinearGradient(
+                                    begin: Alignment.topLeft,
+                                    end: Alignment.bottomRight,
+                                    colors: [
+                                      AppColors.primaryColor,
+                                      AppColors.primaryColor2,
+                                      AppColors.primaryColor3,
+                                    ],
+                                  ),
+                                ),
                               ),
                             ),
                             Container(
@@ -693,8 +704,8 @@ class _ReportState extends State<Reportscreen>
                                                   bottom: 10,
                                                 ),
                                                 decoration: ShapeDecoration(
-                                                  color:
-                                                      AppColors.primaryColor3,
+                                                  color: AppColors
+                                                      .listBagroundcolor,
                                                   shape: RoundedRectangleBorder(
                                                     side: BorderSide(
                                                       width: 1,
@@ -1020,20 +1031,26 @@ class _ReportState extends State<Reportscreen>
                                                                               2,
                                                                           child: InkWell(
                                                                             onTap: () {
-                                                                              controller.updateamount(
-                                                                                controller.callengepartisipationlist[index].id,
-                                                                                controller.orgdistModel.value,
-                                                                                controller.orgassemblymodel.value,
-                                                                                controller.orgPanchaytModel.value,
-                                                                                controller.orgwardModel.value,
-                                                                                clubModel,
+                                                                              showPayConfirmDialog(
+                                                                                onConfirm: () {
+                                                                                  controller.updateamount(
+                                                                                    controller.callengepartisipationlist[index].id,
+                                                                                    controller.orgdistModel.value,
+                                                                                    controller.orgassemblymodel.value,
+                                                                                    controller.orgPanchaytModel.value,
+                                                                                    controller.orgwardModel.value,
+                                                                                    clubModel,
+                                                                                  );
+                                                                                },
                                                                               );
                                                                             },
                                                                             child: Container(
                                                                               margin: const EdgeInsets.only(
                                                                                 left: 6,
+                                                                                top: 15,
                                                                               ),
-                                                                              height: 28,
+                                                                              height: 45,
+
                                                                               decoration: ShapeDecoration(
                                                                                 color: AppColors.primaryColor2,
                                                                                 shape: RoundedRectangleBorder(
@@ -1060,9 +1077,9 @@ class _ReportState extends State<Reportscreen>
                                                                                   ' Pay Now',
                                                                                   style: TextStyle(
                                                                                     color: Colors.white,
-                                                                                    fontSize: 10,
+                                                                                    fontSize: 14,
                                                                                     fontFamily: 'Fontsemibold',
-                                                                                    fontWeight: FontWeight.w500,
+                                                                                    fontWeight: FontWeight.w700,
                                                                                     height: 0,
                                                                                   ),
                                                                                   textScaleFactor: 1.0,
@@ -1091,7 +1108,7 @@ class _ReportState extends State<Reportscreen>
                                                                               ),
                                                                             ),
                                                                             child: Container(
-                                                                              height: 28,
+                                                                              height: 45,
                                                                               decoration: ShapeDecoration(
                                                                                 color: AppColors.primaryColor2,
                                                                                 shape: RoundedRectangleBorder(
@@ -1118,9 +1135,9 @@ class _ReportState extends State<Reportscreen>
                                                                                   'Status',
                                                                                   style: TextStyle(
                                                                                     color: Colors.white,
-                                                                                    fontSize: 10,
+                                                                                    fontSize: 14,
                                                                                     fontFamily: 'Poppins',
-                                                                                    fontWeight: FontWeight.w500,
+                                                                                    fontWeight: FontWeight.w700,
                                                                                     height: 0,
                                                                                   ),
                                                                                   textScaleFactor: 1.0,
@@ -1148,7 +1165,7 @@ class _ReportState extends State<Reportscreen>
                                                                                   margin: const EdgeInsets.only(
                                                                                     left: 6,
                                                                                   ),
-                                                                                  height: 28,
+                                                                                  height: 45,
                                                                                   decoration: ShapeDecoration(
                                                                                     color: AppColors.primaryColor2,
                                                                                     shape: RoundedRectangleBorder(
@@ -1175,9 +1192,9 @@ class _ReportState extends State<Reportscreen>
                                                                                       'Receipt',
                                                                                       style: TextStyle(
                                                                                         color: Colors.white,
-                                                                                        fontSize: 10,
+                                                                                        fontSize: 14,
                                                                                         fontFamily: 'Fontsemibold',
-                                                                                        fontWeight: FontWeight.w500,
+                                                                                        fontWeight: FontWeight.w700,
                                                                                         height: 0,
                                                                                       ),
                                                                                       textScaleFactor: 1.0,
@@ -1507,11 +1524,21 @@ class _ReportState extends State<Reportscreen>
                         Stack(
                           children: [
                             Positioned(
-                              child: SvgPicture.asset(
-                                height: 96,
-
-                                'assets/dashbord/firstbg.svg', // Path to your SVG
-                                fit: BoxFit.fill,
+                              child: Container(
+                                height: 86,
+                                width: double.infinity,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(22),
+                                  gradient: LinearGradient(
+                                    begin: Alignment.topLeft,
+                                    end: Alignment.bottomRight,
+                                    colors: [
+                                      AppColors.primaryColor,
+                                      AppColors.primaryColor2,
+                                      AppColors.primaryColor3,
+                                    ],
+                                  ),
+                                ),
                               ),
                             ),
                             Container(
@@ -1658,8 +1685,8 @@ class _ReportState extends State<Reportscreen>
                                                   bottom: 10,
                                                 ),
                                                 decoration: ShapeDecoration(
-                                                  color:
-                                                      AppColors.primaryColor3,
+                                                  color: AppColors
+                                                      .listBagroundcolor,
                                                   shape: RoundedRectangleBorder(
                                                     side: BorderSide(
                                                       width: 1,
@@ -2487,11 +2514,21 @@ class _ReportState extends State<Reportscreen>
                         Stack(
                           children: [
                             Positioned(
-                              child: SvgPicture.asset(
-                                height: 96,
-
-                                'assets/dashbord/firstbg.svg', // Path to your SVG
-                                fit: BoxFit.fill,
+                              child: Container(
+                                height: 86,
+                                width: double.infinity,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(22),
+                                  gradient: LinearGradient(
+                                    begin: Alignment.topLeft,
+                                    end: Alignment.bottomRight,
+                                    colors: [
+                                      AppColors.primaryColor,
+                                      AppColors.primaryColor2,
+                                      AppColors.primaryColor3,
+                                    ],
+                                  ),
+                                ),
                               ),
                             ),
                             Container(
@@ -2588,8 +2625,8 @@ class _ReportState extends State<Reportscreen>
                                                   bottom: 10,
                                                 ),
                                                 decoration: ShapeDecoration(
-                                                  color:
-                                                      AppColors.primaryColor3,
+                                                  color: AppColors
+                                                      .listBagroundcolor,
                                                   shape: RoundedRectangleBorder(
                                                     side: BorderSide(
                                                       width: 1,

@@ -392,7 +392,14 @@ class _ScreensplashState extends State<Screensplash>
       {"id": "6", "assemblyid": "1", "name": "ഡിവിഷൻ 40 (തിരൂരങ്ങാടി)"},
       {"id": "8", "assemblyid": "1", "name": "വാർഡ് 1 (നന്നമ്പ്ര)"},
       {"id": "9", "assemblyid": "1", "name": "വാർഡ് 13 (മൂന്നിയൂർ)"},
-      {"id": "10", "assemblyid": "1", "name": "Other"},
+
+      {"id": "12", "assemblyid": "1", "name": "SOFT പരപ്പനങ്ങാടി"},
+      {
+        "id": "11",
+        "assemblyid": "1",
+        "name": "ജിദ്ദാ - പാലത്തിങ്ങൽ ഏരിയ മുസ്‌ലിം വെൽഫെയർ കമ്മിറ്റി"
+      },
+            {"id": "10", "assemblyid": "1", "name": "Other"},
     ];
 
     // var pachaythBody = [

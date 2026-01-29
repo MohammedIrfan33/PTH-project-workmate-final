@@ -39,13 +39,19 @@ class QuickpayScreencontroller extends GetxController {
 
   var isLoading = false.obs;
 
+  File ? imagefile;
+
   String headerid = "0";
   var Errorcheck = <int>[0, 0, 0, 0, 0, 0, 0, 0].obs;
 
   fullONOneSave() async {
-    File file = await getImageFileFromAsset('assets/StaticImg/email.png');
+    File file =  imagefile!;
+
+
 
     var uri = Uri.parse(setthefulldatas);
+
+
     var request = http.MultipartRequest("POST", uri)
       ..fields['name'] = txtControllername.text
       ..fields['Address'] = txtControllerAddress.text
@@ -80,7 +86,7 @@ class QuickpayScreencontroller extends GetxController {
       ..fields['volunteer'] = AppData.volunteerId ?? "0"
       ..fields['mode'] = "1"
       ..fields['qty'] = list.first.quantity.toString()
-      ..fields['qty1'] = list[1].quantity.toString()
+      ..fields['qty1'] = '0'
       ..files.add(
         await http.MultipartFile.fromPath(
           'image',
@@ -89,12 +95,17 @@ class QuickpayScreencontroller extends GetxController {
         ),
       );
 
+   
+
     Map<String, String> orderBody = {
       'total': Amount,
       'customer': txtControllername.text,
       'mobile': txtControllerMobile.text,
       'Custid': "",
     };
+
+
+    print("---------------------------------------------");
 
     AppData.volunteerId.isNull
         ? Get.to(
@@ -123,6 +134,9 @@ class QuickpayScreencontroller extends GetxController {
   }
 
   saveFulldatatotheseverSponsor(var _request) async {
+
+
+    print("save volunteer data to server>>>>>>>>>>>>>");
     isLoading(true);
 
     final response = await _request.send();

@@ -79,7 +79,7 @@ class Paymentintentcontroller extends GetxController {
 
     if ((isChecked1.isTrue && isUpi) || (isUpiPhonepe && isChecked2.isTrue)) {
       String url = await fetchPanchayt(Amount, name, order_id, hash, phone);
-      isLoading(false);
+   
       isChecked1.value == true
           ? url = url.replaceFirst("upi://pay", "gpay://upi/pay")
           : null;
@@ -95,6 +95,7 @@ class Paymentintentcontroller extends GetxController {
         print(">>>>>>>>>>>relaese>>>>${_paymentStarted}");
         paymentLaunched = _paymentStarted;
       } else {
+           isLoading(false);
         Get.snackbar(
           'UPI App Not Found', // Title of the Snackbar
           "Selected UPI app not found on this device", // Message of the Snackbar
@@ -175,20 +176,26 @@ class Paymentintentcontroller extends GetxController {
         Map<String, dynamic> parsedJson = jsonDecode(response.body);
         if (parsedJson['Status'].toString().toLowerCase() == 'true') {
           await goBackTwoPages();
+          
           Get.to(
             PaymentsuccessScreen(
               isShare: AppData.volunteerId == null ? 1 : 0,
               name: name,
             ),
           );
+             isLoading(false);
         } else {
+         
           await goBackTwoPages();
           Get.to(PaymentfailedScreen());
+            isLoading(false);
         }
       }
     } else {
+       
       await goBackTwoPages();
       Get.to(PaymentfailedScreen());
+      isLoading(false);
       throw Exception('Failed to load data');
     }
   }

@@ -504,18 +504,24 @@ class _TopClubsState extends State<TopReport>
                                               padding: const EdgeInsets.only(
                                                 left: 6.0,
                                               ),
-                                              child: Text(
-                                                controller
-                                                    .assemblylist[index]
-                                                    .name,
-                                                style: const TextStyle(
-                                                  color: Color(0xFF3A3A3A),
-                                                  fontSize: 13,
-                                                  fontFamily: 'Poppins',
-                                                  fontWeight: FontWeight.w700,
-                                                  height: 0,
-                                                ),
-                                                textScaleFactor: 1.0,
+                                              child: Column(
+                                                mainAxisAlignment: MainAxisAlignment.center,
+                                                children: [
+                                                  Text(
+                                                    controller
+                                                        .assemblylist[index]
+                                                        .name,
+                                                    style: const TextStyle(
+                                                      color: Color(0xFF3A3A3A),
+                                                      fontSize: 13,
+                                                      fontFamily: 'Poppins',
+                                                      fontWeight: FontWeight.w700,
+                                                      height: 0,
+                                                    ),
+                                                    textScaleFactor: 1.0,
+                                                  ),
+                                                  
+                                                ],
                                               ),
                                             ),
                                           ),
@@ -525,17 +531,36 @@ class _TopClubsState extends State<TopReport>
                                               padding: const EdgeInsets.only(
                                                 left: 4,
                                               ),
-                                              child: Text(
-                                                textAlign: TextAlign.right,
-                                                "₹ ${controller.assemblylist[index].amount.replaceAll(".00", "")}",
-                                                style: const TextStyle(
-                                                  color: Color(0xFF3A3A3A),
-                                                  fontSize: 13,
-                                                  fontFamily: 'Poppins',
-                                                  fontWeight: FontWeight.w700,
-                                                  height: 0,
-                                                ),
-                                                textScaleFactor: 1.0,
+                                              child: Column(
+                                                mainAxisAlignment: MainAxisAlignment.center,
+                                                children: [
+                                                  Text(
+                                                    textAlign: TextAlign.right,
+                                                    "₹ ${controller.assemblylist[index].amount.replaceAll(".00", "")}",
+                                                    style: const TextStyle(
+                                                      color: Color(0xFF3A3A3A),
+                                                      fontSize: 13,
+                                                      fontFamily: 'Poppins',
+                                                      fontWeight: FontWeight.w700,
+                                                      height: 0,
+                                                    ),
+                                                    textScaleFactor: 1.0,
+                                                  ),
+                                                  SizedBox(height: 4,),
+                                                  Text(
+                                                    controller
+                                                        .assemblylist[index]
+                                                        .packet+'Kg' ,
+                                                    style: const TextStyle(
+                                                      color: Color(0xFF3A3A3A),
+                                                      fontSize: 13,
+                                                      fontFamily: 'Poppins',
+                                                      fontWeight: FontWeight.w700,
+                                                      height: 0,
+                                                    ),
+                                                    textScaleFactor: 1.0,
+                                                  ),
+                                                ],
                                               ),
                                             ),
                                           ),

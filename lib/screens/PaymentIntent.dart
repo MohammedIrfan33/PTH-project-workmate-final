@@ -472,8 +472,9 @@ class _PaymentintentState extends State<Paymentintent>
             Obx(() {
               if (_getxcontroller.isLoading.isTrue) {
                 return Container(
-                  height: 20,
-                  width: 20,
+                  margin: EdgeInsets.only(top: 30),
+                  height: 50,
+                  width: 50,
                   child: Center(child: CircularProgressIndicator()),
                 );
               } else {

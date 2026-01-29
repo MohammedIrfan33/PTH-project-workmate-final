@@ -171,44 +171,44 @@ class _QuickpayState extends State<Quickpay> with WidgetsBindingObserver {
     Get.until((route) => count++ == 2);
   }
 
-  ///set image
-  // File? imagefile;
+  //set image
+  File? imagefile;
 
-  // void pickImage() async {
-  //   XFile? image;
-  //   final picker = ImagePicker();
-  //   image = await picker.pickImage(source: ImageSource.gallery);
-  //
-  //   if (image != null) {
-  //     final cropedfile = await cropImages(image);
-  //     setState(() {
-  //       imagefile = File(cropedfile.path);
-  //     });
-  //   }
-  // }
-  //
-  // Future<CroppedFile> cropImages(XFile image) async {
-  //   final croppedFile = await ImageCropper().cropImage(
-  //     sourcePath: image.path,
-  //     uiSettings: [
-  //       AndroidUiSettings(
-  //         toolbarTitle: 'Crop Image1',
-  //         toolbarColor: Colors.deepOrange,
-  //         toolbarWidgetColor: Colors.white,
-  //         initAspectRatio: CropAspectRatioPreset.original,
-  //         lockAspectRatio: false,
-  //       ),
-  //       IOSUiSettings(
-  //         title: 'Crop Image',
-  //       ),
-  //     ],
-  //   );
-  //
-  //   return croppedFile!;
-  // }
-  //
-  // /// this is for the
-  // File? _savedImage;
+  void pickImage() async {
+    XFile? image;
+    final picker = ImagePicker();
+    image = await picker.pickImage(source: ImageSource.gallery);
+  
+    if (image != null) {
+      final cropedfile = await cropImages(image);
+      setState(() {
+        imagefile = File(cropedfile.path);
+      });
+    }
+  }
+  
+  Future<CroppedFile> cropImages(XFile image) async {
+    final croppedFile = await ImageCropper().cropImage(
+      sourcePath: image.path,
+      uiSettings: [
+        AndroidUiSettings(
+          toolbarTitle: 'Crop Image1',
+          toolbarColor: Colors.deepOrange,
+          toolbarWidgetColor: Colors.white,
+          initAspectRatio: CropAspectRatioPreset.original,
+          lockAspectRatio: false,
+        ),
+        IOSUiSettings(
+          title: 'Crop Image',
+        ),
+      ],
+    );
+  
+    return croppedFile!;
+  }
+  
+  /// this is for the
+  File? _savedImage;
 
   @override
   Widget build(BuildContext context) {
@@ -923,74 +923,97 @@ class _QuickpayState extends State<Quickpay> with WidgetsBindingObserver {
                             ],
                           ),
 
-                        //  SizedBox(height: 8,),
-                        //  Container(
-                        //   padding: EdgeInsets.all(8),
-                        //
-                        //
-                        //   child: Stack(
-                        //     children: [
-                        //       Container(
-                        //         padding: EdgeInsets.all(4),
-                        //         width: 140,
-                        //         height: 140,
-                        //         decoration: BoxDecoration(
-                        //           color: Colors.white,
-                        //           // White background
-                        //           borderRadius: BorderRadius.circular(100),
-                        //           // Full round corners
-                        //           boxShadow: [
-                        //             BoxShadow(
-                        //               color: Colors.grey.withOpacity(0.25),
-                        //               // Shadow color
-                        //               spreadRadius: 2,
-                        //               // Spread of the shadow
-                        //               blurRadius: 10,
-                        //               // Blur effect
-                        //               offset: Offset(0, 1), // Position of shadow (X, Y)
-                        //             ),
-                        //           ],
-                        //         ),
-                        //         child: imagefile != null
-                        //             ? CircleAvatar(
-                        //                 radius: 104, // Adjust as per your template
-                        //                 backgroundImage: FileImage(imagefile!),
-                        //               )
-                        //             : SizedBox(),
-                        //       ),
-                        //       Positioned(
-                        //         right: 4,
-                        //         top: 2,
-                        //         child: InkWell(
-                        //           onTap: () => pickImage(),
-                        //           child: Container(
-                        //             width: 32,
-                        //             height: 32,
-                        //             decoration: BoxDecoration(
-                        //               color: Colors.white,
-                        //               // White background
-                        //               borderRadius: BorderRadius.circular(100),
-                        //               // Full round corners
-                        //               boxShadow: [
-                        //                 BoxShadow(
-                        //                   color: Colors.grey.withOpacity(0.1),
-                        //                   // Shadow color
-                        //                   spreadRadius: 2,
-                        //                   // Spread of the shadow
-                        //                   blurRadius: 10,
-                        //                   // Blur effect
-                        //                   offset: Offset(0, 4), // Position of shadow (X, Y)
-                        //                 ),
-                        //               ],
-                        //             ),
-                        //             child:Icon(Icons.camera_alt,color: Colors.grey,)
-                        //           ),
-                        //         ),
-                        //       )
-                        //
-                        //     ],
-                        //   ),
-                        // ),
+                         SizedBox(height: 8,),
+
+
+                         Container(
+  padding: const EdgeInsets.all(8),
+  child: Column(
+    mainAxisSize: MainAxisSize.min,
+    children: [
+      // Profile Image
+      Container(
+        width: 150,
+        height: 150,
+        decoration: BoxDecoration(
+          color: Colors.white,
+          shape: BoxShape.circle,
+          border: Border.all(
+            color: Colors.grey.shade400,
+            width: 2,
+          ),
+        ),
+        child: imagefile != null
+            ? ClipOval(
+                child: Image.file(
+                  imagefile!,
+                  fit: BoxFit.cover,
+                  width: 150,
+                  height: 150,
+                ),
+              )
+            : Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: const [
+                  Icon(
+                    Icons.person_outline,
+                    size: 50,
+                    color: Colors.grey,
+                  ),
+                  SizedBox(height: 6),
+                  Text(
+                    "No Photo",
+                    style: TextStyle(
+                      color: Colors.grey,
+                      fontSize: 14,
+                    ),
+                  ),
+                ],
+              ),
+      ),
+
+      const SizedBox(height: 12),
+
+      // Dynamic Outline Button
+      OutlinedButton.icon(
+        onPressed: pickImage,
+        style: OutlinedButton.styleFrom(
+          side: BorderSide(
+            color: Colors.grey.shade600,
+            width: 1.5,
+          ),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(30),
+          ),
+          padding: const EdgeInsets.symmetric(
+            horizontal: 16,
+            vertical: 10,
+          ),
+        ),
+        icon: Icon(
+          imagefile == null
+              ? Icons.add_a_photo_outlined
+              : Icons.camera_alt_outlined,
+          size: 20,
+          color: Colors.black54,
+        ),
+        label: Text(
+          imagefile == null ? "Add Photo" : "Change Photo",
+          style: const TextStyle(
+            fontSize: 14,
+            color: Colors.black87,
+            fontWeight: FontWeight.w500,
+          ),
+        ),
+      ),
+    ],
+  ),
+),
+
+
+
+                         
+                      
                         SizedBox(height: widget.volunteerID.isNull ? 65 : 125),
                       ],
                     ),
@@ -1015,7 +1038,23 @@ class _QuickpayState extends State<Quickpay> with WidgetsBindingObserver {
                     return widget.volunteerID.isNull
                         ? InkWell(
                             onTap: () {
-                              controller.validation();
+                              if(imagefile == null){
+
+                                Get.snackbar(
+                                  "Upload image",
+                                  "Please select an upload your  image",
+                                  snackPosition: SnackPosition.BOTTOM,
+                                  backgroundColor: Colors.red,
+                                  colorText: Colors.white,
+                                );
+
+
+                              }else{
+
+                                controller.imagefile = imagefile;
+
+                                controller.validation();
+                              }
                             },
                             child: Container(
                               height: 50,

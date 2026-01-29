@@ -197,7 +197,10 @@ class _Homepage3State extends State<Homepage3> with RouteAware {
                       SizedBox(height: padingTop),
                       Center(
                         child: Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 16,vertical: 5),
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 16,
+                            vertical: 5,
+                          ),
                           child: SizedBox(
                             width: double.infinity,
                             child: CarouselSlider(
@@ -271,7 +274,11 @@ class _Homepage3State extends State<Homepage3> with RouteAware {
                                           maxFontSize: 48,
                                           overflow: TextOverflow.ellipsis,
                                           textScaleFactor: 1.0,
-                                          controller.dashmodelList.first.description == "Challenge"
+                                          controller
+                                                      .dashmodelList
+                                                      .first
+                                                      .description ==
+                                                  "Challenge"
                                               ? "${controller.dashmodelList[0].count.toString().replaceAll(".0", "")} KG"
                                               : " ₹  ${controller.dashmodelList[0].count.round().toString()}  ",
                                         ),
@@ -337,13 +344,15 @@ class _Homepage3State extends State<Homepage3> with RouteAware {
                                                     color: Colors.black,
                                                     width: 1,
                                                   ),
-                                                  borderRadius: BorderRadius.all(
-                                                    Radius.circular(4),
-                                                  ),
+                                                  borderRadius:
+                                                      BorderRadius.all(
+                                                        Radius.circular(4),
+                                                      ),
                                                 ),
                                                 child: Center(
                                                   child: Text(
-                                                    paketsCounts[index] + "Pkts",
+                                                    paketsCounts[index] +
+                                                        "Pkts",
                                                   ),
                                                 ),
                                               ),
@@ -706,97 +715,190 @@ class _Homepage3State extends State<Homepage3> with RouteAware {
                                 child: Row(
                                   mainAxisAlignment: .spaceEvenly,
                                   children: [
-                                    Column(
-                                      spacing: 4,
-
-                                      mainAxisSize: .max,
-                                      children: [
-                                        GestureDetector(
-                                          onTap: () {
-                                            Get.to(
-                                              itempage(
-                                                uniqueid: AppData.uniqueid,
-                                                volunteerID: AppData.volunteerId,
-                                                challengeid: AppData.challangeid,
-                                              ),
-                                            );
-                                          },
-                                          child: Container(
-                                            height: 70,
-                                            width: 70,
-                                            decoration: BoxDecoration(
-                                              image: DecorationImage(
-                                                image: AssetImage(
-                                                  'assets/home3/sponsor_icon.png',
+                                    Material(
+                                      color: Colors.transparent,
+                                      child: InkWell(
+                                        borderRadius: BorderRadius.circular(12),
+                                        splashColor: Colors.black.withOpacity(
+                                          0.1,
+                                        ),
+                                        highlightColor: Colors.black
+                                            .withOpacity(0.05),
+                                        onTap: () {
+                                          Get.to(
+                                            itempage(
+                                              uniqueid: AppData.uniqueid,
+                                              volunteerID: AppData.volunteerId,
+                                              challengeid: AppData.challangeid,
+                                            ),
+                                          );
+                                        },
+                                        child: Column(
+                                          mainAxisSize: MainAxisSize.min,
+                                          children: [
+                                            Padding(
+                                              padding: const EdgeInsets.all(6),
+                                              child: Container(
+                                                height: 70,
+                                                width: 70,
+                                                decoration: BoxDecoration(
+                                                  borderRadius:
+                                                      BorderRadius.circular(12),
+                                                  image: const DecorationImage(
+                                                    image: AssetImage(
+                                                      'assets/home3/bg.png',
+                                                    ),
+                                                    fit: BoxFit.cover,
+                                                  ),
+                                                  boxShadow: [
+                                                    BoxShadow(
+                                                      color: Colors.black
+                                                          .withOpacity(0.25),
+                                                      blurRadius: 8,
+                                                      offset: const Offset(
+                                                        0,
+                                                        4,
+                                                      ),
+                                                    ),
+                                                  ],
+                                                ),
+                                                child: Center(
+                                                  child: Image.asset(
+                                                    'assets/home3/dn.png',
+                                                    height: 36,
+                                                    width: 36,
+                                                  ),
                                                 ),
                                               ),
-                                              borderRadius: BorderRadius.all(
-                                                Radius.circular(12),
-                                              ),
-                                              gradient: LinearGradient(
-                                                colors: [
-                                                  Color.fromARGB(255, 197, 161, 255),
-                                                  Color(0xff0069B2),
-                                                ],
-                                                begin: Alignment.topRight,
-                                                end: Alignment.bottomLeft,
-                                              ),
                                             ),
-                                          ),
+
+                                            const SizedBox(height: 6),
+
+                                            // Text + arrow (clickable together)
+                                            Row(
+                                              mainAxisSize: MainAxisSize.min,
+                                              children: [
+                                                const Text(
+                                                  'Sponsor Now',
+                                                  style: TextStyle(
+                                                    color: Color(0xff333333),
+                                                    fontSize: 14,
+                                                    fontWeight: FontWeight.w600,
+                                                  ),
+                                                ),
+                                                const SizedBox(width: 6),
+                                                Container(
+                                                  padding: const EdgeInsets.all(
+                                                    4,
+                                                  ),
+                                                  decoration: BoxDecoration(
+                                                    color: Colors.black
+                                                        .withOpacity(0.35),
+                                                    shape: BoxShape.circle,
+                                                  ),
+                                                  child: const Icon(
+                                                    Icons.arrow_forward_ios,
+                                                    size: 10,
+                                                    color: Colors.white,
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                          ],
                                         ),
-                                        Text(
-                                          'Sponsorship',
-                                          style: TextStyle(
-                                            color: Color(0xff333333),
-                                            fontSize: 14,
-                                          ),
-                                        ),
-                                      ],
+                                      ),
                                     ),
-                                    Column(
-                                      spacing: 4,
 
-                                      mainAxisSize: .max,
-                                      children: [
-                                        GestureDetector(
-                                          onTap: () {
-                                            Get.to(
-                                              Quickpaycontribution(
-                                                volunteerID: volunteerID,
-                                              ),
-                                            );
-                                          },
-                                          child: Container(
-                                            height: 70,
-                                            width: 70,
-                                            decoration: BoxDecoration(
-                                              image: DecorationImage(
-                                                image: AssetImage(
-                                                  'assets/home3/donation_icon.png',
+                                    Material(
+                                      color: Colors.transparent,
+                                      child: InkWell(
+                                        borderRadius: BorderRadius.circular(12),
+                                        splashColor: Colors.black.withOpacity(
+                                          0.1,
+                                        ),
+                                        highlightColor: Colors.black
+                                            .withOpacity(0.05),
+                                        onTap: () {
+                                          Get.to(
+                                            Quickpaycontribution(
+                                              volunteerID: volunteerID,
+                                            ),
+                                          );
+                                        },
+                                        child: Column(
+                                          mainAxisSize: MainAxisSize.min,
+                                          children: [
+                                            Padding(
+                                              padding: const EdgeInsets.all(6),
+                                              child: Container(
+                                                height: 70,
+                                                width: 70,
+                                                decoration: BoxDecoration(
+                                                  borderRadius:
+                                                      BorderRadius.circular(12),
+                                                  image: const DecorationImage(
+                                                    image: AssetImage(
+                                                      'assets/home3/bg.png',
+                                                    ),
+                                                    fit: BoxFit.cover,
+                                                  ),
+                                                  boxShadow: [
+                                                    BoxShadow(
+                                                      color: Colors.black
+                                                          .withOpacity(0.25),
+                                                      blurRadius: 8,
+                                                      offset: const Offset(
+                                                        0,
+                                                        4,
+                                                      ),
+                                                    ),
+                                                  ],
+                                                ),
+                                                child: Center(
+                                                  child: Image.asset(
+                                                    'assets/home3/sp.png',
+                                                    height: 36,
+                                                    width: 36,
+                                                  ),
                                                 ),
                                               ),
-                                              borderRadius: BorderRadius.all(
-                                                Radius.circular(12),
-                                              ),
-                                              gradient: LinearGradient(
-                                                colors: [
-                                                  Color.fromARGB(255, 197, 161, 255),
-                                                  Color(0xff0069B2),
-                                                ],
-                                                begin: Alignment.topRight,
-                                                end: Alignment.bottomLeft,
-                                              ),
                                             ),
-                                          ),
+
+                                            const SizedBox(height: 6),
+
+                                            // Text + arrow (clickable together)
+                                            Row(
+                                              mainAxisSize: MainAxisSize.min,
+                                              children: [
+                                                const Text(
+                                                  'Donate Now',
+                                                  style: TextStyle(
+                                                    color: Color(0xff333333),
+                                                    fontSize: 14,
+                                                    fontWeight: FontWeight.w600,
+                                                  ),
+                                                ),
+                                                const SizedBox(width: 6),
+                                                Container(
+                                                  padding: const EdgeInsets.all(
+                                                    4,
+                                                  ),
+                                                  decoration: BoxDecoration(
+                                                    color: Colors.black
+                                                        .withOpacity(0.35),
+                                                    shape: BoxShape.circle,
+                                                  ),
+                                                  child: const Icon(
+                                                    Icons.arrow_forward_ios,
+                                                    size: 10,
+                                                    color: Colors.white,
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                          ],
                                         ),
-                                        Text(
-                                          'Donation',
-                                          style: TextStyle(
-                                            color: Color(0xff333333),
-                                            fontSize: 14,
-                                          ),
-                                        ),
-                                      ],
+                                      ),
                                     ),
                                   ],
                                 ),
@@ -806,9 +908,7 @@ class _Homepage3State extends State<Homepage3> with RouteAware {
                                 horizontal: 32,
                                 vertical: 12,
                               ),
-                              constraints: BoxConstraints(
-                                minHeight: 104,
-                              ),
+                              constraints: BoxConstraints(minHeight: 104),
                               decoration: BoxDecoration(
                                 image: DecorationImage(
                                   fit: .fill,
@@ -903,9 +1003,6 @@ class _Homepage3State extends State<Homepage3> with RouteAware {
                                     //     'assets/home3/top_leader_icon.png',
                                     //   ),
                                     // ),
-                                   
-                                   
-                                   
                                     GestureDetector(
                                       onTap: () {
                                         if (!volunteerID.isNull) {
@@ -1045,7 +1142,9 @@ class _Homepage3State extends State<Homepage3> with RouteAware {
                                             // Border radius of the Snackbar
                                             margin: const EdgeInsets.all(10),
                                             // Margin around the Snackbar
-                                            duration: const Duration(seconds: 3),
+                                            duration: const Duration(
+                                              seconds: 3,
+                                            ),
 
                                             titleText: const Text(
                                               'Loging',
@@ -1172,34 +1271,70 @@ class _Homepage3State extends State<Homepage3> with RouteAware {
                 ),
               ),
 
-             
-                Column(
-                  spacing: 24,
-                  children: [
-                     if (AppData.hide != "1")
-                    GestureDetector(
-                      onTap: () {
-                        Get.to(
-                          CartScreen(Gobal_challengeid: AppData.challangeid),
-                        );
-                      },
-                      child: Container(
-                        margin: EdgeInsets.symmetric(horizontal: 24),
-                        padding: EdgeInsets.symmetric(horizontal: 24),
-                        height: 62,
+              Column(
+                spacing: 24,
+                children: [
+                  if (AppData.hide != "1")
+                    Material(
+                      color: Colors.transparent,
+                      child: InkWell(
+                        borderRadius: BorderRadius.circular(20),
+                        onTap: () {
+                          Get.to(
+                            CartScreen(Gobal_challengeid: AppData.challangeid),
+                          );
+                        },
+                        child: Container(
+                          margin: const EdgeInsets.only(
+                            left: 24,
+                            right: 24,
+                            top: 20,
+                          ),
+                          height: 62,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20),
+                            image: const DecorationImage(
+                              image: AssetImage('assets/home3/Group 2766.png'),
+                              fit: BoxFit.fill,
+                            ),
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.black.withOpacity(
+                                  0.25,
+                                ), // STRONG shadow
+                                blurRadius: 12,
+                                offset: const Offset(0, 6),
+                              ),
+                            ],
+                          ),
 
-                        decoration: BoxDecoration(
-                          image: DecorationImage(
-                            image: AssetImage('assets/home3/Frame 427318974.png'),
-                            fit: .fill,
+                          // OPTIONAL but highly recommended
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: const [
+                              Text(
+                                "Participate",
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                              SizedBox(width: 30),
+                              Icon(
+                                Icons.arrow_forward,
+                                size: 25,
+                                color: Colors.white,
+                              ),
+                            ],
                           ),
                         ),
                       ),
                     ),
 
-                    SizedBox(height: 10),
-                  ],
-                ),
+                  SizedBox(height: 10),
+                ],
+              ),
             ],
           ),
         );
