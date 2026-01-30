@@ -291,7 +291,7 @@ class _Homepage3State extends State<Homepage3> with RouteAware {
                             ),
 
                             //
-                            if (AppData.hide != "1")
+                            if (AppData.hide == "1")
                               Column(
                                 spacing: 14,
                                 children: [
@@ -710,7 +710,7 @@ class _Homepage3State extends State<Homepage3> with RouteAware {
                               ),
                             ),
 
-                            if (AppData.hide != "1")
+                            if (AppData.hide == "1")
                               Visibility(
                                 visible: true,
                                 child: Row(
@@ -1283,7 +1283,7 @@ class _Homepage3State extends State<Homepage3> with RouteAware {
               Column(
                 spacing: 24,
                 children: [
-                  if (AppData.hide != "1")
+                  if (AppData.hide == "1")
                     Material(
                       color: Colors.transparent,
                       child: InkWell(
