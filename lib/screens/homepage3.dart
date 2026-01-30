@@ -291,7 +291,7 @@ class _Homepage3State extends State<Homepage3> with RouteAware {
                             ),
 
                             //
-                            if (AppData.hide == "1")
+                            if (AppData.hide != "1")
                               Column(
                                 spacing: 14,
                                 children: [
@@ -710,7 +710,7 @@ class _Homepage3State extends State<Homepage3> with RouteAware {
                               ),
                             ),
 
-                            if (AppData.hide == "1")
+                            if (AppData.hide != "1")
                               Visibility(
                                 visible: true,
                                 child: Row(
@@ -1002,7 +1002,7 @@ class _Homepage3State extends State<Homepage3> with RouteAware {
                                            Get.to(Topsponsors());
                                     },
                                     child: Image.asset(
-                                      'assets/home3/Group 2801.png', // Ensure the file is added in pubspec.yaml
+                                      'assets/home3/top.png', // Ensure the file is added in pubspec.yaml
                                     
                                                  color: Color(0xff8F6CCB),
                                                  fit: .fill,
@@ -1283,7 +1283,7 @@ class _Homepage3State extends State<Homepage3> with RouteAware {
               Column(
                 spacing: 24,
                 children: [
-                  if (AppData.hide == "1")
+                  if (AppData.hide != "1")
                     Material(
                       color: Colors.transparent,
                       child: InkWell(

@@ -475,7 +475,9 @@ class _ScreensplashState extends State<Screensplash>
   Future<void> checkthechallenge() async {
     final response = await http.post(
       Uri.parse(Challengeexist),
-      body: {"version": AppData.versions[0].toString()},
+      body: {
+        "version": AppData.versions[0].toString()
+      },
     );
 
     if (response.statusCode == 200) {
@@ -491,6 +493,9 @@ class _ScreensplashState extends State<Screensplash>
         } else {
           AppData.ischallenge = false;
         }
+
+
+        print(parsedJson['Appstorehiding']);
         Platform.isIOS
             ? AppData.hide = parsedJson['Appstorehiding']
             : AppData.hide = "0";
@@ -522,7 +527,8 @@ class _ScreensplashState extends State<Screensplash>
     // Initialize the AnimationController
     _controller = AnimationController(
       vsync: this,
-      duration: Duration(milliseconds: 2000), // Animation duration
+      duration: Duration(milliseconds: 2000),
+       // Animation duration
     );
 
     // Define the slide animation from off-screen to the final position

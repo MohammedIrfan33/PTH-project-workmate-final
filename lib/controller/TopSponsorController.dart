@@ -28,8 +28,8 @@ class Topsponsorcontroller extends GetxController {
       Uri.parse(TopSponsor),
       body: {"ward": "0", "club": "0"},
     );
-    //// print("fetchsponsors>>>>>>>>>>>>>>>>>");
-    // print(response.body);
+     print("fetchsponsors>>>>>>>>>>>>>>>>>");
+    print(response.body);
 
     if (response.statusCode == 200) {
       Map<String, dynamic> parsedJson = jsonDecode(response.body);

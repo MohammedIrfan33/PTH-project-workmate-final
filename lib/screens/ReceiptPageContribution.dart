@@ -174,6 +174,32 @@ class _ReceiptDownloadState extends State<Receiptpagecontribution> {
                       fit: BoxFit.fill,
                     ),
                   ),
+
+                  Positioned(
+                    left: 102, // Adjust as per your template
+                    top: 94, // Adjust as per your template
+                    child: Container(
+                      width: 180,
+                      height: 50,
+                      child: Align(
+                        alignment: Alignment.centerLeft,
+                        child: AutoSizeText(
+                          textAlign: TextAlign.left,
+                          "${widget.name}",
+                          style: TextStyle(
+                            fontSize: 12,
+                            color: Colors.white,
+                            fontFamily: 'Fmedium',
+                            fontWeight: FontWeight.w700,
+                          ),
+                          maxLines: 1,
+                          minFontSize: 11,
+                          maxFontSize: 20,
+                          overflow: TextOverflow.ellipsis,
+                        ),
+                      ),
+                    ),
+                  ),
                   Positioned(
                     left: 60, // Adjust as per your template
                     top: 232, // Adjust as per your template
@@ -199,6 +225,7 @@ class _ReceiptDownloadState extends State<Receiptpagecontribution> {
                       ),
                     ),
                   ),
+
                  
                 ],
               ),
@@ -215,11 +242,11 @@ class _ReceiptDownloadState extends State<Receiptpagecontribution> {
                   },
                   child: Container(
                     width: MediaQuery.sizeOf(context).width - 60,
-                    height: 41,
+                    height: 50,
                     decoration: ShapeDecoration(
                       color: AppColors.primaryColor2,
                       shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20),
+                        borderRadius: BorderRadius.circular(10),
                       ),
                     ),
                     child: Row(
@@ -229,9 +256,9 @@ class _ReceiptDownloadState extends State<Receiptpagecontribution> {
                           'Share',
                           style: TextStyle(
                             color: Colors.white,
-                            fontSize: 15,
+                            fontSize: 16,
                             fontFamily: 'Poppins',
-                            fontWeight: FontWeight.w400,
+                            fontWeight: FontWeight.w600,
                             height: 0,
                           ),
                           textScaleFactor: 1.0,

@@ -46,12 +46,16 @@ class QuickpayScreencontroller extends GetxController {
 
   fullONOneSave() async {
 
-    print(basename(imagefile!.path));
+
+   
     File file =  imagefile!;
 
 
 
     var uri = Uri.parse(setthefulldatas);
+
+
+    print('---------------------------------------------');
 
 
     var request = http.MultipartRequest("POST", uri)

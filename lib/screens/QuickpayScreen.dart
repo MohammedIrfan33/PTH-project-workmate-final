@@ -1103,10 +1103,32 @@ class _QuickpayState extends State<Quickpay> with WidgetsBindingObserver {
                             children: [
                               InkWell(
                                 onTap: () {
-                                  controller.savefromvolunterr(
+
+
+
+
+
+                                  if(imagefile == null){
+
+                                    Get.snackbar(
+                                      "Upload image",
+                                      "Please select an upload your  image",
+                                      snackPosition: SnackPosition.BOTTOM,
+                                      backgroundColor: Colors.red,
+                                      colorText: Colors.white,
+                                    );
+
+                                  }else{
+
+                                    controller.imagefile = imagefile;
+
+                                    controller.savefromvolunterr(
                                     "0",
                                     widget.volunteerID,
                                   );
+
+                                  }
+                                  
                                 },
                                 child: Container(
                                   height: 50,
@@ -1146,10 +1168,27 @@ class _QuickpayState extends State<Quickpay> with WidgetsBindingObserver {
                               SizedBox(height: 8),
                               InkWell(
                                 onTap: () {
-                                  controller.savefromvolunterr(
+
+
+                                  if(imagefile == null){
+
+                                    Get.snackbar(
+                                      "Upload image",
+                                      "Please select an upload your  image",
+                                      snackPosition: SnackPosition.BOTTOM,
+                                      backgroundColor: Colors.red,
+                                      colorText: Colors.white,
+                                    );
+                                  }else{
+
+                                    controller.imagefile = imagefile;
+                                    controller.savefromvolunterr(
                                     totalmaount,
                                     widget.volunteerID,
                                   );
+
+                                  }
+                                  
                                 },
                                 child: Container(
                                   height: 50,

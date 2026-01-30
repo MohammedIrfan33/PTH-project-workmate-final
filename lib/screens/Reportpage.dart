@@ -1031,6 +1031,11 @@ class _ReportState extends State<Reportscreen>
                                                                               2,
                                                                           child: InkWell(
                                                                             onTap: () {
+
+
+
+
+
                                                                               showPayConfirmDialog(
                                                                                 onConfirm: () {
                                                                                   controller.updateamount(
@@ -2056,7 +2061,12 @@ class _ReportState extends State<Reportscreen>
                                                                   flex: 2,
                                                                   child: InkWell(
                                                                     onTap: () {
-                                                                      controller.updateamountsponsor(
+
+
+
+                                                                      showPayConfirmDialog(
+                                                                                onConfirm: () {
+                                                                                  controller.updateamountsponsor(
                                                                         controller
                                                                             .challengeSponsorlist[index]
                                                                             .id,
@@ -2073,6 +2083,17 @@ class _ReportState extends State<Reportscreen>
                                                                             .orgwardModel
                                                                             .value,
                                                                       );
+                                                                                },
+                                                                              );
+
+
+
+
+
+
+
+
+                                                                      
                                                                     },
                                                                     child: Container(
                                                                       margin:
@@ -2081,7 +2102,7 @@ class _ReportState extends State<Reportscreen>
                                                                                 6,
                                                                           ),
                                                                       height:
-                                                                          28,
+                                                                          45,
                                                                       decoration: ShapeDecoration(
                                                                         color: AppColors
                                                                             .primaryColor2,
@@ -2113,7 +2134,7 @@ class _ReportState extends State<Reportscreen>
                                                                             color:
                                                                                 Colors.white,
                                                                             fontSize:
-                                                                                10,
+                                                                                13,
                                                                             fontFamily:
                                                                                 'Fontsemibold',
                                                                             fontWeight:
@@ -2162,7 +2183,7 @@ class _ReportState extends State<Reportscreen>
                                                                                 6,
                                                                           ),
                                                                           height:
-                                                                              28,
+                                                                              45,
                                                                           decoration: ShapeDecoration(
                                                                             color:
                                                                                 AppColors.primaryColor2,
@@ -2190,7 +2211,7 @@ class _ReportState extends State<Reportscreen>
                                                                               'Receipt',
                                                                               style: TextStyle(
                                                                                 color: Colors.white,
-                                                                                fontSize: 10,
+                                                                                fontSize: 13,
                                                                                 fontFamily: 'Fontsemibold',
                                                                                 fontWeight: FontWeight.w500,
                                                                                 height: 0,

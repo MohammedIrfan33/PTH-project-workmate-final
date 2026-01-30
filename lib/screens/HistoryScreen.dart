@@ -2001,7 +2001,7 @@ class HistoryState extends State<Historyscreen>
 
                                                 decoration: ShapeDecoration(
                                                   color:
-                                                      AppColors.primaryColor3,
+                                                      AppColors.listBagroundcolor,
                                                   shape: RoundedRectangleBorder(
                                                     side: BorderSide(
                                                       width: 1,
@@ -2541,7 +2541,7 @@ class HistoryState extends State<Historyscreen>
                                           ),
 
                                           decoration: ShapeDecoration(
-                                            color: AppColors.primaryColor3,
+                                            color: AppColors.listBagroundcolor,
                                             shape: RoundedRectangleBorder(
                                               side: BorderSide(
                                                 width: 1,
@@ -3464,7 +3464,7 @@ class HistoryState extends State<Historyscreen>
                                       margin: EdgeInsets.only(bottom: 10),
 
                                       decoration: ShapeDecoration(
-                                        color: AppColors.primaryColor3,
+                                        color: AppColors.listBagroundcolor,
                                         shape: RoundedRectangleBorder(
                                           side: BorderSide(
                                             width: 1,
