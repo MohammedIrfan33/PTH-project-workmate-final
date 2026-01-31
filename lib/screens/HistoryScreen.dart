@@ -60,32 +60,6 @@ class HistoryState extends State<Historyscreen>
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                // Container(
-                //   width: 25,
-                //   height: 25,
-                //   // margin: const EdgeInsets.all(8),
-                //   // decoration: ShapeDecoration(
-                //   //   color: Colors.white,
-                //   //   shape: RoundedRectangleBorder(
-                //   //     side:
-                //   //     const BorderSide(width: 1, color: Color(0xFFEDF4FC)),
-                //   //     borderRadius: BorderRadius.circular(18),
-                //   //   ),
-                //   // ),
-                //   // child: IconButton(
-                //   //   padding: const EdgeInsets.all(8),
-                //   //   constraints: const BoxConstraints(),
-                //   //   onPressed: () {
-                //   //     Get.back();
-                //   //   },
-                //   //   icon: SvgPicture.asset(
-                //   //     'assets/backarrow_s.svg',
-                //   //     width: 22,
-                //   //     height: 22,
-                //   //     semanticsLabel: 'Example SVG',
-                //   //   ),
-                //   // ),
-                // ),
                 const Center(
                   child: Text(
                     'Transactions',
@@ -99,31 +73,6 @@ class HistoryState extends State<Historyscreen>
                     textScaleFactor: 1.0,
                   ),
                 ),
-                // Container(
-                //   width: 25,
-                //   height: 25,
-                //   // margin: const EdgeInsets.all(8),
-                //   // decoration: ShapeDecoration(
-                //   //   color: Colors.white,
-                //   //   shape: RoundedRectangleBorder(
-                //   //     side:
-                //   //     const BorderSide(width: 1, color: Color(0xFFEDF4FC)),
-                //   //     borderRadius: BorderRadius.circular(18),
-                //   //   ),
-                //   // ),
-                //   // child: IconButton(
-                //   //   padding: const EdgeInsets.all(8),
-                //   //   onPressed: () {
-                //   //     Get.back();
-                //   //   },
-                //   //   icon: SvgPicture.asset(
-                //   //     'assets/home.svg',
-                //   //     width: 18,
-                //   //     height: 20,
-                //   //     semanticsLabel: 'Example SVG',
-                //   //   ),
-                //   // ),
-                // ),
               ],
             ),
             SizedBox(height: 8),
@@ -375,22 +324,22 @@ class HistoryState extends State<Historyscreen>
                         ),
                       ),
                     ),
-                    Tab(
-                      child: MediaQuery(
-                        data: MediaQuery.of(
-                          context,
-                        ).copyWith(textScaleFactor: 1.0),
-                        child: const AutoSizeText(
-                          textAlign: TextAlign.center,
-                          'Organisation',
-                          style: TextStyle(fontSize: 14.0),
-                          maxFontSize: 14,
-                          minFontSize: 10,
-                          maxLines: 1,
-                          overflow: TextOverflow.ellipsis,
-                        ),
-                      ),
-                    ),
+                    // Tab(
+                    //   child: MediaQuery(
+                    //     data: MediaQuery.of(
+                    //       context,
+                    //     ).copyWith(textScaleFactor: 1.0),
+                    //     child: const AutoSizeText(
+                    //       textAlign: TextAlign.center,
+                    //       'Organisation',
+                    //       style: TextStyle(fontSize: 14.0),
+                    //       maxFontSize: 14,
+                    //       minFontSize: 10,
+                    //       maxLines: 1,
+                    //       overflow: TextOverflow.ellipsis,
+                    //     ),
+                    //   ),
+                    // ),
                   ],
                 ),
               ),
@@ -1817,7 +1766,7 @@ class HistoryState extends State<Historyscreen>
                                 children: [
                                   Positioned(
                                     child: Container(
-                                      height: 86,
+                                      height: 85,
                                       width: double.infinity,
                                       decoration: BoxDecoration(
                                         borderRadius: BorderRadius.circular(22),
@@ -1835,123 +1784,177 @@ class HistoryState extends State<Historyscreen>
                                   ),
 
                                   Container(
-                                    padding: EdgeInsets.symmetric(vertical: 16),
+                                    padding: EdgeInsets.only(
+                                      top: 20,
+                                      left: 10,
+                                      right: 10,
+                                    ),
 
-                                    child: Padding(
-                                      padding: const EdgeInsets.symmetric(
-                                        horizontal: 12,
-                                      ),
-                                      child: Column(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.center,
-                                        children: [
-                                          Row(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.spaceBetween,
-                                            children: [
-                                              Flexible(
-                                                flex: 1,
-                                                child: Container(
-                                                  child: const AutoSizeText(
-                                                    textAlign: TextAlign.start,
-                                                    "Total Sponsored  Amount",
-                                                    softWrap: true,
-                                                    style: TextStyle(
-                                                      fontSize: 14,
-                                                      color: Colors.white,
-                                                      fontFamily:
-                                                          'Fontsemibold',
-                                                      fontWeight:
-                                                          FontWeight.w600,
-                                                      height: 0,
-                                                      letterSpacing: 0.91,
-                                                    ),
-                                                    textScaleFactor: 1.0,
-                                                    maxLines: 2,
-                                                    minFontSize: 08,
-                                                    maxFontSize: 14,
-                                                    overflow:
-                                                        TextOverflow.ellipsis,
+                                    child: Column(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        Row(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.spaceBetween,
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.center,
+                                          children: [
+                                            Flexible(
+                                              flex: 1,
+                                              child: Container(
+                                                child: const AutoSizeText(
+                                                  textAlign: TextAlign.start,
+                                                  "Sponsored Amount",
+                                                  softWrap: true,
+                                                  style: TextStyle(
+                                                    fontSize: 16,
+                                                    color: Colors.white,
+                                                    fontFamily: 'Fontsemibold',
+                                                    fontWeight: FontWeight.w600,
+                                                    height: 0,
+                                                    letterSpacing: 0.91,
                                                   ),
+                                                  textScaleFactor: 1.0,
+                                                  maxLines: 2,
+
+                                                  overflow:
+                                                      TextOverflow.ellipsis,
                                                 ),
                                               ),
-                                              Flexible(
-                                                flex: 1,
-                                                child: Obx(() {
-                                                  return AutoSizeText(
-                                                    style: const TextStyle(
-                                                      color: Colors.white,
-                                                      fontFamily: 'Fmedium',
-                                                      fontSize: 20,
-                                                      fontWeight:
-                                                          FontWeight.w700,
-                                                      height: 0,
-                                                    ),
-                                                    maxLines: 1,
-                                                    minFontSize: 08,
-                                                    maxFontSize: 20,
-                                                    overflow:
-                                                        TextOverflow.ellipsis,
-                                                    textScaleFactor: 1.0,
-                                                    " ₹ ${controller.totalPrice2.toString()}",
-                                                  );
-                                                }),
-                                              ),
-                                            ],
-                                          ),
+                                            ),
+                                            Flexible(
+                                              flex: 1,
+                                              child: Obx(() {
+                                                return AutoSizeText(
+                                                  style: const TextStyle(
+                                                    color: Colors.white,
+                                                    fontFamily: 'Fmedium',
+                                                    fontSize: 20,
+                                                    fontWeight: FontWeight.w700,
+                                                    height: 0,
+                                                  ),
+                                                  maxLines: 1,
+                                                  minFontSize: 08,
+                                                  maxFontSize: 20,
+                                                  overflow:
+                                                      TextOverflow.ellipsis,
+                                                  textScaleFactor: 1.0,
+                                                  " ₹ ${controller.totalPrice2.toString()}",
+                                                );
+                                              }),
+                                            ),
+                                          ],
+                                        ),
 
-                                          // Row(
-                                          //   mainAxisAlignment:
-                                          //   MainAxisAlignment.spaceBetween,
-                                          //   children: [
-                                          //     Flexible(
-                                          //       flex: 1,
-                                          //       child: Container(
-                                          //
-                                          //
-                                          //         child:const AutoSizeText(
-                                          //           textAlign: TextAlign.start,
-                                          //           "Total Kit Donors Quantity",
-                                          //           softWrap: true,
-                                          //           style:  TextStyle(
-                                          //             fontSize: 14,
-                                          //             color:   Colors.white,
-                                          //             fontFamily: 'Fontsemibold',
-                                          //             fontWeight: FontWeight.w600,
-                                          //             height: 0,
-                                          //             letterSpacing: 0.91,
-                                          //           ),textScaleFactor: 1.0,
-                                          //           maxLines: 2,
-                                          //           minFontSize: 08,
-                                          //           maxFontSize:14 ,
-                                          //           overflow: TextOverflow.ellipsis,
-                                          //         ),
-                                          //       ),
-                                          //     ) ,
-                                          //     Flexible(flex: 1,child: Obx((){
-                                          //       return AutoSizeText(
-                                          //         style: const TextStyle(
-                                          //           color: Colors.white,
-                                          //           fontFamily: 'Fmedium',
-                                          //           fontSize: 20,
-                                          //           fontWeight: FontWeight.w700,
-                                          //           height: 0,
-                                          //         ),
-                                          //         maxLines: 1,
-                                          //         minFontSize: 06,
-                                          //         maxFontSize:20 ,
-                                          //         overflow: TextOverflow.ellipsis,
-                                          //         textScaleFactor: 1.0,
-                                          //         " ${controller.pendingPrice2.toString()}",
-                                          //
-                                          //
-                                          //       );
-                                          //     }))
-                                          //
-                                          //   ],
-                                          // ),
-                                        ],
-                                      ),
+                                        SizedBox(height: 4),
+
+                                        Row(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.spaceBetween,
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.center,
+                                          children: [
+                                            Flexible(
+                                              flex: 1,
+                                              child: Container(
+                                                child: const AutoSizeText(
+                                                  textAlign: TextAlign.start,
+                                                  "Sponsored Quantity",
+                                                  softWrap: true,
+                                                  style: TextStyle(
+                                                    fontSize: 16,
+                                                    color: Colors.white,
+                                                    fontFamily: 'Fontsemibold',
+                                                    fontWeight: FontWeight.w600,
+                                                    height: 0,
+                                                    letterSpacing: 0.91,
+                                                  ),
+                                                  textScaleFactor: 1.0,
+                                                  maxLines: 2,
+
+                                                  overflow:
+                                                      TextOverflow.ellipsis,
+                                                ),
+                                              ),
+                                            ),
+                                            Flexible(
+                                              flex: 1,
+                                              child: Obx(() {
+                                                return AutoSizeText(
+                                                  style: const TextStyle(
+                                                    color: Colors.white,
+                                                    fontFamily: 'Fmedium',
+                                                    fontSize: 20,
+                                                    fontWeight: FontWeight.w700,
+                                                    height: 0,
+                                                  ),
+                                                  maxLines: 1,
+                                                  minFontSize: 08,
+                                                  maxFontSize: 20,
+                                                  overflow:
+                                                      TextOverflow.ellipsis,
+                                                  textScaleFactor: 1.0,
+                                                  "${controller.pendingPrice2.toString()} Kg",
+                                                );
+                                              }),
+                                            ),
+                                          ],
+                                        ),
+
+                                        SizedBox(height: 4),
+
+                                        // Row(
+                                        //   mainAxisAlignment:
+                                        //   MainAxisAlignment.spaceBetween,
+                                        //   children: [
+                                        //     Flexible(
+                                        //       flex: 1,
+                                        //       child: Container(
+                                        //
+                                        //
+                                        //         child:const AutoSizeText(
+                                        //           textAlign: TextAlign.start,
+                                        //           "Total Kit Donors Quantity",
+                                        //           softWrap: true,
+                                        //           style:  TextStyle(
+                                        //             fontSize: 14,
+                                        //             color:   Colors.white,
+                                        //             fontFamily: 'Fontsemibold',
+                                        //             fontWeight: FontWeight.w600,
+                                        //             height: 0,
+                                        //             letterSpacing: 0.91,
+                                        //           ),textScaleFactor: 1.0,
+                                        //           maxLines: 2,
+                                        //           minFontSize: 08,
+                                        //           maxFontSize:14 ,
+                                        //           overflow: TextOverflow.ellipsis,
+                                        //         ),
+                                        //       ),
+                                        //     ) ,
+                                        //     Flexible(flex: 1,child: Obx((){
+                                        //       return AutoSizeText(
+                                        //         style: const TextStyle(
+                                        //           color: Colors.white,
+                                        //           fontFamily: 'Fmedium',
+                                        //           fontSize: 20,
+                                        //           fontWeight: FontWeight.w700,
+                                        //           height: 0,
+                                        //         ),
+                                        //         maxLines: 1,
+                                        //         minFontSize: 06,
+                                        //         maxFontSize:20 ,
+                                        //         overflow: TextOverflow.ellipsis,
+                                        //         textScaleFactor: 1.0,
+                                        //         " ${controller.pendingPrice2.toString()}",
+                                        //
+                                        //
+                                        //       );
+                                        //     }))
+                                        //
+                                        //   ],
+                                        // ),
+                                      ],
                                     ),
                                   ),
                                 ],
@@ -2000,8 +2003,8 @@ class HistoryState extends State<Historyscreen>
                                                 ),
 
                                                 decoration: ShapeDecoration(
-                                                  color:
-                                                      AppColors.listBagroundcolor,
+                                                  color: AppColors
+                                                      .listBagroundcolor,
                                                   shape: RoundedRectangleBorder(
                                                     side: BorderSide(
                                                       width: 1,
@@ -2015,16 +2018,26 @@ class HistoryState extends State<Historyscreen>
                                                   ),
                                                 ),
                                                 child: Row(
+                                                  crossAxisAlignment:
+                                                      CrossAxisAlignment.center,
                                                   children: [
                                                     Expanded(
                                                       flex: 4,
                                                       child: Column(
+                                                        mainAxisAlignment:
+                                                            MainAxisAlignment
+                                                                .center,
                                                         children: [
                                                           Row(
+                                                            crossAxisAlignment:
+                                                                CrossAxisAlignment
+                                                                    .center,
                                                             children: [
-                                                              const Text(
-                                                                'Name   :',
-                                                                style: TextStyle(
+                                                              Text(
+                                                                controller
+                                                                    .challengeSponsorlist[index]
+                                                                    .name,
+                                                                style: const TextStyle(
                                                                   color: Color(
                                                                     0xFF3A3A3A,
                                                                   ),
@@ -2039,10 +2052,18 @@ class HistoryState extends State<Historyscreen>
                                                                 textScaleFactor:
                                                                     1.0,
                                                               ),
+                                                            ],
+                                                          ),
+                                                          SizedBox(height: 6),
+                                                          Row(
+                                                            mainAxisAlignment:
+                                                                MainAxisAlignment
+                                                                    .end,
+                                                            children: [
                                                               Text(
                                                                 controller
                                                                     .challengeSponsorlist[index]
-                                                                    .name,
+                                                                    .count,
                                                                 style: const TextStyle(
                                                                   color: Color(
                                                                     0xFF3A3A3A,
@@ -2072,141 +2093,6 @@ class HistoryState extends State<Historyscreen>
                                                                 children: [
                                                                   const SizedBox(
                                                                     height: 4,
-                                                                  ),
-                                                                  Row(
-                                                                    children: [
-                                                                      const Text(
-                                                                        'Division/Ward : ',
-                                                                        style: TextStyle(
-                                                                          color: Color(
-                                                                            0xFF3A3A3A,
-                                                                          ),
-                                                                          fontSize:
-                                                                              12,
-                                                                          fontFamily:
-                                                                              'Fontsemibold',
-                                                                          fontWeight:
-                                                                              FontWeight.w500,
-                                                                          height:
-                                                                              0,
-                                                                        ),
-                                                                        textScaleFactor:
-                                                                            1.0,
-                                                                      ),
-                                                                      Text(
-                                                                        controller
-                                                                            .challengeSponsorlist[index]
-                                                                            .panchayat,
-                                                                        style: const TextStyle(
-                                                                          color: Color(
-                                                                            0xFF3A3A3A,
-                                                                          ),
-                                                                          fontSize:
-                                                                              12,
-                                                                          fontFamily:
-                                                                              'Fontsemibold',
-                                                                          fontWeight:
-                                                                              FontWeight.w500,
-                                                                          height:
-                                                                              0,
-                                                                        ),
-                                                                        textScaleFactor:
-                                                                            1.0,
-                                                                      ),
-                                                                    ],
-                                                                  ),
-                                                                  const SizedBox(
-                                                                    height: 4,
-                                                                  ),
-                                                                  Row(
-                                                                    children: [
-                                                                      const Text(
-                                                                        textAlign:
-                                                                            TextAlign.left,
-                                                                        'Area   :  ',
-                                                                        style: TextStyle(
-                                                                          color: Color(
-                                                                            0xFF3A3A3A,
-                                                                          ),
-                                                                          fontSize:
-                                                                              12,
-                                                                          fontFamily:
-                                                                              'Fontsemibold',
-                                                                          fontWeight:
-                                                                              FontWeight.w500,
-                                                                          height:
-                                                                              0,
-                                                                        ),
-                                                                        textScaleFactor:
-                                                                            1.0,
-                                                                      ),
-                                                                      Text(
-                                                                        controller
-                                                                            .challengeSponsorlist[index]
-                                                                            .ward,
-                                                                        style: const TextStyle(
-                                                                          color: Color(
-                                                                            0xFF3A3A3A,
-                                                                          ),
-                                                                          fontSize:
-                                                                              12,
-                                                                          fontFamily:
-                                                                              'Fontsemibold',
-                                                                          fontWeight:
-                                                                              FontWeight.w500,
-                                                                          height:
-                                                                              0,
-                                                                        ),
-                                                                        textScaleFactor:
-                                                                            1.0,
-                                                                      ),
-                                                                    ],
-                                                                  ),
-
-                                                                  const SizedBox(
-                                                                    height: 4,
-                                                                  ),
-                                                                  Row(
-                                                                    children: [
-                                                                      const Text(
-                                                                        textAlign:
-                                                                            TextAlign.left,
-                                                                        'Date & Time :  ',
-                                                                        style: TextStyle(
-                                                                          color: Color(
-                                                                            0xFF3A3A3A,
-                                                                          ),
-                                                                          fontSize:
-                                                                              12,
-                                                                          fontFamily:
-                                                                              'Fontsemibold',
-                                                                          fontWeight:
-                                                                              FontWeight.w500,
-                                                                          height:
-                                                                              0,
-                                                                        ),
-                                                                        textScaleFactor:
-                                                                            1.0,
-                                                                      ),
-                                                                      Text(
-                                                                        "${controller.challengeSponsorlist[index].date_time}",
-                                                                        style: const TextStyle(
-                                                                          color: Color(
-                                                                            0xFF3A3A3A,
-                                                                          ),
-                                                                          fontSize:
-                                                                              12,
-                                                                          fontFamily:
-                                                                              'Fontsemibold',
-                                                                          fontWeight:
-                                                                              FontWeight.w500,
-                                                                          height:
-                                                                              0,
-                                                                        ),
-                                                                        textScaleFactor:
-                                                                            1.0,
-                                                                      ),
-                                                                    ],
                                                                   ),
                                                                 ],
                                                               ),
@@ -2270,779 +2156,780 @@ class HistoryState extends State<Historyscreen>
                     ),
 
                     /// organisation///
-                    Padding(
-                      padding: const EdgeInsets.symmetric(
-                        horizontal: 24,
-                        vertical: 0,
-                      ),
-                      child: Column(
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 0),
-                            child: Column(
-                              children: [
-                                SizedBox(height: 8),
-                                CompositedTransformTarget(
-                                  link: layerLinkclub_C,
-                                  child: Container(
-                                    height: 50,
-                                    child: TextField(
-                                      controller: searchdistrictController_C,
-                                      focusNode: searchdrictFocusNode_C,
-                                      decoration: InputDecoration(
-                                        hintText: "Select Organisation",
-                                        enabledBorder: const OutlineInputBorder(
-                                          borderSide: BorderSide(
-                                            color: Color(0xffE0EDFF),
-                                            width: 1,
-                                          ),
-                                          borderRadius: BorderRadius.all(
-                                            Radius.circular(12),
-                                          ),
-                                        ),
-                                        focusedBorder: const OutlineInputBorder(
-                                          borderSide: BorderSide(
-                                            color: AppColors.primaryColor2,
-                                            width: 1,
-                                          ),
-                                          borderRadius: BorderRadius.all(
-                                            Radius.circular(12),
-                                          ),
-                                        ),
-                                        border: OutlineInputBorder(
-                                          borderRadius: BorderRadius.circular(
-                                            25,
-                                          ),
-                                        ),
-                                        fillColor: Colors.transparent,
-                                        filled: true,
-                                        hintStyle: const TextStyle(
-                                          color: Color(0xFF757575),
-                                          fontFamily: "Fontsemibold",
-                                          fontSize: 14,
-                                        ),
-                                        suffixIcon:
-                                            searchdistrictController_C
-                                                .text
-                                                .isNotEmpty
-                                            ? IconButton(
-                                                icon: Icon(
-                                                  Icons.clear,
-                                                  size: 16,
-                                                ),
-                                                onPressed: () {
-                                                  setState(() {
-                                                    searchdistrictController_C
-                                                            .text =
-                                                        "";
-                                                    controller.clubModel.value =
-                                                        null;
-                                                    controller.clubList.clear();
-                                                    controller.ChallengeHistoryorganisation();
-                                                  });
-                                                },
-                                              )
-                                            : null,
-                                      ),
-                                      textInputAction: TextInputAction
-                                          .done, // ✅ Shows the tick button on the keyboard
-                                      onSubmitted: (value) {
-                                        // ✅ Called when tick (✔) is pressed
-                                      },
-                                      onChanged: (value) {
-                                        filterSearchdrict_C(
-                                          searchdistrictController_C.text,
-                                        );
-                                      },
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                          SizedBox(height: 8),
+                    // Padding(
+                    //   padding: const EdgeInsets.symmetric(
+                    //     horizontal: 24,
+                    //     vertical: 0,
+                    //   ),
 
-                          SizedBox(height: 12),
+                    //   child: Column(
+                    //     children: [
+                    //       Padding(
+                    //         padding: const EdgeInsets.symmetric(horizontal: 0),
+                    //         child: Column(
+                    //           children: [
+                    //             SizedBox(height: 8),
+                    //             CompositedTransformTarget(
+                    //               link: layerLinkclub_C,
+                    //               child: Container(
+                    //                 height: 50,
+                    //                 child: TextField(
+                    //                   controller: searchdistrictController_C,
+                    //                   focusNode: searchdrictFocusNode_C,
+                    //                   decoration: InputDecoration(
+                    //                     hintText: "Select Organisation",
+                    //                     enabledBorder: const OutlineInputBorder(
+                    //                       borderSide: BorderSide(
+                    //                         color: Color(0xffE0EDFF),
+                    //                         width: 1,
+                    //                       ),
+                    //                       borderRadius: BorderRadius.all(
+                    //                         Radius.circular(12),
+                    //                       ),
+                    //                     ),
+                    //                     focusedBorder: const OutlineInputBorder(
+                    //                       borderSide: BorderSide(
+                    //                         color: AppColors.primaryColor2,
+                    //                         width: 1,
+                    //                       ),
+                    //                       borderRadius: BorderRadius.all(
+                    //                         Radius.circular(12),
+                    //                       ),
+                    //                     ),
+                    //                     border: OutlineInputBorder(
+                    //                       borderRadius: BorderRadius.circular(
+                    //                         25,
+                    //                       ),
+                    //                     ),
+                    //                     fillColor: Colors.transparent,
+                    //                     filled: true,
+                    //                     hintStyle: const TextStyle(
+                    //                       color: Color(0xFF757575),
+                    //                       fontFamily: "Fontsemibold",
+                    //                       fontSize: 14,
+                    //                     ),
+                    //                     suffixIcon:
+                    //                         searchdistrictController_C
+                    //                             .text
+                    //                             .isNotEmpty
+                    //                         ? IconButton(
+                    //                             icon: Icon(
+                    //                               Icons.clear,
+                    //                               size: 16,
+                    //                             ),
+                    //                             onPressed: () {
+                    //                               setState(() {
+                    //                                 searchdistrictController_C
+                    //                                         .text =
+                    //                                     "";
+                    //                                 controller.clubModel.value =
+                    //                                     null;
+                    //                                 controller.clubList.clear();
+                    //                                 controller.ChallengeHistoryorganisation();
+                    //                               });
+                    //                             },
+                    //                           )
+                    //                         : null,
+                    //                   ),
+                    //                   textInputAction: TextInputAction
+                    //                       .done, // ✅ Shows the tick button on the keyboard
+                    //                   onSubmitted: (value) {
+                    //                     // ✅ Called when tick (✔) is pressed
+                    //                   },
+                    //                   onChanged: (value) {
+                    //                     filterSearchdrict_C(
+                    //                       searchdistrictController_C.text,
+                    //                     );
+                    //                   },
+                    //                 ),
+                    //               ),
+                    //             ),
+                    //           ],
+                    //         ),
+                    //       ),
+                    //       SizedBox(height: 8),
 
-                          Wrap(
-                            children: [
-                              Stack(
-                                children: [
-                                  Positioned(
-                                    child: Container(
-                                      height: 86,
-                                      width: double.infinity,
-                                      decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(22),
-                                        gradient: LinearGradient(
-                                          begin: Alignment.topLeft,
-                                          end: Alignment.bottomRight,
-                                          colors: [
-                                            AppColors.primaryColor,
-                                            AppColors.primaryColor2,
-                                            AppColors.primaryColor3,
-                                          ],
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                  Container(
-                                    height: 86,
+                    //       SizedBox(height: 12),
 
-                                    child: Padding(
-                                      padding: const EdgeInsets.symmetric(
-                                        horizontal: 20,
-                                      ),
-                                      child: Column(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.center,
-                                        children: [
-                                          Row(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.spaceBetween,
-                                            children: [
-                                              Container(
-                                                width: 158,
+                    //       Wrap(
+                    //         children: [
+                    //           Stack(
+                    //             children: [
+                    //               Positioned(
+                    //                 child: Container(
+                    //                   height: 86,
+                    //                   width: double.infinity,
+                    //                   decoration: BoxDecoration(
+                    //                     borderRadius: BorderRadius.circular(22),
+                    //                     gradient: LinearGradient(
+                    //                       begin: Alignment.topLeft,
+                    //                       end: Alignment.bottomRight,
+                    //                       colors: [
+                    //                         AppColors.primaryColor,
+                    //                         AppColors.primaryColor2,
+                    //                         AppColors.primaryColor3,
+                    //                       ],
+                    //                     ),
+                    //                   ),
+                    //                 ),
+                    //               ),
+                    //               Container(
+                    //                 height: 86,
 
-                                                child: const AutoSizeText(
-                                                  textAlign: TextAlign.start,
-                                                  "Total Collected",
-                                                  softWrap: true,
-                                                  style: TextStyle(
-                                                    fontSize: 16,
-                                                    color: Colors.white,
-                                                    fontFamily: 'Fontsemibold',
-                                                    fontWeight: FontWeight.w600,
-                                                    height: 0,
-                                                    letterSpacing: 0.91,
-                                                  ),
-                                                  textScaleFactor: 1.0,
-                                                  maxLines: 2,
-                                                  minFontSize: 08,
-                                                  maxFontSize: 16,
-                                                  overflow:
-                                                      TextOverflow.ellipsis,
-                                                ),
-                                              ),
-                                              Flexible(
-                                                flex: 1,
-                                                child: Obx(() {
-                                                  return AutoSizeText(
-                                                    style: const TextStyle(
-                                                      color: Colors.white,
-                                                      fontFamily: 'Fmedium',
-                                                      fontSize: 20,
-                                                      fontWeight:
-                                                          FontWeight.w700,
-                                                      height: 0,
-                                                    ),
-                                                    maxLines: 1,
-                                                    minFontSize: 08,
-                                                    maxFontSize: 20,
-                                                    overflow:
-                                                        TextOverflow.ellipsis,
-                                                    textScaleFactor: 1.0,
-                                                    " ₹ ${controller.totalPrice4.toString()}",
-                                                  );
-                                                }),
-                                              ),
-                                            ],
-                                          ),
-                                          SizedBox(height: 4),
+                    //                 child: Padding(
+                    //                   padding: const EdgeInsets.symmetric(
+                    //                     horizontal: 20,
+                    //                   ),
+                    //                   child: Column(
+                    //                     mainAxisAlignment:
+                    //                         MainAxisAlignment.center,
+                    //                     children: [
+                    //                       Row(
+                    //                         mainAxisAlignment:
+                    //                             MainAxisAlignment.spaceBetween,
+                    //                         children: [
+                    //                           Container(
+                    //                             width: 158,
 
-                                          Row(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.spaceBetween,
-                                            children: [
-                                              Container(
-                                                width: 158,
+                    //                             child: const AutoSizeText(
+                    //                               textAlign: TextAlign.start,
+                    //                               "Total Collected",
+                    //                               softWrap: true,
+                    //                               style: TextStyle(
+                    //                                 fontSize: 16,
+                    //                                 color: Colors.white,
+                    //                                 fontFamily: 'Fontsemibold',
+                    //                                 fontWeight: FontWeight.w600,
+                    //                                 height: 0,
+                    //                                 letterSpacing: 0.91,
+                    //                               ),
+                    //                               textScaleFactor: 1.0,
+                    //                               maxLines: 2,
+                    //                               minFontSize: 08,
+                    //                               maxFontSize: 16,
+                    //                               overflow:
+                    //                                   TextOverflow.ellipsis,
+                    //                             ),
+                    //                           ),
+                    //                           Flexible(
+                    //                             flex: 1,
+                    //                             child: Obx(() {
+                    //                               return AutoSizeText(
+                    //                                 style: const TextStyle(
+                    //                                   color: Colors.white,
+                    //                                   fontFamily: 'Fmedium',
+                    //                                   fontSize: 20,
+                    //                                   fontWeight:
+                    //                                       FontWeight.w700,
+                    //                                   height: 0,
+                    //                                 ),
+                    //                                 maxLines: 1,
+                    //                                 minFontSize: 08,
+                    //                                 maxFontSize: 20,
+                    //                                 overflow:
+                    //                                     TextOverflow.ellipsis,
+                    //                                 textScaleFactor: 1.0,
+                    //                                 " ₹ ${controller.totalPrice4.toString()}",
+                    //                               );
+                    //                             }),
+                    //                           ),
+                    //                         ],
+                    //                       ),
+                    //                       SizedBox(height: 4),
 
-                                                child: const AutoSizeText(
-                                                  textAlign: TextAlign.start,
-                                                  "Total Ordered",
-                                                  softWrap: true,
-                                                  style: TextStyle(
-                                                    fontSize: 16,
-                                                    color: Colors.white,
-                                                    fontFamily: 'Fontsemibold',
-                                                    fontWeight: FontWeight.w600,
-                                                    height: 0,
-                                                    letterSpacing: 0.91,
-                                                  ),
-                                                  textScaleFactor: 1.0,
-                                                  maxLines: 2,
-                                                  minFontSize: 08,
-                                                  maxFontSize: 16,
-                                                  overflow:
-                                                      TextOverflow.ellipsis,
-                                                ),
-                                              ),
-                                              Flexible(
-                                                flex: 1,
-                                                child: Obx(() {
-                                                  return AutoSizeText(
-                                                    style: const TextStyle(
-                                                      color: Colors.white,
-                                                      fontFamily: 'Fmedium',
-                                                      fontSize: 20,
-                                                      fontWeight:
-                                                          FontWeight.w700,
-                                                      height: 0,
-                                                    ),
-                                                    maxLines: 1,
-                                                    minFontSize: 06,
-                                                    maxFontSize: 20,
-                                                    overflow:
-                                                        TextOverflow.ellipsis,
-                                                    textScaleFactor: 1.0,
-                                                    " ${controller.pendingPrice4.toString()}",
-                                                  );
-                                                }),
-                                              ),
-                                            ],
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ],
-                          ),
-                          SizedBox(height: 4),
+                    //                       Row(
+                    //                         mainAxisAlignment:
+                    //                             MainAxisAlignment.spaceBetween,
+                    //                         children: [
+                    //                           Container(
+                    //                             width: 158,
 
-                          Expanded(
-                            child: Obx(() {
-                              if (controller.isLoading.value) {
-                                return Center(
-                                  child: Container(
-                                    height: 45,
-                                    width: 45,
-                                    child: ProgressINdigator(),
-                                  ),
-                                );
-                              } else if (controller.challengelistClub.isEmpty) {
-                                return const Center(
-                                  child: Text('No entries to show'),
-                                );
-                              } else {
-                                return ListView.builder(
-                                  itemCount:
-                                      controller.challengelistClub.length,
-                                  itemBuilder: (context, index) {
-                                    return Stack(
-                                      fit: StackFit.passthrough,
-                                      alignment: AlignmentDirectional.topCenter,
-                                      clipBehavior: Clip.none,
-                                      children: [
-                                        Container(
-                                          margin: const EdgeInsets.only(
-                                            bottom: 10,
-                                          ),
+                    //                             child: const AutoSizeText(
+                    //                               textAlign: TextAlign.start,
+                    //                               "Total Ordered",
+                    //                               softWrap: true,
+                    //                               style: TextStyle(
+                    //                                 fontSize: 16,
+                    //                                 color: Colors.white,
+                    //                                 fontFamily: 'Fontsemibold',
+                    //                                 fontWeight: FontWeight.w600,
+                    //                                 height: 0,
+                    //                                 letterSpacing: 0.91,
+                    //                               ),
+                    //                               textScaleFactor: 1.0,
+                    //                               maxLines: 2,
+                    //                               minFontSize: 08,
+                    //                               maxFontSize: 16,
+                    //                               overflow:
+                    //                                   TextOverflow.ellipsis,
+                    //                             ),
+                    //                           ),
+                    //                           Flexible(
+                    //                             flex: 1,
+                    //                             child: Obx(() {
+                    //                               return AutoSizeText(
+                    //                                 style: const TextStyle(
+                    //                                   color: Colors.white,
+                    //                                   fontFamily: 'Fmedium',
+                    //                                   fontSize: 20,
+                    //                                   fontWeight:
+                    //                                       FontWeight.w700,
+                    //                                   height: 0,
+                    //                                 ),
+                    //                                 maxLines: 1,
+                    //                                 minFontSize: 06,
+                    //                                 maxFontSize: 20,
+                    //                                 overflow:
+                    //                                     TextOverflow.ellipsis,
+                    //                                 textScaleFactor: 1.0,
+                    //                                 " ${controller.pendingPrice4.toString()}",
+                    //                               );
+                    //                             }),
+                    //                           ),
+                    //                         ],
+                    //                       ),
+                    //                     ],
+                    //                   ),
+                    //                 ),
+                    //               ),
+                    //             ],
+                    //           ),
+                    //         ],
+                    //       ),
+                    //       SizedBox(height: 4),
 
-                                          decoration: ShapeDecoration(
-                                            color: AppColors.listBagroundcolor,
-                                            shape: RoundedRectangleBorder(
-                                              side: BorderSide(
-                                                width: 1,
-                                                color: AppColors.primaryColor,
-                                              ),
-                                              borderRadius:
-                                                  BorderRadius.circular(10),
-                                            ),
-                                          ),
-                                          child: Padding(
-                                            padding: const EdgeInsets.symmetric(
-                                              vertical: 12.0,
-                                            ),
-                                            child: Row(
-                                              crossAxisAlignment:
-                                                  CrossAxisAlignment.start,
-                                              children: [
-                                                Container(
-                                                  margin: const EdgeInsets.only(
-                                                    left: 8,
-                                                    top: 20,
-                                                  ),
-                                                  width: 43,
-                                                  height: 51,
-                                                  decoration: ShapeDecoration(
-                                                    color: Colors.white,
-                                                    shape: RoundedRectangleBorder(
-                                                      borderRadius:
-                                                          BorderRadius.circular(
-                                                            10,
-                                                          ),
-                                                    ),
-                                                  ),
-                                                  child: Center(
-                                                    child: Column(
-                                                      mainAxisAlignment:
-                                                          MainAxisAlignment
-                                                              .center,
-                                                      children: [
-                                                        Text(
-                                                          controller
-                                                              .challengelistClub[index]
-                                                              .day,
-                                                          style:
-                                                              const TextStyle(
-                                                                color: Color(
-                                                                  0xFF3A3A3A,
-                                                                ),
-                                                                fontSize: 18,
-                                                                fontFamily:
-                                                                    'Poppins',
-                                                                fontWeight:
-                                                                    FontWeight
-                                                                        .w700,
-                                                                height: 0,
-                                                              ),
-                                                          textScaleFactor: 1.0,
-                                                        ),
-                                                        Text(
-                                                          controller
-                                                              .challengelistClub[index]
-                                                              .month,
-                                                          style:
-                                                              const TextStyle(
-                                                                color: Color(
-                                                                  0xFF757575,
-                                                                ),
-                                                                fontSize: 9,
-                                                                fontFamily:
-                                                                    'Poppins',
-                                                                fontWeight:
-                                                                    FontWeight
-                                                                        .w500,
-                                                                height: 0,
-                                                              ),
-                                                          textScaleFactor: 1.0,
-                                                        ),
-                                                      ],
-                                                    ),
-                                                  ),
-                                                ),
-                                                Expanded(
-                                                  flex: 4,
-                                                  child: Padding(
-                                                    padding:
-                                                        const EdgeInsets.only(
-                                                          left: 4,
-                                                          right: 4,
-                                                        ),
-                                                    child: Column(
-                                                      children: [
-                                                        const SizedBox(
-                                                          height: 12,
-                                                        ),
-                                                        Row(
-                                                          children: [
-                                                            Text(
-                                                              'Name   :',
-                                                              style: TextStyle(
-                                                                color: Color(
-                                                                  0xFF3A3A3A,
-                                                                ),
-                                                                fontSize: 12,
-                                                                fontFamily:
-                                                                    'Poppins',
-                                                                fontWeight:
-                                                                    FontWeight
-                                                                        .w900,
-                                                                height: 0,
-                                                              ),
-                                                              textScaleFactor:
-                                                                  1.0,
-                                                            ),
-                                                            Expanded(
-                                                              child: Text(
-                                                                controller
-                                                                    .challengelistClub[index]
-                                                                    .name,
-                                                                style: TextStyle(
-                                                                  color: Color(
-                                                                    0xFF3A3A3A,
-                                                                  ),
-                                                                  fontSize: 12,
-                                                                  fontFamily:
-                                                                      'Poppins',
-                                                                  fontWeight:
-                                                                      FontWeight
-                                                                          .w900,
-                                                                  height: 0,
-                                                                ),
-                                                                textScaleFactor:
-                                                                    1.0,
-                                                              ),
-                                                            ),
-                                                          ],
-                                                        ),
-                                                        Row(
-                                                          mainAxisAlignment:
-                                                              MainAxisAlignment
-                                                                  .spaceBetween,
-                                                          children: [
-                                                            Column(
-                                                              crossAxisAlignment:
-                                                                  CrossAxisAlignment
-                                                                      .start,
-                                                              children: [
-                                                                const SizedBox(
-                                                                  height: 4,
-                                                                ),
-                                                                Row(
-                                                                  children: [
-                                                                    const Text(
-                                                                      'Panchayat : ',
-                                                                      style: TextStyle(
-                                                                        color: Color(
-                                                                          0xFF3A3A3A,
-                                                                        ),
-                                                                        fontSize:
-                                                                            12,
-                                                                        fontFamily:
-                                                                            'Poppins',
-                                                                        fontWeight:
-                                                                            FontWeight.w500,
-                                                                        height:
-                                                                            0,
-                                                                      ),
-                                                                      textScaleFactor:
-                                                                          1.0,
-                                                                    ),
-                                                                    Text(
-                                                                      controller
-                                                                          .challengelistClub[index]
-                                                                          .panchayat,
-                                                                      style: const TextStyle(
-                                                                        color: Color(
-                                                                          0xFF3A3A3A,
-                                                                        ),
-                                                                        fontSize:
-                                                                            12,
-                                                                        fontFamily:
-                                                                            'Poppins',
-                                                                        fontWeight:
-                                                                            FontWeight.w500,
-                                                                        height:
-                                                                            0,
-                                                                      ),
-                                                                      textScaleFactor:
-                                                                          1.0,
-                                                                    ),
-                                                                  ],
-                                                                ),
-                                                                const SizedBox(
-                                                                  height: 4,
-                                                                ),
-                                                                Row(
-                                                                  children: [
-                                                                    const Text(
-                                                                      textAlign:
-                                                                          TextAlign
-                                                                              .left,
-                                                                      'Area   :  ',
-                                                                      style: TextStyle(
-                                                                        color: Color(
-                                                                          0xFF3A3A3A,
-                                                                        ),
-                                                                        fontSize:
-                                                                            12,
-                                                                        fontFamily:
-                                                                            'Poppins',
-                                                                        fontWeight:
-                                                                            FontWeight.w500,
-                                                                        height:
-                                                                            0,
-                                                                      ),
-                                                                      textScaleFactor:
-                                                                          1.0,
-                                                                    ),
-                                                                    Text(
-                                                                      controller
-                                                                          .challengelistClub[index]
-                                                                          .ward,
-                                                                      style: const TextStyle(
-                                                                        color: Color(
-                                                                          0xFF3A3A3A,
-                                                                        ),
-                                                                        fontSize:
-                                                                            12,
-                                                                        fontFamily:
-                                                                            'Poppins',
-                                                                        fontWeight:
-                                                                            FontWeight.w500,
-                                                                        height:
-                                                                            0,
-                                                                      ),
-                                                                      textScaleFactor:
-                                                                          1.0,
-                                                                    ),
-                                                                  ],
-                                                                ),
-                                                                const SizedBox(
-                                                                  height: 4,
-                                                                ),
-                                                                Row(
-                                                                  children: [
-                                                                    const Text(
-                                                                      textAlign:
-                                                                          TextAlign
-                                                                              .left,
-                                                                      'Club  :  ',
-                                                                      style: TextStyle(
-                                                                        color: Color(
-                                                                          0xFF3A3A3A,
-                                                                        ),
-                                                                        fontSize:
-                                                                            12,
-                                                                        fontFamily:
-                                                                            'Poppins',
-                                                                        fontWeight:
-                                                                            FontWeight.w500,
-                                                                        height:
-                                                                            0,
-                                                                      ),
-                                                                      textScaleFactor:
-                                                                          1.0,
-                                                                    ),
-                                                                    Text(
-                                                                      controller
-                                                                          .challengelistClub[index]
-                                                                          .club,
-                                                                      style: const TextStyle(
-                                                                        color: Color(
-                                                                          0xFF3A3A3A,
-                                                                        ),
-                                                                        fontSize:
-                                                                            12,
-                                                                        fontFamily:
-                                                                            'Poppins',
-                                                                        fontWeight:
-                                                                            FontWeight.w500,
-                                                                        height:
-                                                                            0,
-                                                                      ),
-                                                                      textScaleFactor:
-                                                                          1.0,
-                                                                    ),
-                                                                  ],
-                                                                ),
-                                                              ],
-                                                            ),
-                                                          ],
-                                                        ),
-                                                        const SizedBox(
-                                                          height: 16,
-                                                        ),
-                                                        controller
-                                                                    .challengelistClub[index]
-                                                                    .canchangeward ==
-                                                                0
-                                                            ? SizedBox()
-                                                            : Row(
-                                                                mainAxisAlignment:
-                                                                    MainAxisAlignment
-                                                                        .spaceBetween,
-                                                                children: [
-                                                                  Expanded(
-                                                                    flex: 2,
-                                                                    child: InkWell(
-                                                                      onTap: () {
-                                                                        showModalBottomSheet(
-                                                                          context:
-                                                                              context,
-                                                                          isScrollControlled:
-                                                                              true,
-                                                                          builder:
-                                                                              (
-                                                                                context,
-                                                                              ) => BottomSheetContent(
-                                                                                id: controller.challengelistClub[index].customerid,
-                                                                                panchayatid: controller.challengelistClub[index].panchayatid,
+                    //       Expanded(
+                    //         child: Obx(() {
+                    //           if (controller.isLoading.value) {
+                    //             return Center(
+                    //               child: Container(
+                    //                 height: 45,
+                    //                 width: 45,
+                    //                 child: ProgressINdigator(),
+                    //               ),
+                    //             );
+                    //           } else if (controller.challengelistClub.isEmpty) {
+                    //             return const Center(
+                    //               child: Text('No entries to show'),
+                    //             );
+                    //           } else {
+                    //             return ListView.builder(
+                    //               itemCount:
+                    //                   controller.challengelistClub.length,
+                    //               itemBuilder: (context, index) {
+                    //                 return Stack(
+                    //                   fit: StackFit.passthrough,
+                    //                   alignment: AlignmentDirectional.topCenter,
+                    //                   clipBehavior: Clip.none,
+                    //                   children: [
+                    //                     Container(
+                    //                       margin: const EdgeInsets.only(
+                    //                         bottom: 10,
+                    //                       ),
 
-                                                                                controllersub: controller,
-                                                                                GlogalIDSub: GlobalId,
-                                                                              ),
-                                                                        );
-                                                                      },
-                                                                      child: Container(
-                                                                        margin: const EdgeInsets.only(
-                                                                          left:
-                                                                              6,
-                                                                        ),
-                                                                        height:
-                                                                            28,
-                                                                        decoration: ShapeDecoration(
-                                                                          color:
-                                                                              Colors.white,
-                                                                          shape: RoundedRectangleBorder(
-                                                                            borderRadius: BorderRadius.circular(
-                                                                              10,
-                                                                            ),
-                                                                          ),
-                                                                          shadows: const [
-                                                                            BoxShadow(
-                                                                              color: Color(
-                                                                                0x3F000000,
-                                                                              ),
-                                                                              blurRadius: 4,
-                                                                              offset: Offset(
-                                                                                0,
-                                                                                4,
-                                                                              ),
-                                                                              spreadRadius: 0,
-                                                                            ),
-                                                                          ],
-                                                                        ),
-                                                                        child: const Center(
-                                                                          child: Text(
-                                                                            'Change Area',
-                                                                            style: TextStyle(
-                                                                              color: Colors.black,
-                                                                              fontSize: 10,
-                                                                              fontFamily: 'Poppins',
-                                                                              fontWeight: FontWeight.w500,
-                                                                              height: 0,
-                                                                            ),
-                                                                            textScaleFactor:
-                                                                                1.0,
-                                                                          ),
-                                                                        ),
-                                                                      ),
-                                                                    ),
-                                                                  ),
-                                                                  controller.challengelistClub[index].fullypaid ==
-                                                                          0
-                                                                      ? SizedBox()
-                                                                      : Expanded(
-                                                                          flex:
-                                                                              2,
-                                                                          child: InkWell(
-                                                                            onTap: () {
-                                                                              Get.to(
-                                                                                ReceiptDownload(
-                                                                                  Amount: controller.challengelistClub[index].amount,
-                                                                                  name: controller.challengelistClub[index].receiptname,
-                                                                                ),
-                                                                              );
-                                                                            },
-                                                                            child: Container(
-                                                                              margin: const EdgeInsets.only(
-                                                                                left: 6,
-                                                                              ),
-                                                                              height: 28,
-                                                                              decoration: ShapeDecoration(
-                                                                                color: Colors.white,
-                                                                                shape: RoundedRectangleBorder(
-                                                                                  borderRadius: BorderRadius.circular(
-                                                                                    10,
-                                                                                  ),
-                                                                                ),
-                                                                                shadows: const [
-                                                                                  BoxShadow(
-                                                                                    color: Color(
-                                                                                      0x3F000000,
-                                                                                    ),
-                                                                                    blurRadius: 4,
-                                                                                    offset: Offset(
-                                                                                      0,
-                                                                                      4,
-                                                                                    ),
-                                                                                    spreadRadius: 0,
-                                                                                  ),
-                                                                                ],
-                                                                              ),
-                                                                              child: const Center(
-                                                                                child: Text(
-                                                                                  'Receipt ',
-                                                                                  style: TextStyle(
-                                                                                    color: Colors.black,
-                                                                                    fontSize: 10,
-                                                                                    fontFamily: 'Poppins',
-                                                                                    fontWeight: FontWeight.w500,
-                                                                                    height: 0,
-                                                                                  ),
-                                                                                  textScaleFactor: 1.0,
-                                                                                ),
-                                                                              ),
-                                                                            ),
-                                                                          ),
-                                                                        ),
-                                                                ],
-                                                              ),
-                                                      ],
-                                                    ),
-                                                  ),
-                                                ),
-                                              ],
-                                            ),
-                                          ),
-                                        ),
-                                        Positioned(
-                                          right: 10,
-                                          bottom: 40,
-                                          top: 0,
-                                          child: Column(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.center,
-                                            children: [
-                                              Container(
-                                                width: 72,
+                    //                       decoration: ShapeDecoration(
+                    //                         color: AppColors.listBagroundcolor,
+                    //                         shape: RoundedRectangleBorder(
+                    //                           side: BorderSide(
+                    //                             width: 1,
+                    //                             color: AppColors.primaryColor,
+                    //                           ),
+                    //                           borderRadius:
+                    //                               BorderRadius.circular(10),
+                    //                         ),
+                    //                       ),
+                    //                       child: Padding(
+                    //                         padding: const EdgeInsets.symmetric(
+                    //                           vertical: 12.0,
+                    //                         ),
+                    //                         child: Row(
+                    //                           crossAxisAlignment:
+                    //                               CrossAxisAlignment.start,
+                    //                           children: [
+                    //                             Container(
+                    //                               margin: const EdgeInsets.only(
+                    //                                 left: 8,
+                    //                                 top: 20,
+                    //                               ),
+                    //                               width: 43,
+                    //                               height: 51,
+                    //                               decoration: ShapeDecoration(
+                    //                                 color: Colors.white,
+                    //                                 shape: RoundedRectangleBorder(
+                    //                                   borderRadius:
+                    //                                       BorderRadius.circular(
+                    //                                         10,
+                    //                                       ),
+                    //                                 ),
+                    //                               ),
+                    //                               child: Center(
+                    //                                 child: Column(
+                    //                                   mainAxisAlignment:
+                    //                                       MainAxisAlignment
+                    //                                           .center,
+                    //                                   children: [
+                    //                                     Text(
+                    //                                       controller
+                    //                                           .challengelistClub[index]
+                    //                                           .day,
+                    //                                       style:
+                    //                                           const TextStyle(
+                    //                                             color: Color(
+                    //                                               0xFF3A3A3A,
+                    //                                             ),
+                    //                                             fontSize: 18,
+                    //                                             fontFamily:
+                    //                                                 'Poppins',
+                    //                                             fontWeight:
+                    //                                                 FontWeight
+                    //                                                     .w700,
+                    //                                             height: 0,
+                    //                                           ),
+                    //                                       textScaleFactor: 1.0,
+                    //                                     ),
+                    //                                     Text(
+                    //                                       controller
+                    //                                           .challengelistClub[index]
+                    //                                           .month,
+                    //                                       style:
+                    //                                           const TextStyle(
+                    //                                             color: Color(
+                    //                                               0xFF757575,
+                    //                                             ),
+                    //                                             fontSize: 9,
+                    //                                             fontFamily:
+                    //                                                 'Poppins',
+                    //                                             fontWeight:
+                    //                                                 FontWeight
+                    //                                                     .w500,
+                    //                                             height: 0,
+                    //                                           ),
+                    //                                       textScaleFactor: 1.0,
+                    //                                     ),
+                    //                                   ],
+                    //                                 ),
+                    //                               ),
+                    //                             ),
+                    //                             Expanded(
+                    //                               flex: 4,
+                    //                               child: Padding(
+                    //                                 padding:
+                    //                                     const EdgeInsets.only(
+                    //                                       left: 4,
+                    //                                       right: 4,
+                    //                                     ),
+                    //                                 child: Column(
+                    //                                   children: [
+                    //                                     const SizedBox(
+                    //                                       height: 12,
+                    //                                     ),
+                    //                                     Row(
+                    //                                       children: [
+                    //                                         Text(
+                    //                                           'Name   :',
+                    //                                           style: TextStyle(
+                    //                                             color: Color(
+                    //                                               0xFF3A3A3A,
+                    //                                             ),
+                    //                                             fontSize: 12,
+                    //                                             fontFamily:
+                    //                                                 'Poppins',
+                    //                                             fontWeight:
+                    //                                                 FontWeight
+                    //                                                     .w900,
+                    //                                             height: 0,
+                    //                                           ),
+                    //                                           textScaleFactor:
+                    //                                               1.0,
+                    //                                         ),
+                    //                                         Expanded(
+                    //                                           child: Text(
+                    //                                             controller
+                    //                                                 .challengelistClub[index]
+                    //                                                 .name,
+                    //                                             style: TextStyle(
+                    //                                               color: Color(
+                    //                                                 0xFF3A3A3A,
+                    //                                               ),
+                    //                                               fontSize: 12,
+                    //                                               fontFamily:
+                    //                                                   'Poppins',
+                    //                                               fontWeight:
+                    //                                                   FontWeight
+                    //                                                       .w900,
+                    //                                               height: 0,
+                    //                                             ),
+                    //                                             textScaleFactor:
+                    //                                                 1.0,
+                    //                                           ),
+                    //                                         ),
+                    //                                       ],
+                    //                                     ),
+                    //                                     Row(
+                    //                                       mainAxisAlignment:
+                    //                                           MainAxisAlignment
+                    //                                               .spaceBetween,
+                    //                                       children: [
+                    //                                         Column(
+                    //                                           crossAxisAlignment:
+                    //                                               CrossAxisAlignment
+                    //                                                   .start,
+                    //                                           children: [
+                    //                                             const SizedBox(
+                    //                                               height: 4,
+                    //                                             ),
+                    //                                             Row(
+                    //                                               children: [
+                    //                                                 const Text(
+                    //                                                   'Panchayat : ',
+                    //                                                   style: TextStyle(
+                    //                                                     color: Color(
+                    //                                                       0xFF3A3A3A,
+                    //                                                     ),
+                    //                                                     fontSize:
+                    //                                                         12,
+                    //                                                     fontFamily:
+                    //                                                         'Poppins',
+                    //                                                     fontWeight:
+                    //                                                         FontWeight.w500,
+                    //                                                     height:
+                    //                                                         0,
+                    //                                                   ),
+                    //                                                   textScaleFactor:
+                    //                                                       1.0,
+                    //                                                 ),
+                    //                                                 Text(
+                    //                                                   controller
+                    //                                                       .challengelistClub[index]
+                    //                                                       .panchayat,
+                    //                                                   style: const TextStyle(
+                    //                                                     color: Color(
+                    //                                                       0xFF3A3A3A,
+                    //                                                     ),
+                    //                                                     fontSize:
+                    //                                                         12,
+                    //                                                     fontFamily:
+                    //                                                         'Poppins',
+                    //                                                     fontWeight:
+                    //                                                         FontWeight.w500,
+                    //                                                     height:
+                    //                                                         0,
+                    //                                                   ),
+                    //                                                   textScaleFactor:
+                    //                                                       1.0,
+                    //                                                 ),
+                    //                                               ],
+                    //                                             ),
+                    //                                             const SizedBox(
+                    //                                               height: 4,
+                    //                                             ),
+                    //                                             Row(
+                    //                                               children: [
+                    //                                                 const Text(
+                    //                                                   textAlign:
+                    //                                                       TextAlign
+                    //                                                           .left,
+                    //                                                   'Area   :  ',
+                    //                                                   style: TextStyle(
+                    //                                                     color: Color(
+                    //                                                       0xFF3A3A3A,
+                    //                                                     ),
+                    //                                                     fontSize:
+                    //                                                         12,
+                    //                                                     fontFamily:
+                    //                                                         'Poppins',
+                    //                                                     fontWeight:
+                    //                                                         FontWeight.w500,
+                    //                                                     height:
+                    //                                                         0,
+                    //                                                   ),
+                    //                                                   textScaleFactor:
+                    //                                                       1.0,
+                    //                                                 ),
+                    //                                                 Text(
+                    //                                                   controller
+                    //                                                       .challengelistClub[index]
+                    //                                                       .ward,
+                    //                                                   style: const TextStyle(
+                    //                                                     color: Color(
+                    //                                                       0xFF3A3A3A,
+                    //                                                     ),
+                    //                                                     fontSize:
+                    //                                                         12,
+                    //                                                     fontFamily:
+                    //                                                         'Poppins',
+                    //                                                     fontWeight:
+                    //                                                         FontWeight.w500,
+                    //                                                     height:
+                    //                                                         0,
+                    //                                                   ),
+                    //                                                   textScaleFactor:
+                    //                                                       1.0,
+                    //                                                 ),
+                    //                                               ],
+                    //                                             ),
+                    //                                             const SizedBox(
+                    //                                               height: 4,
+                    //                                             ),
+                    //                                             Row(
+                    //                                               children: [
+                    //                                                 const Text(
+                    //                                                   textAlign:
+                    //                                                       TextAlign
+                    //                                                           .left,
+                    //                                                   'Club  :  ',
+                    //                                                   style: TextStyle(
+                    //                                                     color: Color(
+                    //                                                       0xFF3A3A3A,
+                    //                                                     ),
+                    //                                                     fontSize:
+                    //                                                         12,
+                    //                                                     fontFamily:
+                    //                                                         'Poppins',
+                    //                                                     fontWeight:
+                    //                                                         FontWeight.w500,
+                    //                                                     height:
+                    //                                                         0,
+                    //                                                   ),
+                    //                                                   textScaleFactor:
+                    //                                                       1.0,
+                    //                                                 ),
+                    //                                                 Text(
+                    //                                                   controller
+                    //                                                       .challengelistClub[index]
+                    //                                                       .club,
+                    //                                                   style: const TextStyle(
+                    //                                                     color: Color(
+                    //                                                       0xFF3A3A3A,
+                    //                                                     ),
+                    //                                                     fontSize:
+                    //                                                         12,
+                    //                                                     fontFamily:
+                    //                                                         'Poppins',
+                    //                                                     fontWeight:
+                    //                                                         FontWeight.w500,
+                    //                                                     height:
+                    //                                                         0,
+                    //                                                   ),
+                    //                                                   textScaleFactor:
+                    //                                                       1.0,
+                    //                                                 ),
+                    //                                               ],
+                    //                                             ),
+                    //                                           ],
+                    //                                         ),
+                    //                                       ],
+                    //                                     ),
+                    //                                     const SizedBox(
+                    //                                       height: 16,
+                    //                                     ),
+                    //                                     controller
+                    //                                                 .challengelistClub[index]
+                    //                                                 .canchangeward ==
+                    //                                             0
+                    //                                         ? SizedBox()
+                    //                                         : Row(
+                    //                                             mainAxisAlignment:
+                    //                                                 MainAxisAlignment
+                    //                                                     .spaceBetween,
+                    //                                             children: [
+                    //                                               Expanded(
+                    //                                                 flex: 2,
+                    //                                                 child: InkWell(
+                    //                                                   onTap: () {
+                    //                                                     showModalBottomSheet(
+                    //                                                       context:
+                    //                                                           context,
+                    //                                                       isScrollControlled:
+                    //                                                           true,
+                    //                                                       builder:
+                    //                                                           (
+                    //                                                             context,
+                    //                                                           ) => BottomSheetContent(
+                    //                                                             id: controller.challengelistClub[index].customerid,
+                    //                                                             panchayatid: controller.challengelistClub[index].panchayatid,
 
-                                                child: AutoSizeText(
-                                                  "₹${controller.challengelistClub[index].amount.trim().replaceAll(".00", "")}",
-                                                  softWrap: true,
-                                                  textAlign: TextAlign.right,
-                                                  style: const TextStyle(
-                                                    color: Color(0xFF3A3A3A),
-                                                    fontFamily: 'Fontsemibold',
-                                                    fontWeight: FontWeight.w600,
-                                                    height: 0,
-                                                    letterSpacing: 0.91,
-                                                  ),
-                                                  maxLines: 2,
-                                                  minFontSize: 06,
-                                                  maxFontSize: 18,
-                                                  overflow:
-                                                      TextOverflow.ellipsis,
-                                                ),
-                                              ),
-                                              Container(
-                                                width: 72,
+                    //                                                             controllersub: controller,
+                    //                                                             GlogalIDSub: GlobalId,
+                    //                                                           ),
+                    //                                                     );
+                    //                                                   },
+                    //                                                   child: Container(
+                    //                                                     margin: const EdgeInsets.only(
+                    //                                                       left:
+                    //                                                           6,
+                    //                                                     ),
+                    //                                                     height:
+                    //                                                         28,
+                    //                                                     decoration: ShapeDecoration(
+                    //                                                       color:
+                    //                                                           Colors.white,
+                    //                                                       shape: RoundedRectangleBorder(
+                    //                                                         borderRadius: BorderRadius.circular(
+                    //                                                           10,
+                    //                                                         ),
+                    //                                                       ),
+                    //                                                       shadows: const [
+                    //                                                         BoxShadow(
+                    //                                                           color: Color(
+                    //                                                             0x3F000000,
+                    //                                                           ),
+                    //                                                           blurRadius: 4,
+                    //                                                           offset: Offset(
+                    //                                                             0,
+                    //                                                             4,
+                    //                                                           ),
+                    //                                                           spreadRadius: 0,
+                    //                                                         ),
+                    //                                                       ],
+                    //                                                     ),
+                    //                                                     child: const Center(
+                    //                                                       child: Text(
+                    //                                                         'Change Area',
+                    //                                                         style: TextStyle(
+                    //                                                           color: Colors.black,
+                    //                                                           fontSize: 10,
+                    //                                                           fontFamily: 'Poppins',
+                    //                                                           fontWeight: FontWeight.w500,
+                    //                                                           height: 0,
+                    //                                                         ),
+                    //                                                         textScaleFactor:
+                    //                                                             1.0,
+                    //                                                       ),
+                    //                                                     ),
+                    //                                                   ),
+                    //                                                 ),
+                    //                                               ),
+                    //                                               controller.challengelistClub[index].fullypaid ==
+                    //                                                       0
+                    //                                                   ? SizedBox()
+                    //                                                   : Expanded(
+                    //                                                       flex:
+                    //                                                           2,
+                    //                                                       child: InkWell(
+                    //                                                         onTap: () {
+                    //                                                           Get.to(
+                    //                                                             ReceiptDownload(
+                    //                                                               Amount: controller.challengelistClub[index].amount,
+                    //                                                               name: controller.challengelistClub[index].receiptname,
+                    //                                                             ),
+                    //                                                           );
+                    //                                                         },
+                    //                                                         child: Container(
+                    //                                                           margin: const EdgeInsets.only(
+                    //                                                             left: 6,
+                    //                                                           ),
+                    //                                                           height: 28,
+                    //                                                           decoration: ShapeDecoration(
+                    //                                                             color: Colors.white,
+                    //                                                             shape: RoundedRectangleBorder(
+                    //                                                               borderRadius: BorderRadius.circular(
+                    //                                                                 10,
+                    //                                                               ),
+                    //                                                             ),
+                    //                                                             shadows: const [
+                    //                                                               BoxShadow(
+                    //                                                                 color: Color(
+                    //                                                                   0x3F000000,
+                    //                                                                 ),
+                    //                                                                 blurRadius: 4,
+                    //                                                                 offset: Offset(
+                    //                                                                   0,
+                    //                                                                   4,
+                    //                                                                 ),
+                    //                                                                 spreadRadius: 0,
+                    //                                                               ),
+                    //                                                             ],
+                    //                                                           ),
+                    //                                                           child: const Center(
+                    //                                                             child: Text(
+                    //                                                               'Receipt ',
+                    //                                                               style: TextStyle(
+                    //                                                                 color: Colors.black,
+                    //                                                                 fontSize: 10,
+                    //                                                                 fontFamily: 'Poppins',
+                    //                                                                 fontWeight: FontWeight.w500,
+                    //                                                                 height: 0,
+                    //                                                               ),
+                    //                                                               textScaleFactor: 1.0,
+                    //                                                             ),
+                    //                                                           ),
+                    //                                                         ),
+                    //                                                       ),
+                    //                                                     ),
+                    //                                             ],
+                    //                                           ),
+                    //                                   ],
+                    //                                 ),
+                    //                               ),
+                    //                             ),
+                    //                           ],
+                    //                         ),
+                    //                       ),
+                    //                     ),
+                    //                     Positioned(
+                    //                       right: 10,
+                    //                       bottom: 40,
+                    //                       top: 0,
+                    //                       child: Column(
+                    //                         mainAxisAlignment:
+                    //                             MainAxisAlignment.center,
+                    //                         children: [
+                    //                           Container(
+                    //                             width: 72,
 
-                                                child: AutoSizeText(
-                                                  "${controller.challengelistClub[index].time}",
-                                                  softWrap: true,
-                                                  textAlign: TextAlign.right,
-                                                  style: const TextStyle(
-                                                    color: Color(0xFF3A3A3A),
-                                                    fontFamily: 'Fontsemibold',
-                                                    fontWeight: FontWeight.w300,
-                                                    height: 0,
-                                                    letterSpacing: 0.91,
-                                                  ),
-                                                  maxLines: 2,
-                                                  minFontSize: 06,
-                                                  maxFontSize: 8,
-                                                  overflow:
-                                                      TextOverflow.ellipsis,
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                        ),
-                                      ],
-                                    );
-                                  },
-                                );
-                              }
-                            }),
-                          ),
-                        ],
-                      ),
-                    ),
+                    //                             child: AutoSizeText(
+                    //                               "₹${controller.challengelistClub[index].amount.trim().replaceAll(".00", "")}",
+                    //                               softWrap: true,
+                    //                               textAlign: TextAlign.right,
+                    //                               style: const TextStyle(
+                    //                                 color: Color(0xFF3A3A3A),
+                    //                                 fontFamily: 'Fontsemibold',
+                    //                                 fontWeight: FontWeight.w600,
+                    //                                 height: 0,
+                    //                                 letterSpacing: 0.91,
+                    //                               ),
+                    //                               maxLines: 2,
+                    //                               minFontSize: 06,
+                    //                               maxFontSize: 18,
+                    //                               overflow:
+                    //                                   TextOverflow.ellipsis,
+                    //                             ),
+                    //                           ),
+                    //                           Container(
+                    //                             width: 72,
+
+                    //                             child: AutoSizeText(
+                    //                               "${controller.challengelistClub[index].time}",
+                    //                               softWrap: true,
+                    //                               textAlign: TextAlign.right,
+                    //                               style: const TextStyle(
+                    //                                 color: Color(0xFF3A3A3A),
+                    //                                 fontFamily: 'Fontsemibold',
+                    //                                 fontWeight: FontWeight.w300,
+                    //                                 height: 0,
+                    //                                 letterSpacing: 0.91,
+                    //                               ),
+                    //                               maxLines: 2,
+                    //                               minFontSize: 06,
+                    //                               maxFontSize: 8,
+                    //                               overflow:
+                    //                                   TextOverflow.ellipsis,
+                    //                             ),
+                    //                           ),
+                    //                         ],
+                    //                       ),
+                    //                     ),
+                    //                   ],
+                    //                 );
+                    //               },
+                    //             );
+                    //           }
+                    //         }),
+                    //       ),
+                    //     ],
+                    //   ),
+                    // ),
                   ],
                 ),
               ),

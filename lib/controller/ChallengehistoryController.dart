@@ -47,6 +47,8 @@ class ChallengeHistroyController extends GetxController {
   var totalPrice4 = "0".obs;
   var pendingPrice4 = "0".obs;
 
+  var totalqty = "0".obs;
+
   int count = 0;
 
   /// challenge history

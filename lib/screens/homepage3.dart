@@ -1322,7 +1322,7 @@ class _Homepage3State extends State<Homepage3> with RouteAware {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: const [
                               Text(
-                                "Participate",
+                                "Participate Now",
                                 style: TextStyle(
                                   color: Colors.white,
                                   fontSize: 20,

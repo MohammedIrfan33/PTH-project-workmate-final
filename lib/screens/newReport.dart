@@ -55,32 +55,7 @@ class HistoryState extends State<Newreport> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                // Container(
-                //   width: 25,
-                //   height: 25,
-                //   // margin: const EdgeInsets.all(8),
-                //   // decoration: ShapeDecoration(
-                //   //   color: Colors.white,
-                //   //   shape: RoundedRectangleBorder(
-                //   //     side:
-                //   //     const BorderSide(width: 1, color: Color(0xFFEDF4FC)),
-                //   //     borderRadius: BorderRadius.circular(18),
-                //   //   ),
-                //   // ),
-                //   // child: IconButton(
-                //   //   padding: const EdgeInsets.all(8),
-                //   //   constraints: const BoxConstraints(),
-                //   //   onPressed: () {
-                //   //     Get.back();
-                //   //   },
-                //   //   icon: SvgPicture.asset(
-                //   //     'assets/backarrow_s.svg',
-                //   //     width: 22,
-                //   //     height: 22,
-                //   //     semanticsLabel: 'Example SVG',
-                //   //   ),
-                //   // ),
-                // ),
+               
                 const Center(
                   child: Text(
                     'Report',
@@ -94,31 +69,8 @@ class HistoryState extends State<Newreport> {
                     textScaleFactor: 1.0,
                   ),
                 ),
-                // Container(
-                //   width: 25,
-                //   height: 25,
-                //   // margin: const EdgeInsets.all(8),
-                //   // decoration: ShapeDecoration(
-                //   //   color: Colors.white,
-                //   //   shape: RoundedRectangleBorder(
-                //   //     side:
-                //   //     const BorderSide(width: 1, color: Color(0xFFEDF4FC)),
-                //   //     borderRadius: BorderRadius.circular(18),
-                //   //   ),
-                //   // ),
-                //   // child: IconButton(
-                //   //   padding: const EdgeInsets.all(8),
-                //   //   onPressed: () {
-                //   //     Get.back();
-                //   //   },
-                //   //   icon: SvgPicture.asset(
-                //   //     'assets/home.svg',
-                //   //     width: 18,
-                //   //     height: 20,
-                //   //     semanticsLabel: 'Example SVG',
-                //   //   ),
-                //   // ),
-                // ),
+               
+              
               ],
             ),
             SizedBox(height: 8),
@@ -398,56 +350,10 @@ class HistoryState extends State<Newreport> {
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Container(
-                                  width: 158,
 
-                                  child: const AutoSizeText(
-                                    textAlign: TextAlign.start,
-                                    "Total Collected",
-                                    softWrap: true,
-                                    style: TextStyle(
-                                      fontSize: 16,
-                                      color: Colors.white,
-                                      fontFamily: 'Fontsemibold',
-                                      fontWeight: FontWeight.w600,
-                                      height: 0,
-                                      letterSpacing: 0.91,
-                                    ),
-                                    textScaleFactor: 1.0,
-                                    maxLines: 2,
-                                    minFontSize: 08,
-                                    maxFontSize: 16,
-                                    overflow: TextOverflow.ellipsis,
-                                  ),
-                                ),
-                                Flexible(
-                                  flex: 1,
-                                  child: Obx(() {
-                                    return AutoSizeText(
-                                      style: const TextStyle(
-                                        color: Colors.white,
-                                        fontFamily: 'Fmedium',
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.w700,
-                                        height: 0,
-                                      ),
-                                      maxLines: 1,
-                                      minFontSize: 08,
-                                      maxFontSize: 20,
-                                      overflow: TextOverflow.ellipsis,
-                                      textScaleFactor: 1.0,
-                                      " ₹ ${controller.totalPrice.toString()}",
-                                    );
-                                  }),
-                                ),
-                              ],
-                            ),
-                            SizedBox(height: 4),
 
-                            Row(
+
+                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Container(
@@ -488,12 +394,120 @@ class HistoryState extends State<Newreport> {
                                       maxFontSize: 20,
                                       overflow: TextOverflow.ellipsis,
                                       textScaleFactor: 1.0,
-                                      " ${controller.pendingPrice.toString()}",
+                                      " ${controller.totalorder.toString()} Kg",
                                     );
                                   }),
                                 ),
                               ],
                             ),
+                         
+                         
+
+                              Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Container(
+                                  width: 158,
+
+                                  child: const AutoSizeText(
+                                    textAlign: TextAlign.start,
+                                    "Total Recieved",
+                                    softWrap: true,
+                                    style: TextStyle(
+                                      fontSize: 16,
+                                      color: Colors.white,
+                                      fontFamily: 'Fontsemibold',
+                                      fontWeight: FontWeight.w600,
+                                      height: 0,
+                                      letterSpacing: 0.91,
+                                    ),
+                                    textScaleFactor: 1.0,
+                                    maxLines: 2,
+                                    minFontSize: 08,
+                                    maxFontSize: 16,
+                                    overflow: TextOverflow.ellipsis,
+                                  ),
+                                ),
+                                Flexible(
+                                  flex: 1,
+                                  child: Obx(() {
+                                    return AutoSizeText(
+                                      style: const TextStyle(
+                                        color: Colors.white,
+                                        fontFamily: 'Fmedium',
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.w700,
+                                        height: 0,
+                                      ),
+                                      maxLines: 1,
+                                      minFontSize: 08,
+                                      maxFontSize: 20,
+                                      overflow: TextOverflow.ellipsis,
+                                      textScaleFactor: 1.0,
+                                      " ₹ ${controller.totalPrice.toString()}",
+                                    );
+                                  }),
+                                ),
+                              ],
+                            ),
+                           
+                           
+                         
+                           
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Container(
+                                  width: 158,
+
+                                  child: const AutoSizeText(
+                                    textAlign: TextAlign.start,
+                                    "Total Outstanding",
+                                    softWrap: true,
+                                    style: TextStyle(
+                                      fontSize: 16,
+                                      color: Colors.white,
+                                      fontFamily: 'Fontsemibold',
+                                      fontWeight: FontWeight.w600,
+                                      height: 0,
+                                      letterSpacing: 0.91,
+                                    ),
+                                    textScaleFactor: 1.0,
+                                    maxLines: 2,
+                                    minFontSize: 08,
+                                    maxFontSize: 16,
+                                    overflow: TextOverflow.ellipsis,
+                                  ),
+                                ),
+                                Flexible(
+                                  flex: 1,
+                                  child: Obx(() {
+                                    return AutoSizeText(
+                                      style: const TextStyle(
+                                        color: Colors.white,
+                                        fontFamily: 'Fmedium',
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.w700,
+                                        height: 0,
+                                      ),
+                                      maxLines: 1,
+                                      minFontSize: 08,
+                                      maxFontSize: 20,
+                                      overflow: TextOverflow.ellipsis,
+                                      textScaleFactor: 1.0,
+                                      " ₹ ${controller.totalOutstanding.toString()}.00",
+                                    );
+                                  }),
+                                ),
+                              ],
+                            ),
+                           
+                           
+                           
+                            SizedBox(height: 4),
+
+                           
+                         
                           ],
                         ),
                       ),

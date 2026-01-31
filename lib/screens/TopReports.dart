@@ -216,34 +216,8 @@ class _TopClubsState extends State<TopReport>
                         ),
                       ),
                     ),
-                    Tab(
-                      child: ShaderMask(
-                        shaderCallback: (Rect bounds) {
-                          return LinearGradient(
-                            colors: [
-                              AppColors.primaryColor,
-                              AppColors.primaryColor2,
-                            ],
-                            begin: Alignment.topLeft,
-                            end: Alignment.bottomRight,
-                          ).createShader(bounds);
-                        },
-                        child: AutoSizeText(
-                          "Organisation",
-                          style: TextStyle(
-                            fontSize: 14,
-                            fontWeight: FontWeight.w500,
-                            color: Colors
-                                .white, // Must set a color for ShaderMask to work
-                          ),
-                          maxLines: 1,
-                          minFontSize: 6,
-                          maxFontSize: 14,
-                          overflow: TextOverflow.ellipsis,
-                          textScaleFactor: 1.0,
-                        ),
-                      ),
-                    ),
+                   
+                 
                   ],
                 ),
               ),
@@ -424,35 +398,8 @@ String value=controller.assemblylist[index].packet;
                       },
                     ),
             ),
-            //Last Tab>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 24),
-              child: controller.isLoading3.value
-                  ? Center(
-                      child: Container(
-                        height: 25,
-                        width: 25,
-                        child: ProgressINdigator(),
-                      ),
-                    )
-                  : controller.clublist.isEmpty
-                  ? const Center(child: Text('No entries to show'))
-                  : GetBuilder(
-                      builder: (TopreportController controller) {
-                        return ListView.builder(
-                          itemCount: controller.clublist.length,
-                          itemBuilder: (context, index) {
-                            return PeopleListItem(
-                              index: index,
-                              name: controller.clublist[index].name,
-                              quantityKg: controller.clublist[index].packet,
-                            );
-                          
-                          },
-                        );
-                      },
-                    ),
-            ),
+          
+         
           ],
         ),
       ),

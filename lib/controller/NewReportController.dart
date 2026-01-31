@@ -23,7 +23,9 @@ class Newreportcontroller extends GetxController {
 
   var isLoading = false.obs;
   RxString totalPrice = "0.00".obs;
+  RxString totalorder = "0.00".obs;
   RxString pendingPrice = "0".obs;
+  RxString totalOutstanding = "0".obs;
 
   ///partipation list from challenge
   fullproducts() async {
@@ -63,12 +65,33 @@ class Newreportcontroller extends GetxController {
     if (response.statusCode == 200) {
       Map<String, dynamic> parsedJson = jsonDecode(response.body);
       if (parsedJson['Status'] == 'true') {
+
+   
+        
         var data = List<Newreportmodel>.from(
-          parsedJson['data'].map((x) => Newreportmodel.fromJson(x)),
+          parsedJson['data'].map((x) {
+
+
+              Map<String, dynamic> xMap = x as Map<String, dynamic>;
+              
+              
+
+            return Newreportmodel.fromJson(x);
+
+
+
+
+
+          }),
         ).toList();
 
         totalPrice.value = parsedJson['datareceived'] ?? "0.00";
-        pendingPrice.value = parsedJson['dataqty'].toString() ?? "0";
+        pendingPrice.value = parsedJson['dataqty'].toString();
+
+       
+  
+        totalOutstanding.value = parsedJson['datapending'].toString();
+        totalorder.value = parsedJson['dataqty'].toString();
 
         return data;
       }

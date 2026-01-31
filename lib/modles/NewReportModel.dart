@@ -8,6 +8,7 @@ class Newreportmodel {
   String panchayatid;
   String amount;
   String quantity;
+  String totalOutstanding;
 
 
   Newreportmodel({
@@ -17,7 +18,11 @@ class Newreportmodel {
     required this.wardid,
     required this.panchayatid,
     required this.amount,
-    required this.quantity,});
+    required this.quantity,
+    this.totalOutstanding="0",
+    
+    
+    });
 
 
 
@@ -29,6 +34,7 @@ class Newreportmodel {
     quantity: json['quantity']??"",
     panchayatid: json['panchayatid']??"",
     wardid: json['wardid']??"",
+    totalOutstanding: json['datapending']??"0",
   );
 
 

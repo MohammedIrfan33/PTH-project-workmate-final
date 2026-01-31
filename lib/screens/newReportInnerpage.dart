@@ -359,7 +359,7 @@ class HistoryState extends State<Newreportinnerpage> {
                                                 Row(
                                                   children: [
                                                     const Text(
-                                                      'Panchayat : ',
+                                                      'Division : ',
                                                       style: TextStyle(
                                                         color: Color(
                                                           0xFF3A3A3A,
@@ -395,7 +395,7 @@ class HistoryState extends State<Newreportinnerpage> {
                                                   children: [
                                                     const Text(
                                                       textAlign: TextAlign.left,
-                                                      'Ward   :  ',
+                                                      'Area   :  ',
                                                       style: TextStyle(
                                                         color: Color(
                                                           0xFF3A3A3A,
