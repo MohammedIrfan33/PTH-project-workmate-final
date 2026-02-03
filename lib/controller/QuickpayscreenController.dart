@@ -51,6 +51,15 @@ class QuickpayScreencontroller extends GetxController {
     File file =  imagefile!;
 
 
+ 
+
+if (imagefile == null) {
+  file = await getImageFileFromAsset("assets/cart/cartimg.jpg");
+} else {
+  file = imagefile!;
+}
+
+
 
     var uri = Uri.parse(setthefulldatas);
 
@@ -91,12 +100,12 @@ class QuickpayScreencontroller extends GetxController {
       ..fields['Received'] = received
       ..fields['volunteer'] = AppData.volunteerId ?? "0"
       ..fields['mode'] = "1"
-      ..fields['qty'] = list.first.quantity.toString()
-      ..fields['qty1'] = '0'
+      ..fields['qty'] = list.length != 0 ? list.first.quantity.toString() : "0"
+      ..fields['qty1'] = list.length >1  ?  list[1].quantity.toString() : "0"
       ..files.add(
         await http.MultipartFile.fromPath(
           'image',
-          file!.path,
+          file.path,
           //filename: basename(file!.path),
         ),
       );
@@ -111,7 +120,7 @@ class QuickpayScreencontroller extends GetxController {
     };
 
 
-    print("---------------------------------------------");
+    print("---------------------${request.fields}------------------------");
 
     AppData.volunteerId.isNull
         ? Get.to(
@@ -143,9 +152,12 @@ class QuickpayScreencontroller extends GetxController {
 
 
     print("save volunteer data to server>>>>>>>>>>>>>");
+   
     isLoading(true);
 
     final response = await _request.send();
+
+
     isLoading(false);
     print("Responese of data${response}");
     if (response.statusCode == 200) {
