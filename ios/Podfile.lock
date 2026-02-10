@@ -22,7 +22,7 @@ PODS:
   - image_picker_ios (0.0.1):
     - Flutter
   - OrderedSet (6.0.3)
-  - payment_gateway_plugin (5.0.9):
+  - payment_gateway_plugin (4.1.2):
     - Flutter
   - razorpay-core-pod (1.0.3)
   - razorpay-pod (1.5.2):
@@ -104,7 +104,7 @@ SPEC CHECKSUMS:
   image_cropper: b8ef14d3fcff4040b0f9da2ca28d98219a5cba0e
   image_picker_ios: 4f2f91b01abdb52842a8e277617df877e40f905b
   OrderedSet: e539b66b644ff081c73a262d24ad552a69be3a94
-  payment_gateway_plugin: 74424e07812e87a1cfc88e9649965ded9341e1fa
+  payment_gateway_plugin: 82f12aaa99175dff6308f73c838b13cd6e88de1e
   razorpay-core-pod: ef0309dbf8e3e5a1330f6cad89dcf9226d8ef758
   razorpay-pod: a9cb6e158aee8754053b147008eff6b4897789c8
   razorpay_flutter: 84b3bfd206ae9c9c2a9ba585524a1b3d8102b6c1
