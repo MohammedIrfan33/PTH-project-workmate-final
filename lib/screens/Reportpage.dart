@@ -5,6 +5,7 @@ import 'package:PTHPalathingal/ApiLists/Appdata.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:PTHPalathingal/Appcore/helper.dart';
@@ -542,7 +543,7 @@ class _ReportState extends State<Reportscreen>
                           children: [
                             Positioned(
                               child: Container(
-                                height: 86,
+                                height: 110.h,
                                 width: double.infinity,
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(22),
@@ -559,7 +560,7 @@ class _ReportState extends State<Reportscreen>
                               ),
                             ),
                             Container(
-                              height: 96,
+                              height: 100.h,
 
                               child: Padding(
                                 padding: const EdgeInsets.symmetric(
@@ -568,19 +569,24 @@ class _ReportState extends State<Reportscreen>
                                 child: Column(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
-                                    Row(
+
+                                     SizedBox(height: 6.h),
+                                    
+                                    
+
+                                       Row(
                                       mainAxisAlignment:
                                           MainAxisAlignment.spaceBetween,
                                       children: [
                                         Container(
-                                          width: 158,
+                                          width: 158.h,
 
                                           child: const AutoSizeText(
                                             textAlign: TextAlign.start,
-                                            "Amount Received",
+                                            "Total Ordered",
                                             softWrap: true,
                                             style: TextStyle(
-                                              fontSize: 14,
+                                              fontSize: 15,
                                               color: Colors.white,
                                               fontFamily: 'Fontsemibold',
                                               fontWeight: FontWeight.w600,
@@ -590,7 +596,58 @@ class _ReportState extends State<Reportscreen>
                                             textScaleFactor: 1.0,
                                             maxLines: 2,
                                             minFontSize: 08,
-                                            maxFontSize: 14,
+                                            maxFontSize: 15,
+                                            overflow: TextOverflow.ellipsis,
+                                          ),
+                                        ),
+                                        Flexible(
+                                          flex: 1,
+                                          child: Obx(() {
+                                            return AutoSizeText(
+                                              style: const TextStyle(
+                                                color: Colors.white,
+                                                fontFamily: 'Fmedium',
+                                                fontSize: 20,
+                                                fontWeight: FontWeight.w900,
+                                                height: 0,
+                                              ),
+                                              maxLines: 1,
+                                              minFontSize: 08,
+                                              maxFontSize: 20,
+                                              overflow: TextOverflow.ellipsis,
+                                              textScaleFactor: 1.0,
+                                              "${controller.totalQtyPartcipents.toString()} Kg",
+                                            );
+                                          }),
+                                        ),
+                                      ],
+                                    ),
+                                  
+                                  
+                                    SizedBox(height: 6),
+                                    Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceBetween,
+                                      children: [
+                                        Container(
+                                          width: 158.h,
+
+                                          child: const AutoSizeText(
+                                            textAlign: TextAlign.start,
+                                            "Total Received",
+                                            softWrap: true,
+                                            style: TextStyle(
+                                              fontSize: 15,
+                                              color: Colors.white,
+                                              fontFamily: 'Fontsemibold',
+                                              fontWeight: FontWeight.w600,
+                                              height: 0,
+                                              letterSpacing: 0.91,
+                                            ),
+                                            textScaleFactor: 1.0,
+                                            maxLines: 2,
+                                            minFontSize: 08,
+                                            maxFontSize: 15,
                                             overflow: TextOverflow.ellipsis,
                                           ),
                                         ),
@@ -616,20 +673,22 @@ class _ReportState extends State<Reportscreen>
                                         ),
                                       ],
                                     ),
-                                    SizedBox(height: 4),
+                                  
+                                  
+                                    SizedBox(height: 6),
 
                                     Row(
                                       mainAxisAlignment:
                                           MainAxisAlignment.spaceBetween,
                                       children: [
                                         Container(
-                                          width: 158,
+                                          width: 158.h,
                                           child: const AutoSizeText(
                                             textAlign: TextAlign.start,
-                                            "Amount Pending",
+                                            "Total Outstanding",
                                             softWrap: true,
                                             style: TextStyle(
-                                              fontSize: 14,
+                                              fontSize: 15,
                                               color: Colors.white,
                                               fontFamily: 'Fontsemibold',
                                               fontWeight: FontWeight.w600,
@@ -639,7 +698,7 @@ class _ReportState extends State<Reportscreen>
                                             textScaleFactor: 1.0,
                                             maxLines: 2,
                                             minFontSize: 08,
-                                            maxFontSize: 14,
+                                            maxFontSize: 15,
                                             overflow: TextOverflow.ellipsis,
                                           ),
                                         ),
@@ -1565,7 +1624,7 @@ class _ReportState extends State<Reportscreen>
 
                                           child: const AutoSizeText(
                                             textAlign: TextAlign.start,
-                                            "Amount Received",
+                                            "Total Received",
                                             softWrap: true,
                                             style: TextStyle(
                                               fontSize: 14,
@@ -1614,7 +1673,7 @@ class _ReportState extends State<Reportscreen>
                                           width: 158,
                                           child: const AutoSizeText(
                                             textAlign: TextAlign.start,
-                                            "Amount Pending",
+                                            "Total Outstanding",
                                             softWrap: true,
                                             style: TextStyle(
                                               fontSize: 14,
@@ -2571,7 +2630,7 @@ class _ReportState extends State<Reportscreen>
 
                                           child: const AutoSizeText(
                                             textAlign: TextAlign.start,
-                                            "Amount Received",
+                                            "Total Received",
                                             softWrap: true,
                                             style: TextStyle(
                                               fontSize: 14,

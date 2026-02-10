@@ -35,6 +35,7 @@ class ReportController extends GetxController {
   RxDouble pendingPrice2 = 0.00.obs;
   RxDouble totalPrice3 = 0.00.obs;
   String? volunteer_ID;
+  RxInt totalQtyPartcipents= 0.obs;
 
   ///partipation list from challenge
   fullproducts() async {
@@ -69,8 +70,12 @@ class ReportController extends GetxController {
       },
     );
 
+  
+
     if (response.statusCode == 200) {
       Map<String, dynamic> parsedJson = jsonDecode(response.body);
+    
+     
       if (parsedJson['Status'] == 'true') {
         var data = List<CallengereportPartisipationModel>.from(
           parsedJson['data'].map(
@@ -81,6 +86,15 @@ class ReportController extends GetxController {
         int temppending = parsedJson['datapending'];
         totalPrice.value = temptotal.toDouble();
         pendingPrice.value = temppending.toDouble();
+
+     
+        totalQtyPartcipents.value = parsedJson['dataqty'];
+
+
+
+    
+
+        print(totalQtyPartcipents.value);
         return data;
       }
 

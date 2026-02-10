@@ -1,3 +1,4 @@
+import 'package:PTHPalathingal/widgets/custom_app_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -37,84 +38,7 @@ class _CartScreenState extends State<CartScreen> {
     super.dispose();
   }
 
-  PreferredSize get _appBar {
-    return PreferredSize(
-      preferredSize: const Size.fromHeight(90),
-      child: SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 10),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Container(
-                width: 53,
-                height: 53,
-                margin: const EdgeInsets.all(8),
-                decoration: ShapeDecoration(
-                  color: Colors.white,
-                  shape: RoundedRectangleBorder(
-                    side: const BorderSide(width: 1, color: Color(0xFFEDF4FC)),
-                    borderRadius: BorderRadius.circular(18),
-                  ),
-                ),
-                child: IconButton(
-                  padding: const EdgeInsets.all(8),
-                  constraints: const BoxConstraints(),
-                  onPressed: () {
-                    Get.back();
-                  },
-                  icon: SvgPicture.asset(
-                    'assets/backarrow_s.svg',
-                    width: 22,
-                    height: 22,
-                    semanticsLabel: 'Example SVG',
-                  ),
-                ),
-              ),
-              const Center(
-                child: Text(
-                  'Cart',
-                  style: TextStyle(
-                    color: Color(0xFF3A3A3A),
-                    fontSize: 14,
-                    fontFamily: 'Fontsemibold',
-                    fontWeight: FontWeight.w600,
-                    height: 0,
-                  ),
-                  textScaleFactor: 1.0,
-                ),
-              ),
-              Container(
-                width: 53,
-                height: 53,
-                margin: const EdgeInsets.all(8),
-                decoration: ShapeDecoration(
-                  color: Colors.white,
-                  shape: RoundedRectangleBorder(
-                    side: const BorderSide(width: 1, color: Color(0xFFEDF4FC)),
-                    borderRadius: BorderRadius.circular(18),
-                  ),
-                ),
-                child: IconButton(
-                  padding: const EdgeInsets.all(8),
-                  onPressed: () {
-                    goBackTwoPages();
-                  },
-                  icon: SvgPicture.asset(
-                    'assets/home.svg',
-                    width: 18,
-                    height: 20,
-                    semanticsLabel: 'Example SVG',
-                  ),
-                ),
-              ),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
-
+  
   void goBackTwoPages() {
     int count = 0;
     Get.until((route) => count++ == 1);
@@ -269,7 +193,7 @@ class _CartScreenState extends State<CartScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: _appBar,
+      appBar: CustomAppBar(title: 'Cart' ),
       body: Obx(() {
         if (controller.isLoading.value) {
           return Center(child: ProgressINdigator());

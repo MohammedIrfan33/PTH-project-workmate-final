@@ -695,7 +695,7 @@ class _Homepage3State extends State<Homepage3> with RouteAware {
                                         maxFontSize: 14,
                                         maxLines: 3,
                                         minFontSize: 08,
-                                        'കിടപ്പ് രോഗികൾക്കൊരു കൈതങ്ങാവാൻ കൂടെ നിൽക്കാം',
+                                        'കിടപ്പ് രോഗികൾക്കൊരു കൈത്താങ്ങാവാൻ കൂടെ നിൽക്കാം',
                                         textAlign: .center,
                                         style: TextStyle(
                                           color: Colors.white,

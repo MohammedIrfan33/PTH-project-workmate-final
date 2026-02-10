@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'dart:ui';
 
+import 'package:PTHPalathingal/widgets/custom_app_bar.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:PTHPalathingal/modles/NewAssemblyModel.dart';
@@ -45,41 +46,6 @@ class HistoryState extends State<Newreport> {
 
   HistoryState({required this.GlobalId});
 
-  PreferredSize get _appBar {
-    return PreferredSize(
-      preferredSize: const Size.fromHeight(74),
-      child: SafeArea(
-        child: Column(
-          children: [
-            SizedBox(height: 12),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-               
-                const Center(
-                  child: Text(
-                    'Report',
-                    style: TextStyle(
-                      color: Color(0xFF3A3A3A),
-                      fontSize: 14,
-                      fontFamily: 'Fontsemibold',
-                      fontWeight: FontWeight.w600,
-                      height: 0,
-                    ),
-                    textScaleFactor: 1.0,
-                  ),
-                ),
-               
-              
-              ],
-            ),
-            SizedBox(height: 8),
-          ],
-        ),
-      ),
-    );
-  }
-
   @override
   void initState() {
     super.initState();
@@ -120,7 +86,7 @@ class HistoryState extends State<Newreport> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: _appBar,
+      appBar: CustomAppBar(title: 'Reports',height: 74,),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 24),
         child: Column(

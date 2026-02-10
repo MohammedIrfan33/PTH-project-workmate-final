@@ -1,22 +1,12 @@
-import 'dart:convert';
-import 'dart:ui';
 
+import 'package:PTHPalathingal/widgets/custom_app_bar.dart';
 import 'package:auto_size_text/auto_size_text.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:flutter/widgets.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
-import 'package:get_storage/get_storage.dart';
-import 'package:PTHPalathingal/widgets/my_textfield.dart';
-import '../ApiLists/Apis.dart';
 import '../Utils/colors.dart';
 import '../controller/ControllermyHistrory.dart';
 import '../main.dart';
-import '../modles/WardModel.dart';
 import '../widgets/PorgressIndicator.dart';
-import 'package:http/http.dart' as http;
 
 import '../widgets/funtionDate.dart';
 import 'ReceiptDownloadpage.dart';
@@ -33,86 +23,9 @@ class Myhistory extends StatefulWidget {
 }
 
 class _HistoryState extends State<Myhistory> with RouteAware {
-  PreferredSize get _appBar {
-    return PreferredSize(
-      preferredSize: const Size.fromHeight(70),
-      child: SafeArea(
-        child: Column(
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Container(
-                  width: 53,
-                  height: 53,
-                  margin: const EdgeInsets.all(8),
-                  // decoration: ShapeDecoration(
-                  //   color: Colors.white,
-                  //   shape: RoundedRectangleBorder(
-                  //     side: BorderSide(width: 1, color: Color(0xFFEDF4FC)),
-                  //     borderRadius: BorderRadius.circular(18),
-                  //   ),
-                  // ),
-                  // child: IconButton(
-                  //   padding: const EdgeInsets.all(8),
-                  //   constraints: const BoxConstraints(),
-                  //   onPressed: () {
-                  //     Get.back();
-                  //   },
-                  //   icon: SvgPicture.asset(
-                  //     'assets/backarrow_s.svg',
-                  //     width: 22,
-                  //     height: 22,
-                  //     semanticsLabel: 'Example SVG',
-                  //   ),
-                  // ),
-                ),
-                const Center(
-                  child: Text(
-                    'My History',
-                    style: TextStyle(
-                      color: Color(0xFF3A3A3A),
-                      fontSize: 14,
-                      fontFamily: 'Poppins',
-                      fontWeight: FontWeight.w600,
-                      height: 0,
-                    ),
-                    textScaleFactor: 1.0,
-                  ),
-                ),
-                Container(
-                  width: 53,
-                  height: 53,
-                  margin: const EdgeInsets.all(8),
-                  // decoration: ShapeDecoration(
-                  //   color: Colors.white,
-                  //   shape: RoundedRectangleBorder(
-                  //     side:
-                  //     const BorderSide(width: 1, color: Color(0xFFEDF4FC)),
-                  //     borderRadius: BorderRadius.circular(18),
-                  //   ),
-                  // ),
-                  // child: IconButton(
-                  //   padding: const EdgeInsets.all(8),
-                  //   onPressed: () {
-                  //     Get.back();
-                  //   },
-                  //   icon: SvgPicture.asset(
-                  //     'assets/home.svg',
-                  //     width: 18,
-                  //     height: 20,
-                  //     semanticsLabel: 'Example SVG',
-                  //   ),
-                  // ),
-                ),
-              ],
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-
+ 
+  
+  
   @override
   void initState() {
     super.initState();
@@ -144,7 +57,9 @@ class _HistoryState extends State<Myhistory> with RouteAware {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: _appBar,
+      appBar: CustomAppBar(
+        title: 'My History',
+      ),
       body: Column(
         children: [
           Expanded(

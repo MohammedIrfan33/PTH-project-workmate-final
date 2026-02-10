@@ -210,7 +210,7 @@ class MyHomePageState extends State<MyHomePage> with RouteAware {
                 ),
                 BottomBarItem(
                   itemLabelWidget: Text(
-                    'Top Report',
+                    'Top Reports',
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 8,

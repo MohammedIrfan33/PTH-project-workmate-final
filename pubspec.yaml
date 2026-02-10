@@ -56,7 +56,7 @@ dependencies:
   flutter_secure_storage: ^10.0.0
   device_info_plus: ^12.3.0
   flutter_spinkit: ^5.2.1
-  payment_gateway_plugin: ^5.0.9
+  payment_gateway_plugin: ^5.0.9 #for ios ^4.1.0 android ^5.0.9
   crypto: ^3.0.6
   dropdown_button2: ^2.3.9
   flutter_screenutil: ^5.9.0

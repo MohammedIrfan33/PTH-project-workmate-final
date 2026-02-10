@@ -80,7 +80,7 @@ class PeopleListItem extends StatelessWidget {
             Expanded(
               child: Text(
                 name,
-                maxLines: 1,
+                maxLines: 2,
                 overflow: TextOverflow.ellipsis,
                 style: const TextStyle(
                   fontSize: 14,

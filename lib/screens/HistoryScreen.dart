@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'dart:ui';
 
+import 'package:PTHPalathingal/widgets/custom_app_bar.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:get/get_connect/http/src/utils/utils.dart';
 import 'package:PTHPalathingal/modles/NewAssemblyModel.dart';
@@ -49,118 +50,6 @@ class HistoryState extends State<Historyscreen>
   final String? GlobalId;
 
   HistoryState({required this.GlobalId});
-
-  PreferredSize get _appBar {
-    return PreferredSize(
-      preferredSize: const Size.fromHeight(94),
-      child: SafeArea(
-        child: Column(
-          children: [
-            SizedBox(height: 12),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                const Center(
-                  child: Text(
-                    'Transactions',
-                    style: TextStyle(
-                      color: Color(0xFF3A3A3A),
-                      fontSize: 14,
-                      fontFamily: 'Fontsemibold',
-                      fontWeight: FontWeight.w600,
-                      height: 0,
-                    ),
-                    textScaleFactor: 1.0,
-                  ),
-                ),
-              ],
-            ),
-            SizedBox(height: 8),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 12.0),
-              child: TabBar(
-                // Selected tab text color
-                unselectedLabelColor: Colors.transparent,
-                // Unselected tab text color
-                controller: _tabController,
-
-                // Tab indicator size
-                indicatorWeight: 0,
-                indicator: GradientTabIndicator(
-                  gradient: LinearGradient(
-                    colors: [AppColors.primaryColor2, AppColors.primaryColor],
-                  ),
-
-                  thickness: 2.2,
-                  radius: 90.0, // Adjust as needed
-                ),
-                dividerColor: Colors.transparent,
-                tabs: [
-                  Tab(
-                    child: ShaderMask(
-                      shaderCallback: (Rect bounds) {
-                        return LinearGradient(
-                          colors: [
-                            AppColors.primaryColor,
-                            AppColors.primaryColor2,
-                          ],
-                          begin: Alignment.topLeft,
-                          end: Alignment.bottomRight,
-                        ).createShader(bounds);
-                      },
-                      child: AutoSizeText(
-                        "Challenge Report",
-                        style: TextStyle(
-                          fontSize: 14,
-                          fontWeight: FontWeight.w500,
-                          color: Colors
-                              .white, // Must set a color for ShaderMask to work
-                        ),
-                        maxLines: 1,
-                        minFontSize: 6,
-                        maxFontSize: 14,
-                        overflow: TextOverflow.ellipsis,
-                        textScaleFactor: 1.0,
-                      ),
-                    ),
-                  ),
-
-                  Tab(
-                    child: ShaderMask(
-                      shaderCallback: (Rect bounds) {
-                        return LinearGradient(
-                          colors: [
-                            AppColors.primaryColor,
-                            AppColors.primaryColor2,
-                          ],
-                          begin: Alignment.topLeft,
-                          end: Alignment.bottomRight,
-                        ).createShader(bounds);
-                      },
-                      child: AutoSizeText(
-                        "Contribution Report",
-                        style: TextStyle(
-                          fontSize: 14,
-                          fontWeight: FontWeight.w500,
-                          color: Colors
-                              .white, // Must set a color for ShaderMask to work
-                        ),
-                        maxLines: 1,
-                        minFontSize: 6,
-                        maxFontSize: 14,
-                        overflow: TextOverflow.ellipsis,
-                        textScaleFactor: 1.0,
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
 
   @override
   void initState() {
@@ -266,7 +155,7 @@ class HistoryState extends State<Historyscreen>
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: _appBar,
+      appBar: CustomAppBar(title: 'Transactions',height: 94,),
       body: TabBarView(
         controller: _tabController,
         children: [

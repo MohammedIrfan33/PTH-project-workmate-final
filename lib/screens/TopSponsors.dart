@@ -1,3 +1,4 @@
+import 'package:PTHPalathingal/widgets/custom_app_bar.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -17,33 +18,6 @@ class Topsponsors extends StatefulWidget {
 class _TopsponsorsState extends State<Topsponsors> with RouteAware {
   final Topsponsorcontroller controller = Get.put(Topsponsorcontroller());
 
-  PreferredSize get _appBar {
-    return PreferredSize(
-      preferredSize: Size.fromHeight(60.h),
-      child: SafeArea(
-        child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 5.w, vertical: 10.h),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              SizedBox(width: 53.w, height: 53.w),
-              Text(
-                'Top Sponsors',
-                style: TextStyle(
-                  color: const Color(0xFF3A3A3A),
-                  fontSize: 14.sp,
-                  fontFamily: 'Fontsemibold',
-                  fontWeight: FontWeight.w600,
-                ),
-              ),
-              SizedBox(width: 53.w, height: 53.w),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
-
   @override
   void didPopNext() {
     controller.fulllist();
@@ -62,7 +36,7 @@ class _TopsponsorsState extends State<Topsponsors> with RouteAware {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: _appBar,
+      appBar: CustomAppBar(title: 'Top Sponsors'),
       body: Obx(() {
         if (controller.isLoading.value) {
           return Center(
@@ -164,9 +138,9 @@ class _TopsponsorsState extends State<Topsponsors> with RouteAware {
 
                         /// Count
                         Positioned(
-                          left: 286.w,
+                          left: 292.w,
                          
-                          top: 138,
+                          top: 157.h,
                           child: SizedBox(
                             width: 90.w,
                             height: 60.h,

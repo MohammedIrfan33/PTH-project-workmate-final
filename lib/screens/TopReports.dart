@@ -33,7 +33,7 @@ class _TopClubsState extends State<TopReport>
 
   PreferredSize get _appBar {
     return PreferredSize(
-      preferredSize: const Size.fromHeight(117),
+      preferredSize: const Size.fromHeight(125),
       child: SafeArea(
         child: Column(
           children: [
@@ -44,32 +44,32 @@ class _TopClubsState extends State<TopReport>
                   width: 53,
                   height: 53,
                   margin: const EdgeInsets.all(8),
-                  // decoration: ShapeDecoration(
-                  //   color: Colors.white,
-                  //   shape: RoundedRectangleBorder(
-                  //     side:
-                  //     const BorderSide(width: 1, color: Color(0xFFEDF4FC)),
-                  //     borderRadius: BorderRadius.circular(18),
-                  //   ),
-                  // ),
-                  // child: IconButton(
-                  //   padding: const EdgeInsets.all(8),
-                  //   constraints: const BoxConstraints(),
-                  //   onPressed: () {
-                  //     Get.back();
-                  //   },
-                  //   icon: SvgPicture.asset(
-                  //     'assets/backarrow_s.svg',
-                  //     width: 22,
-                  //     height: 22,
-                  //     semanticsLabel: 'Example SVG',
-                  //   ),
-                  // ),
+                  decoration: ShapeDecoration(
+                    color: Colors.white,
+                    shape: RoundedRectangleBorder(
+                      side:
+                      const BorderSide(width: 1, color: Color(0xFFEDF4FC)),
+                      borderRadius: BorderRadius.circular(18),
+                    ),
+                  ),
+                  child: IconButton(
+                    padding: const EdgeInsets.all(8),
+                    constraints: const BoxConstraints(),
+                    onPressed: () {
+                      Get.back();
+                    },
+                    icon: SvgPicture.asset(
+                      'assets/backarrow_s.svg',
+                      width: 22,
+                      height: 22,
+                      semanticsLabel: 'Example SVG',
+                    ),
+                  ),
                 ),
                 const Center(
                   child: Text
                   (
-                    'Top Report',
+                    'Top Reports',
                     style: TextStyle(
                       color: Color(0xFF3A3A3A),
                       fontSize: 14,
@@ -83,27 +83,27 @@ class _TopClubsState extends State<TopReport>
                 Container(
                   width: 53,
                   height: 53,
-                  margin: const EdgeInsets.all(8),
-                  // decoration: ShapeDecoration(
-                  //   color: Colors.white,
-                  //   shape: RoundedRectangleBorder(
-                  //     side:
-                  //     const BorderSide(width: 1, color: Color(0xFFEDF4FC)),
-                  //     borderRadius: BorderRadius.circular(18),
-                  //   ),
-                  // ),
-                  // child: IconButton(
-                  //   padding: const EdgeInsets.all(8),
-                  //   onPressed: () {
-                  //     Get.back();
-                  //   },
-                  //   icon: SvgPicture.asset(
-                  //     'assets/home.svg',
-                  //     width: 18,
-                  //     height: 20,
-                  //     semanticsLabel: 'Example SVG',
-                  //   ),
-                  // ),
+                  margin: const EdgeInsets.symmetric(horizontal: 12,vertical: 10),
+                  decoration: ShapeDecoration(
+                    color: Colors.white,
+                    shape: RoundedRectangleBorder(
+                      side:
+                      const BorderSide(width: 1, color: Color(0xFFEDF4FC)),
+                      borderRadius: BorderRadius.circular(18),
+                    ),
+                  ),
+                  child: IconButton(
+                    padding: const EdgeInsets.all(8),
+                    onPressed: () {
+                      Get.back();
+                    },
+                    icon: SvgPicture.asset(
+                      'assets/home.svg',
+                      width: 18,
+                      height: 20,
+                      semanticsLabel: 'Example SVG',
+                    ),
+                  ),
                 ),
               ],
             ),

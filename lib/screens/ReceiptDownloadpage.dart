@@ -229,11 +229,11 @@ class _ReceiptDownloadState extends State<ReceiptDownload> {
                   },
                   child: Container(
                     width: MediaQuery.sizeOf(context).width - 60,
-                    height: 41,
+                    height: 50,
                     decoration: ShapeDecoration(
                       color: AppColors.primaryColor2,
                       shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20),
+                        borderRadius: BorderRadius.circular(16),
                       ),
                     ),
                     child: Row(
@@ -243,9 +243,9 @@ class _ReceiptDownloadState extends State<ReceiptDownload> {
                           'Share',
                           style: TextStyle(
                             color: Colors.white,
-                            fontSize: 15,
+                            fontSize: 17,
                             fontFamily: 'Poppins',
-                            fontWeight: FontWeight.w400,
+                            fontWeight: FontWeight.w600,
                             height: 0,
                           ),
                           textScaleFactor: 1.0,
