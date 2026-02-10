@@ -157,7 +157,7 @@ class _ReceiptDownloadState extends State<ReceiptDownload> {
                   ClipRRect(
                     borderRadius: BorderRadius.circular(12.0),
                     child: Image.asset(
-                      'assets/home3/receipt2.jpeg',
+                      'assets/home3/recipt_signed.jpeg',
                       width: 340,
                       height: 400,
                       fit: BoxFit.fill,
@@ -200,7 +200,7 @@ class _ReceiptDownloadState extends State<ReceiptDownload> {
                       child: AutoSizeText(
                         "${widget.name}",
                         style: TextStyle(
-                          color: Colors.black,
+                          color: Colors.white,
                           fontSize: 12,
                           fontFamily: 'Fmedium',
                           fontWeight: FontWeight.w600,

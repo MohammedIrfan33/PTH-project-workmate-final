@@ -4,17 +4,14 @@ import 'dart:io';
 import 'package:flutter/services.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:PTHPalathingal/ApiLists/Appdata.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
 import 'package:path/path.dart';
 
 import 'package:PTHPalathingal/screens/PaymentfailedScreen.dart';
-import 'package:PTHPalathingal/screens/PaymentsuccessScreen.dart';
 
 import '../ApiLists/Apis.dart';
-import '../modles/AssembelyModel.dart';
 import '../modles/DistrictModel.dart';
 import '../modles/NewAssemblyModel.dart';
 import '../modles/PanchayatModel.dart';
@@ -54,7 +51,7 @@ class QuickpayScreencontroller extends GetxController {
  
 
 if (imagefile == null) {
-  file = await getImageFileFromAsset("assets/cart/cartimg.jpg");
+  file = await getImageFileFromAsset("assets/home3/leader_login_icon.png");
 } else {
   file = imagefile!;
 }
@@ -64,7 +61,7 @@ if (imagefile == null) {
     var uri = Uri.parse(setthefulldatas);
 
 
-    print('---------------------------------------------');
+  
 
 
     var request = http.MultipartRequest("POST", uri)

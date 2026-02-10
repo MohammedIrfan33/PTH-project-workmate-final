@@ -1,22 +1,15 @@
 import 'dart:convert';
 
 import 'package:http/http.dart' as http;
-import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:PTHPalathingal/modles/AssembelyModel.dart';
-import 'package:PTHPalathingal/modles/ClubModel.dart';
 import 'package:PTHPalathingal/modles/DistrictModel.dart';
 import 'package:PTHPalathingal/modles/PanchayatModel.dart';
 import 'package:PTHPalathingal/modles/WardModel.dart';
 
 import '../ApiLists/Apis.dart';
 import '../ApiLists/Appdata.dart';
-import '../modles/ChallengeSopnsorModel.dart';
-import '../modles/ChallengereportparticipantsModel.dart';
 import '../modles/NewAssemblyModel.dart';
 import '../modles/NewReportModel.dart';
-import '../modles/ReportContributionModel.dart';
-import '../Utils/colors.dart';
 
 class Newreportcontroller extends GetxController {
   RxList<Newreportmodel> newRportList = <Newreportmodel>[].obs;
