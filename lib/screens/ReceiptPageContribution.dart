@@ -62,7 +62,7 @@ class _ReceiptDownloadState extends State<Receiptpagecontribution> {
         if (_savedImage != null) {
           await Share.shareXFiles(
             [XFile(_savedImage!.path)],
-            text: 'Receipt from CH Centre Thennala',
+           
           );
         } else {
           if (mounted) {
