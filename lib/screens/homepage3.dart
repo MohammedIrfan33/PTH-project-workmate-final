@@ -1,3 +1,4 @@
+import 'package:PTHPalathingal/Appcore/close_challenge_check.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
@@ -716,6 +717,8 @@ class _Homepage3State extends State<Homepage3> with RouteAware {
                                 child: Row(
                                   mainAxisAlignment: .spaceEvenly,
                                   children: [
+
+                                    if(closeChallenge != "1")
                                     Material(
                                       color: Colors.transparent,
                                       child: InkWell(
@@ -776,6 +779,8 @@ class _Homepage3State extends State<Homepage3> with RouteAware {
                                             const SizedBox(height: 6),
 
                                             // Text + arrow (clickable together)
+
+                                       
                                             Row(
                                               mainAxisSize: MainAxisSize.min,
                                               children: [
@@ -809,6 +814,9 @@ class _Homepage3State extends State<Homepage3> with RouteAware {
                                         ),
                                       ),
                                     ),
+
+
+                                
 
                                     Material(
                                       color: Colors.transparent,
@@ -1282,9 +1290,9 @@ class _Homepage3State extends State<Homepage3> with RouteAware {
 
               Column(
                 spacing: 24,
-                children: [
+                children: [ 
                   if (AppData.hide != "1")
-                    Material(
+                    closeChallenge != "1" ?  Material(
                       color: Colors.transparent,
                       child: InkWell(
                         borderRadius: BorderRadius.circular(20),
@@ -1339,7 +1347,7 @@ class _Homepage3State extends State<Homepage3> with RouteAware {
                           ),
                         ),
                       ),
-                    ),
+                    ) : SizedBox.shrink(),
 
                   SizedBox(height: 10),
                 ],

@@ -1,3 +1,4 @@
+import 'package:PTHPalathingal/Appcore/close_challenge_check.dart';
 import 'package:flutter/services.dart';
 
 import 'package:PTHPalathingal/screens/SplashScreen.dart';
@@ -8,11 +9,15 @@ import 'package:get_storage/get_storage.dart';
 
 Future<void> main() async {
   await GetStorage.init();
+  await loadCloseChallenge();
   WidgetsFlutterBinding.ensureInitialized();
   SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,
     DeviceOrientation.portraitDown,
   ]).then((_) {
+
+
+
     runApp(const MyApp());
   });
 }
