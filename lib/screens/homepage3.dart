@@ -293,79 +293,82 @@ class _Homepage3State extends State<Homepage3> with RouteAware {
 
                             //
                             if (AppData.hide != "1")
-                              Column(
-                                spacing: 14,
-                                children: [
-                                  Row(
-                                    spacing: 4,
-                                    children: [
-                                      Container(
-                                        height: 24,
-                                        width: 24,
-                                        child: Image.asset(
-                                          'assets/home3/Mask group.png',
-                                        ),
-                                      ),
-                                      Text(
-                                        'Quick Order',
-                                        style: TextStyle(
-                                          color: Colors.black,
-                                          fontSize: 14,
-                                          fontWeight: .w500,
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                  SizedBox(
-                                    height: 38,
-                                    child: Row(
-                                      spacing: 12,
+                              if (closeChallenge != "1")
+                                Column(
+                                  spacing: 14,
+                                  children: [
+                                    Row(
+                                      spacing: 4,
                                       children: [
-                                        ...List.generate(paketsCounts.length, (
-                                          index,
-                                        ) {
-                                          return Expanded(
-                                            child: GestureDetector(
-                                              onTap: () {
-                                                Get.to(
-                                                  CartScreen(
-                                                    packetCount: int.parse(
-                                                      paketsCounts[index],
-                                                    ),
-                                                    Gobal_challengeid:
-                                                        AppData.challangeid,
-                                                  ),
-                                                );
-                                              },
-                                              child: Container(
-                                                padding: EdgeInsets.symmetric(
-                                                  horizontal: 8,
-                                                ),
-                                                decoration: BoxDecoration(
-                                                  border: Border.all(
-                                                    color: Colors.black,
-                                                    width: 1,
-                                                  ),
-                                                  borderRadius:
-                                                      BorderRadius.all(
-                                                        Radius.circular(4),
-                                                      ),
-                                                ),
-                                                child: Center(
-                                                  child: Text(
-                                                    paketsCounts[index] +
-                                                        "Pkts",
-                                                  ),
-                                                ),
-                                              ),
-                                            ),
-                                          );
-                                        }),
+                                        Container(
+                                          height: 24,
+                                          width: 24,
+                                          child: Image.asset(
+                                            'assets/home3/Mask group.png',
+                                          ),
+                                        ),
+                                        Text(
+                                          'Quick Order',
+                                          style: TextStyle(
+                                            color: Colors.black,
+                                            fontSize: 14,
+                                            fontWeight: .w500,
+                                          ),
+                                        ),
                                       ],
                                     ),
-                                  ),
-                                ],
-                              ),
+                                    SizedBox(
+                                      height: 38,
+                                      child: Row(
+                                        spacing: 12,
+                                        children: [
+                                          ...List.generate(
+                                            paketsCounts.length,
+                                            (index) {
+                                              return Expanded(
+                                                child: GestureDetector(
+                                                  onTap: () {
+                                                    Get.to(
+                                                      CartScreen(
+                                                        packetCount: int.parse(
+                                                          paketsCounts[index],
+                                                        ),
+                                                        Gobal_challengeid:
+                                                            AppData.challangeid,
+                                                      ),
+                                                    );
+                                                  },
+                                                  child: Container(
+                                                    padding:
+                                                        EdgeInsets.symmetric(
+                                                          horizontal: 8,
+                                                        ),
+                                                    decoration: BoxDecoration(
+                                                      border: Border.all(
+                                                        color: Colors.black,
+                                                        width: 1,
+                                                      ),
+                                                      borderRadius:
+                                                          BorderRadius.all(
+                                                            Radius.circular(4),
+                                                          ),
+                                                    ),
+                                                    child: Center(
+                                                      child: Text(
+                                                        paketsCounts[index] +
+                                                            "Pkts",
+                                                      ),
+                                                    ),
+                                                  ),
+                                                ),
+                                              );
+                                            },
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                  ],
+                                ),
                             SizedBox(
                               height: 240,
                               child: Container(
@@ -717,106 +720,108 @@ class _Homepage3State extends State<Homepage3> with RouteAware {
                                 child: Row(
                                   mainAxisAlignment: .spaceEvenly,
                                   children: [
-
-                                    if(closeChallenge != "1")
-                                    Material(
-                                      color: Colors.transparent,
-                                      child: InkWell(
-                                        borderRadius: BorderRadius.circular(12),
-                                        splashColor: Colors.black.withOpacity(
-                                          0.1,
-                                        ),
-                                        highlightColor: Colors.black
-                                            .withOpacity(0.05),
-                                        onTap: () {
-                                          Get.to(
-                                            itempage(
-                                              uniqueid: AppData.uniqueid,
-                                              volunteerID: AppData.volunteerId,
-                                              challengeid: AppData.challangeid,
-                                            ),
-                                          );
-                                        },
-                                        child: Column(
-                                          mainAxisSize: MainAxisSize.min,
-                                          children: [
-                                            Padding(
-                                              padding: const EdgeInsets.all(6),
-                                              child: Container(
-                                                height: 70,
-                                                width: 70,
-                                                decoration: BoxDecoration(
-                                                  borderRadius:
-                                                      BorderRadius.circular(12),
-                                                  image: const DecorationImage(
-                                                    image: AssetImage(
-                                                      'assets/home3/bg.png',
-                                                    ),
-                                                    fit: BoxFit.cover,
-                                                  ),
-                                                  boxShadow: [
-                                                    BoxShadow(
-                                                      color: Colors.black
-                                                          .withOpacity(0.25),
-                                                      blurRadius: 8,
-                                                      offset: const Offset(
-                                                        0,
-                                                        4,
-                                                      ),
-                                                    ),
-                                                  ],
+                                    if (closeChallenge != "1")
+                                      Material(
+                                        color: Colors.transparent,
+                                        child: InkWell(
+                                          borderRadius: BorderRadius.circular(
+                                            12,
+                                          ),
+                                          splashColor: Colors.black.withOpacity(
+                                            0.1,
+                                          ),
+                                          highlightColor: Colors.black
+                                              .withOpacity(0.05),
+                                          onTap: () {
+                                            Get.to(
+                                              itempage(
+                                                uniqueid: AppData.uniqueid,
+                                                volunteerID:
+                                                    AppData.volunteerId,
+                                                challengeid:
+                                                    AppData.challangeid,
+                                              ),
+                                            );
+                                          },
+                                          child: Column(
+                                            mainAxisSize: MainAxisSize.min,
+                                            children: [
+                                              Padding(
+                                                padding: const EdgeInsets.all(
+                                                  6,
                                                 ),
-                                                child: Center(
-                                                  child: Image.asset(
-                                                    'assets/home3/dn.png',
-                                                    height: 36,
-                                                    width: 36,
+                                                child: Container(
+                                                  height: 70,
+                                                  width: 70,
+                                                  decoration: BoxDecoration(
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                          12,
+                                                        ),
+                                                    image: const DecorationImage(
+                                                      image: AssetImage(
+                                                        'assets/home3/bg.png',
+                                                      ),
+                                                      fit: BoxFit.cover,
+                                                    ),
+                                                    boxShadow: [
+                                                      BoxShadow(
+                                                        color: Colors.black
+                                                            .withOpacity(0.25),
+                                                        blurRadius: 8,
+                                                        offset: const Offset(
+                                                          0,
+                                                          4,
+                                                        ),
+                                                      ),
+                                                    ],
+                                                  ),
+                                                  child: Center(
+                                                    child: Image.asset(
+                                                      'assets/home3/dn.png',
+                                                      height: 36,
+                                                      width: 36,
+                                                    ),
                                                   ),
                                                 ),
                                               ),
-                                            ),
 
-                                            const SizedBox(height: 6),
+                                              const SizedBox(height: 6),
 
-                                            // Text + arrow (clickable together)
-
-                                       
-                                            Row(
-                                              mainAxisSize: MainAxisSize.min,
-                                              children: [
-                                                const Text(
-                                                  'Sponsor Now',
-                                                  style: TextStyle(
-                                                    color: Color(0xff333333),
-                                                    fontSize: 14,
-                                                    fontWeight: FontWeight.w600,
+                                              // Text + arrow (clickable together)
+                                              Row(
+                                                mainAxisSize: MainAxisSize.min,
+                                                children: [
+                                                  const Text(
+                                                    'Sponsor Now',
+                                                    style: TextStyle(
+                                                      color: Color(0xff333333),
+                                                      fontSize: 14,
+                                                      fontWeight:
+                                                          FontWeight.w600,
+                                                    ),
                                                   ),
-                                                ),
-                                                const SizedBox(width: 6),
-                                                Container(
-                                                  padding: const EdgeInsets.all(
-                                                    4,
+                                                  const SizedBox(width: 6),
+                                                  Container(
+                                                    padding:
+                                                        const EdgeInsets.all(4),
+                                                    decoration: BoxDecoration(
+                                                      color: Colors.black
+                                                          .withOpacity(0.35),
+                                                      shape: BoxShape.circle,
+                                                    ),
+                                                    child: const Icon(
+                                                      Icons.arrow_forward_ios,
+                                                      size: 10,
+                                                      color: Colors.white,
+                                                    ),
                                                   ),
-                                                  decoration: BoxDecoration(
-                                                    color: Colors.black
-                                                        .withOpacity(0.35),
-                                                    shape: BoxShape.circle,
-                                                  ),
-                                                  child: const Icon(
-                                                    Icons.arrow_forward_ios,
-                                                    size: 10,
-                                                    color: Colors.white,
-                                                  ),
-                                                ),
-                                              ],
-                                            ),
-                                          ],
+                                                ],
+                                              ),
+                                            ],
+                                          ),
                                         ),
                                       ),
-                                    ),
-
-
-                                
 
                                     Material(
                                       color: Colors.transparent,
@@ -1002,24 +1007,18 @@ class _Homepage3State extends State<Homepage3> with RouteAware {
                                 child: Row(
                                   mainAxisAlignment: .spaceEvenly,
                                   children: [
+                                    GestureDetector(
+                                      onTap: () {
+                                        Get.to(Topsponsors());
+                                      },
+                                      child: Image.asset(
+                                        'assets/home3/top.png', // Ensure the file is added in pubspec.yaml
 
-
-
-                                  GestureDetector(
-                                    onTap: () {
-                                           Get.to(Topsponsors());
-                                    },
-                                    child: Image.asset(
-                                      'assets/home3/top.png', // Ensure the file is added in pubspec.yaml
-                                    
-                                                 color: Color(0xff8F6CCB),
-                                                 fit: .fill,
+                                        color: Color(0xff8F6CCB),
+                                        fit: .fill,
+                                      ),
                                     ),
-                                  ),
-                          
-                                  
-                                  
-                                  
+
                                     GestureDetector(
                                       onTap: () {
                                         if (!volunteerID.isNull) {
@@ -1290,64 +1289,70 @@ class _Homepage3State extends State<Homepage3> with RouteAware {
 
               Column(
                 spacing: 24,
-                children: [ 
+                children: [
                   if (AppData.hide != "1")
-                    closeChallenge != "1" ?  Material(
-                      color: Colors.transparent,
-                      child: InkWell(
-                        borderRadius: BorderRadius.circular(20),
-                        onTap: () {
-                          Get.to(
-                            CartScreen(Gobal_challengeid: AppData.challangeid),
-                          );
-                        },
-                        child: Container(
-                          margin: const EdgeInsets.only(
-                            left: 24,
-                            right: 24,
-                            top: 20,
-                          ),
-                          height: 62,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(20),
-                            image: const DecorationImage(
-                              image: AssetImage('assets/home3/Group 2766.png'),
-                              fit: BoxFit.fill,
-                            ),
-                            boxShadow: [
-                              BoxShadow(
-                                color: Colors.black.withOpacity(
-                                  0.25,
-                                ), // STRONG shadow
-                                blurRadius: 12,
-                                offset: const Offset(0, 6),
-                              ),
-                            ],
-                          ),
+                    closeChallenge != "1"
+                        ? Material(
+                            color: Colors.transparent,
+                            child: InkWell(
+                              borderRadius: BorderRadius.circular(20),
+                              onTap: () {
+                                Get.to(
+                                  CartScreen(
+                                    Gobal_challengeid: AppData.challangeid,
+                                  ),
+                                );
+                              },
+                              child: Container(
+                                margin: const EdgeInsets.only(
+                                  left: 24,
+                                  right: 24,
+                                  top: 20,
+                                ),
+                                height: 62,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(20),
+                                  image: const DecorationImage(
+                                    image: AssetImage(
+                                      'assets/home3/Group 2766.png',
+                                    ),
+                                    fit: BoxFit.fill,
+                                  ),
+                                  boxShadow: [
+                                    BoxShadow(
+                                      color: Colors.black.withOpacity(
+                                        0.25,
+                                      ), // STRONG shadow
+                                      blurRadius: 12,
+                                      offset: const Offset(0, 6),
+                                    ),
+                                  ],
+                                ),
 
-                          // OPTIONAL but highly recommended
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: const [
-                              Text(
-                                "Participate Now",
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.bold,
+                                // OPTIONAL but highly recommended
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: const [
+                                    Text(
+                                      "Participate Now",
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                    SizedBox(width: 30),
+                                    Icon(
+                                      Icons.arrow_forward,
+                                      size: 25,
+                                      color: Colors.white,
+                                    ),
+                                  ],
                                 ),
                               ),
-                              SizedBox(width: 30),
-                              Icon(
-                                Icons.arrow_forward,
-                                size: 25,
-                                color: Colors.white,
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ) : SizedBox.shrink(),
+                            ),
+                          )
+                        : SizedBox.shrink(),
 
                   SizedBox(height: 10),
                 ],

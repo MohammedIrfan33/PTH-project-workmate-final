@@ -12,7 +12,7 @@ class AppData {
   static String challangeid="0";
 
   static String hide = "0";
-  static List<String> versions=['7','6'];
+  static List<String> versions=['8','7'];
   static String productlist="";
   static String Sponsorproductlist="";
 
